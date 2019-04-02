@@ -31,7 +31,33 @@ class WordBoxFinder: NSObject {
     }
     
     private func detectTextRectanglesHandler(request: VNRequest, error: Error?) {
+        guard error == nil else { print(error!); return }
+        guard let results = request.results else { print("No results"); return } // TODO: Improve error handling
         
+        // Map results to word boxes
+        let wordBoxes = results.map { result -> CGRect in
+            guard let textObservation = result as? VNTextObservation else { return CGRect.null }
+            guard let characterBoxes = textObservation.characterBoxes else { return CGRect.null }
+            
+            // Find word box from character boxes
+            var minX = CGFloat.infinity, minY = CGFloat.infinity
+            var maxX = CGFloat.zero, maxY = CGFloat.zero
+            for characterBox in characterBoxes {
+                minX = CGFloat.minimum(minX, characterBox.bottomLeft.x)
+                maxX = CGFloat.maximum(maxX, characterBox.bottomRight.x)
+                minY = CGFloat.minimum(minY, characterBox.bottomLeft.y)
+                maxY = CGFloat.maximum(maxY, characterBox.topLeft.y)
+            }
+            
+            let x = maxX
+            let y = 1 - minY
+            let width = maxX - minX
+            let height = maxY - minY
+            return CGRect(x: x, y: y, width: width, height: height)
+        }
+        
+        // Call the delegate
+        self.delegate?.didFindWordBoxes(wordBoxes: wordBoxes)
     }
     
 }
