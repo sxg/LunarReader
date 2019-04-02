@@ -27,7 +27,9 @@ class ViewController: UIViewController, WordBoxFinderDelegate, UIScrollViewDeleg
         try? wordBoxFinder.findWordBoxes()
     }
     
-    func didFindWordBoxes(wordBoxes: [CGRect]) {
+    // MARK: - WordBoxFinder delegate
+    
+    func didFindWordBoxes(wordBoxFinder: WordBoxFinder, wordBoxes: [CGRect]) {
         // Calculate image frame and offset within image view
         let imageFrame = AVMakeRect(aspectRatio: self.imageView.image!.size, insideRect: self.imageView.bounds)
         let yOffset = 0.5 * (self.imageView.frame.size.height - imageFrame.size.height)

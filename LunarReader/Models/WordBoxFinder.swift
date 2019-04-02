@@ -57,13 +57,13 @@ class WordBoxFinder: NSObject {
         }
         
         // Call the delegate
-        self.delegate?.didFindWordBoxes(wordBoxes: wordBoxes)
+        self.delegate?.didFindWordBoxes(wordBoxFinder: self, wordBoxes: wordBoxes)
     }
     
 }
 
 protocol WordBoxFinderDelegate: class {
     
-    func didFindWordBoxes(wordBoxes: [CGRect])
+    func didFindWordBoxes(wordBoxFinder: WordBoxFinder, wordBoxes: [CGRect])
     
 }
