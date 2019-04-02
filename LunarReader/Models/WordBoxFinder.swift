@@ -49,8 +49,8 @@ class WordBoxFinder: NSObject {
                 maxY = CGFloat.maximum(maxY, characterBox.topLeft.y)
             }
             
-            let x = maxX
-            let y = 1 - minY
+            let x = minX
+            let y = 1 - maxY
             let width = maxX - minX
             let height = maxY - minY
             return CGRect(x: x, y: y, width: width, height: height)
