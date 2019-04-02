@@ -23,7 +23,7 @@ class ViewController: UIViewController, WordBoxFinderDelegate, UIScrollViewDeleg
         // Do any additional setup after the view appears.
         
         let wordBoxFinder = WordBoxFinder(image: self.wordBoxImageView.image!, delegate: self)
-        try? wordBoxFinder.findWordBoxes()
+        try? wordBoxFinder.findWordBoxes() // TODO: Improve error handling
     }
     
     // MARK: - WordBoxFinder delegate

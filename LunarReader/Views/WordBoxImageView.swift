@@ -19,6 +19,7 @@ class WordBoxImageView: UIImageView {
         
         // Draw each word box's lines
         wordBoxes.forEach { wordBox in
+            // Scale the word box to the image view and calculate line offsets
             let x = wordBox.minX * imageFrame.size.width
             let y = wordBox.minY * imageFrame.size.height + yOffset
             let width = wordBox.width * imageFrame.size.width
@@ -27,11 +28,13 @@ class WordBoxImageView: UIImageView {
             let topOffset = scaledWordBox.height * 0.6
             let bottomOffset = scaledWordBox.height * 0.4
             
+            // Calculate start and end points for each line
             let topLineStart = CGPoint(x: scaledWordBox.minX, y: scaledWordBox.maxY - topOffset)
             let topLineEnd = CGPoint(x: scaledWordBox.maxX, y: scaledWordBox.maxY - topOffset)
             let bottomLineStart = CGPoint(x: scaledWordBox.minX, y: scaledWordBox.maxY - bottomOffset)
             let bottomLineEnd = CGPoint(x: scaledWordBox.maxX, y: scaledWordBox.maxY - bottomOffset)
             
+            // Draw each line
             let topLinePath = UIBezierPath()
             topLinePath.move(to: topLineStart)
             topLinePath.addLine(to: topLineEnd)
