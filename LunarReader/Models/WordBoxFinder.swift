@@ -15,8 +15,9 @@ class WordBoxFinder: NSObject {
     weak var delegate: WordBoxFinderDelegate?
     let requestHandler: VNImageRequestHandler
     
-    init(image: UIImage) {
+    init(image: UIImage, delegate: WordBoxFinderDelegate) {
         self.requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
+        self.delegate = delegate
     }
     
     func findWordBoxes() throws {
