@@ -15,7 +15,6 @@
 		4A4F77612252B1330046C393 /* LunarReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F77602252B1330046C393 /* LunarReaderTests.swift */; };
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
 		4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E48892253A8FC009A373A /* WordBoxFinder.swift */; };
-		4A8E488D2253B153009A373A /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E488C2253B153009A373A /* ScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarReaderUITests.swift; sourceTree = "<group>"; };
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8E48892253A8FC009A373A /* WordBoxFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxFinder.swift; path = Models/WordBoxFinder.swift; sourceTree = "<group>"; };
-		4A8E488C2253B153009A373A /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = Views/ScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +140,6 @@
 		4A8E488B2253B130009A373A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A8E488C2253B153009A373A /* ScrollView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -287,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
-				4A8E488D2253B153009A373A /* ScrollView.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 			);

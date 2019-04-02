@@ -10,16 +10,13 @@ import UIKit
 import Vision
 import AVFoundation
 
-class ViewController: UIViewController, WordBoxFinderDelegate {
+class ViewController: UIViewController, WordBoxFinderDelegate, UIScrollViewDelegate {
     
-    @IBOutlet weak var scrollView: ScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.scrollView.delegate = self.scrollView
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,6 +68,12 @@ class ViewController: UIViewController, WordBoxFinderDelegate {
             self.imageView.layer.addSublayer(topLine)
             self.imageView.layer.addSublayer(bottomLine)
         }
+    }
+    
+    // MARK: - UIScrollView delegate
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
 
 }

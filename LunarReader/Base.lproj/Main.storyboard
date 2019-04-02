@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.10000000000000001" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-9v-dMh" customClass="ScrollView" customModule="LunarReader" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.10000000000000001" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-9v-dMh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-71-sh5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -34,7 +34,7 @@
                                     <constraint firstItem="IwI-71-sh5" firstAttribute="centerX" secondItem="KEf-9v-dMh" secondAttribute="centerX" id="on9-Ji-xb9"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="IwI-71-sh5" id="Seg-ji-aRE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2xp-Ih-gTw"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -49,7 +49,6 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="IwI-71-sh5" id="NLy-Ts-sTO"/>
-                        <outlet property="scrollView" destination="KEf-9v-dMh" id="xmq-Hr-93W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
