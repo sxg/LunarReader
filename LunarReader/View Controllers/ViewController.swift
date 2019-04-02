@@ -10,8 +10,8 @@ import UIKit
 import Vision
 import AVFoundation
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, WordBoxFinderDelegate {
+    
     @IBOutlet weak var scrollView: ScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -26,68 +26,27 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         // Do any additional setup after the view appears.
         
-        let imageRequestHandler = VNImageRequestHandler(cgImage: imageView.image!.cgImage!, options: [:])
-        let textDetectionRequest = VNDetectTextRectanglesRequest { (request, err) in
-            guard let observations = request.results else {
-                print("no result")
-                return
-            }
-            guard err == nil else { print(err!); return }
-            
-            let result = observations.map({$0 as? VNTextObservation})
-            
-            DispatchQueue.main.async() {
-                self.imageView.layer.sublayers?.removeSubrange(1...)
-                for region in result {
-                    guard let rg = region else {
-                        continue
-                    }
-                    guard let boxes = rg.characterBoxes else {
-                        return
-                    }
-                    
-                    var maxX: CGFloat = CGFloat.infinity
-                    var minX: CGFloat = 0.0
-                    var maxY: CGFloat = CGFloat.infinity
-                    var minY: CGFloat = 0.0
-                    
-                    for char in boxes {
-                        if char.bottomLeft.x < maxX {
-                            maxX = char.bottomLeft.x
-                        }
-                        if char.bottomRight.x > minX {
-                            minX = char.bottomRight.x
-                        }
-                        if char.bottomRight.y < maxY {
-                            maxY = char.bottomRight.y
-                        }
-                        if char.topRight.y > minY {
-                            minY = char.topRight.y
-                        }
-                    }
-                    
-                    let imageFrame = AVMakeRect(aspectRatio: self.imageView.image!.size, insideRect: self.imageView.bounds)
-                    let yOffset = 0.5 * (self.imageView.frame.size.height - imageFrame.size.height)
-                    let xCord = maxX * imageFrame.size.width
-                    let yCord = (1 - minY) * imageFrame.size.height + yOffset
-                    let width = (minX - maxX) * imageFrame.size.width
-                    let height = (minY - maxY) * imageFrame.size.height
-                    
-                    let outline = CALayer()
-                    outline.frame = CGRect(x: xCord, y: yCord, width: width, height: height)
-                    outline.borderWidth = 2.0
-                    outline.borderColor = UIColor.red.cgColor
-                    
-                    self.imageView.layer.addSublayer(outline)
-                }
-            }
-        }
-        textDetectionRequest.reportCharacterBoxes = true
+        let wordBoxFinder = WordBoxFinder(image: self.imageView.image!, delegate: self)
+        try? wordBoxFinder.findWordBoxes()
+    }
+    
+    func didFindWordBoxes(wordBoxes: [CGRect]) {
+        // Calculate image frame and offset within image view
+        let imageFrame = AVMakeRect(aspectRatio: self.imageView.image!.size, insideRect: self.imageView.bounds)
+        let yOffset = 0.5 * (self.imageView.frame.size.height - imageFrame.size.height)
         
-        do {
-            try imageRequestHandler.perform([textDetectionRequest])
-        } catch {
-            print(error)
+        // Draw each word box
+        wordBoxes.forEach { wordBox in
+            let x = wordBox.minX * imageFrame.size.width
+            let y = wordBox.minY * imageFrame.size.height + yOffset
+            let width = wordBox.width * imageFrame.size.width
+            let height = wordBox.height * imageFrame.size.height
+            
+            let box = CALayer()
+            box.frame = CGRect(x: x, y: y, width: width, height: height)
+            box.borderWidth = 2.0
+            box.borderColor = UIColor.red.cgColor
+            self.imageView.layer.addSublayer(box)
         }
     }
 
