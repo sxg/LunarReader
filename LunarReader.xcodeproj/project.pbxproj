@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
 		4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774B2252B1320046C393 /* AppDelegate.swift */; };
 		4A4F774E2252B1320046C393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774D2252B1320046C393 /* ViewController.swift */; };
 		4A4F77512252B1320046C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F774F2252B1320046C393 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A340C652253FECB0043E69D /* WordBoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxImageView.swift; path = Views/WordBoxImageView.swift; sourceTree = "<group>"; };
 		4A4F77482252B1320046C393 /* LunarReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F774B2252B1320046C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4F774D2252B1320046C393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "View Controllers/ViewController.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		4A8E488B2253B130009A373A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A340C652253FECB0043E69D /* WordBoxImageView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */,
 				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
