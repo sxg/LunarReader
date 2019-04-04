@@ -9,14 +9,16 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Photos
 
-class CameraViewController: UIViewController, PulleyPrimaryContentControllerDelegate {
+class CameraViewController: UIViewController, PulleyPrimaryContentControllerDelegate, AVCapturePhotoCaptureDelegate {
     
     @IBOutlet weak var cameraView: CameraView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var cameraButtonBottomConstraint: NSLayoutConstraint!
     
     private let cameraSession: AVCaptureSession = AVCaptureSession()
+    private let photoOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
     private let cameraButtonBottomDistance: CGFloat = 20
     
     override func viewDidLoad() {
@@ -28,10 +30,9 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
         let camera = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back)
         guard let cameraInput = try? AVCaptureDeviceInput(device: camera!), cameraSession.canAddInput(cameraInput) else { return }
         self.cameraSession.addInput(cameraInput)
-        let photoOutput = AVCapturePhotoOutput()
-        guard self.cameraSession.canAddOutput(photoOutput) else { return }
+        guard self.cameraSession.canAddOutput(self.photoOutput) else { return }
         self.cameraSession.sessionPreset = .photo
-        self.cameraSession.addOutput(photoOutput)
+        self.cameraSession.addOutput(self.photoOutput)
         self.cameraSession.commitConfiguration()
         
         // Connect the camera to the view, resize the video feed, and start the camera
@@ -45,6 +46,35 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
         // Move the camera button with the drawer
         self.cameraButtonBottomConstraint.constant = CGFloat.minimum(264, distance) + self.cameraButtonBottomDistance
+    }
+    
+    // MARK: - AVCapturePhotoCaptureDelegate
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else { print("Error capturing photo: \(error!)"); return }
+        
+        PHPhotoLibrary.requestAuthorization { status in
+            guard status == .authorized else { return }
+            
+            PHPhotoLibrary.shared().performChanges({
+                let photoCreationRequest = PHAssetCreationRequest.forAsset()
+                photoCreationRequest.addResource(with: .photo, data: photo.fileDataRepresentation()!, options: nil)
+            }, completionHandler: { (success, error) in
+                guard error == nil else { print("Error saving photo: \(error!)"); return }
+                print("Saved photo! Success: \(success)")
+            })
+        }
+    }
+    
+    // MARK: - UIButton Actions
+    
+    @IBAction func didTapCameraButton(sender: UIButton, forEvent event: UIEvent) {
+        // Configure photo output settings
+        let photoOutputSettings = AVCapturePhotoSettings()
+        photoOutputSettings.flashMode = .on
+        
+        // Capture the photo
+        self.photoOutput.capturePhoto(with: photoOutputSettings, delegate: self)
     }
     
 }

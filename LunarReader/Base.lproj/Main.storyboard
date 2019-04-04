@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-71-sh5" customClass="WordBoxImageView" customModule="LunarReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -121,6 +121,9 @@
                                     <constraint firstAttribute="width" secondItem="y6t-SY-qSR" secondAttribute="height" multiplier="1:1" id="NuB-M0-WOX"/>
                                 </constraints>
                                 <state key="normal" image="CameraButton"/>
+                                <connections>
+                                    <action selector="didTapCameraButtonWithSender:forEvent:" destination="mIP-RJ-US8" eventType="touchUpInside" id="g98-Lu-vHR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
