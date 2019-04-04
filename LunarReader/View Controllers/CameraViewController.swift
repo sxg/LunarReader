@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, PulleyPrimaryContentControllerDelegate {
     
     @IBOutlet weak var cameraView: CameraView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var cameraButtonBottomConstraint: NSLayoutConstraint!
     
-    private let cameraSession = AVCaptureSession()
+    private let cameraSession: AVCaptureSession = AVCaptureSession()
+    private let cameraButtonBottomDistance: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,13 @@ class CameraViewController: UIViewController {
         self.cameraView.cameraPreviewLayer.session = cameraSession
         self.cameraView.cameraPreviewLayer.videoGravity = .resizeAspectFill
         cameraSession.startRunning()
+    }
+    
+    // MARK: - PulleyPrimaryContentControllerDelegate
+    
+    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
+        // Move the camera button with the drawer
+        self.cameraButtonBottomConstraint.constant = CGFloat.minimum(264, distance) + self.cameraButtonBottomDistance
     }
     
 }

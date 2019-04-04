@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-71-sh5" customClass="WordBoxImageView" customModule="LunarReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -115,17 +115,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-SY-qSR">
+                                <rect key="frame" x="167" y="546" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y6t-SY-qSR" secondAttribute="height" multiplier="1:1" id="NuB-M0-WOX"/>
+                                </constraints>
+                                <state key="normal" image="CameraButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="y6t-SY-qSR" secondAttribute="bottom" constant="20" id="1r3-Z0-DQO"/>
+                            <constraint firstItem="y6t-SY-qSR" firstAttribute="centerX" secondItem="o9v-j2-fcQ" secondAttribute="centerX" id="5Se-R6-QNu"/>
                             <constraint firstAttribute="trailing" secondItem="FNR-rc-Ogg" secondAttribute="trailing" id="6gu-LS-4A4"/>
                             <constraint firstItem="FNR-rc-Ogg" firstAttribute="top" secondItem="o9v-j2-fcQ" secondAttribute="top" id="ZkG-LJ-hIi"/>
                             <constraint firstItem="FNR-rc-Ogg" firstAttribute="leading" secondItem="o9v-j2-fcQ" secondAttribute="leading" id="d6J-0f-mQJ"/>
                             <constraint firstAttribute="bottom" secondItem="FNR-rc-Ogg" secondAttribute="bottom" id="fWm-6O-Khy"/>
+                            <constraint firstItem="y6t-SY-qSR" firstAttribute="width" secondItem="FNR-rc-Ogg" secondAttribute="width" multiplier="0.193" id="pru-e8-8Fo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XCl-kT-J65"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="y6t-SY-qSR" id="eME-2B-1s7"/>
+                        <outlet property="cameraButtonBottomConstraint" destination="1r3-Z0-DQO" id="4Ix-Eu-Igk"/>
                         <outlet property="cameraView" destination="FNR-rc-Ogg" id="bxP-5p-CnR"/>
                     </connections>
                 </viewController>
@@ -150,6 +162,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CameraButton" width="90" height="90"/>
         <image name="SampleText" width="1885.5" height="2473"/>
     </resources>
 </document>
