@@ -162,7 +162,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraButton" width="90" height="90"/>
+        <image name="CameraButton" width="88" height="88"/>
         <image name="SampleText" width="1885.5" height="2473"/>
     </resources>
 </document>
