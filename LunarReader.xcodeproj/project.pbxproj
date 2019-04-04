@@ -19,6 +19,7 @@
 		4A4F77562252B1330046C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F77542252B1330046C393 /* LaunchScreen.storyboard */; };
 		4A4F77612252B1330046C393 /* LunarReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F77602252B1330046C393 /* LunarReaderTests.swift */; };
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
+		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
 		4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E48892253A8FC009A373A /* WordBoxFinder.swift */; };
 		4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA7FFC225549A6006BA409 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		4A4F77672252B1330046C393 /* LunarReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunarReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarReaderUITests.swift; sourceTree = "<group>"; };
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
 		4A8E48892253A8FC009A373A /* WordBoxFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxFinder.swift; path = Models/WordBoxFinder.swift; sourceTree = "<group>"; };
 		4AFA7FFC225549A6006BA409 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "View Controllers/CameraViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4A340C652253FECB0043E69D /* WordBoxImageView.swift */,
+				4A64E130225642FC00CE7A89 /* CameraView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */,
 				4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */,
 				4A12CBAB225552EE00756372 /* PulleyPassthroughScrollView.swift in Sources */,
+				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
 				4A12CBAA225552EE00756372 /* UIViewController+PulleyViewController.swift in Sources */,
 				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,

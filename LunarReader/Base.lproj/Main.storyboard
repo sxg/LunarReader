@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dt2-Pc-rQf">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,6 +54,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Pulley View Controller-->
+        <scene sceneID="dwx-6h-zrj">
+            <objects>
+                <viewController id="dt2-Pc-rQf" customClass="PulleyViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7N-vD-YMc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSW-Sb-2Il">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="646" id="uAP-2g-dgi"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="mIP-RJ-US8" kind="embed" id="C7A-mE-dWE"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-G9-dpu">
+                                <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bPs-bd-vtu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="cmQ-5m-iCl" kind="embed" id="LJq-o7-s2v"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZSW-Sb-2Il" firstAttribute="trailing" secondItem="KfF-3L-dMV" secondAttribute="trailing" id="17p-H4-nck"/>
+                            <constraint firstItem="ZSW-Sb-2Il" firstAttribute="leading" secondItem="KfF-3L-dMV" secondAttribute="leading" id="EAL-lS-l3X"/>
+                            <constraint firstAttribute="bottom" secondItem="tPt-G9-dpu" secondAttribute="bottom" id="FYg-Nj-vWy"/>
+                            <constraint firstItem="ZSW-Sb-2Il" firstAttribute="top" secondItem="l7N-vD-YMc" secondAttribute="top" id="OJi-WB-dTH"/>
+                            <constraint firstItem="tPt-G9-dpu" firstAttribute="leading" secondItem="KfF-3L-dMV" secondAttribute="leading" id="OkB-fi-A7D"/>
+                            <constraint firstItem="tPt-G9-dpu" firstAttribute="top" secondItem="ZSW-Sb-2Il" secondAttribute="bottom" id="dvZ-MK-Yi5"/>
+                            <constraint firstItem="tPt-G9-dpu" firstAttribute="trailing" secondItem="KfF-3L-dMV" secondAttribute="trailing" id="ujP-6z-936"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KfF-3L-dMV"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawerContentContainerView" destination="tPt-G9-dpu" id="x6s-6U-vUU"/>
+                        <outlet property="primaryContentContainerView" destination="ZSW-Sb-2Il" id="i0x-dp-wrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCn-CE-eF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="-611.38392857142856"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="ezE-ph-6OM">
+            <objects>
+                <viewController id="mIP-RJ-US8" customClass="CameraViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9v-j2-fcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNR-rc-Ogg" customClass="CameraView" customModule="LunarReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FNR-rc-Ogg" secondAttribute="trailing" id="6gu-LS-4A4"/>
+                            <constraint firstItem="FNR-rc-Ogg" firstAttribute="top" secondItem="o9v-j2-fcQ" secondAttribute="top" id="ZkG-LJ-hIi"/>
+                            <constraint firstItem="FNR-rc-Ogg" firstAttribute="leading" secondItem="o9v-j2-fcQ" secondAttribute="leading" id="d6J-0f-mQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="FNR-rc-Ogg" secondAttribute="bottom" id="fWm-6O-Khy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XCl-kT-J65"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="FNR-rc-Ogg" id="bxP-5p-CnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrU-Sa-BN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="-763.39285714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hj4-Ro-hGM">
+            <objects>
+                <viewController id="cmQ-5m-iCl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Qs-IE-FkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vxO-rH-ARy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADO-IF-Spf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-377"/>
         </scene>
     </scenes>
     <resources>
