@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A12CBAA225552EE00756372 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12CBA6225552EE00756372 /* UIViewController+PulleyViewController.swift */; };
-		4A12CBAB225552EE00756372 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12CBA7225552EE00756372 /* PulleyPassthroughScrollView.swift */; };
-		4A12CBAC225552EE00756372 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12CBA8225552EE00756372 /* PulleyViewController.swift */; };
-		4A12CBAD225552EE00756372 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12CBA9225552EE00756372 /* UIView+constrainToParent.swift */; };
 		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
 		4A47BD7B2256E7AA008D4342 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* PhotoViewController.swift */; };
 		4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774B2252B1320046C393 /* AppDelegate.swift */; };
@@ -23,6 +19,9 @@
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
 		4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E48892253A8FC009A373A /* WordBoxFinder.swift */; };
 		4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA7FFC225549A6006BA409 /* CameraViewController.swift */; };
+		620CB6BB9397DBADA275486E /* Pods_LunarReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6CD73E3FE372687FE8DC74 /* Pods_LunarReaderUITests.framework */; };
+		8B50141ED83ACDAFEA60BC41 /* Pods_LunarReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE7EA485EE7EED5A3CEE560 /* Pods_LunarReader.framework */; };
+		A1BFFAC932C47A6E1D876451 /* Pods_LunarReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B09D576313E81C7455322B7 /* Pods_LunarReaderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A12CBA6225552EE00756372 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "Pulley/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
-		4A12CBA7225552EE00756372 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = Pulley/PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
-		4A12CBA8225552EE00756372 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = Pulley/PulleyViewController.swift; sourceTree = "<group>"; };
-		4A12CBA9225552EE00756372 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "Pulley/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		1C6CD73E3FE372687FE8DC74 /* Pods_LunarReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B09D576313E81C7455322B7 /* Pods_LunarReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAC8F131ECFAF3322478AFA /* Pods-LunarReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReader.release.xcconfig"; path = "Target Support Files/Pods-LunarReader/Pods-LunarReader.release.xcconfig"; sourceTree = "<group>"; };
 		4A340C652253FECB0043E69D /* WordBoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxImageView.swift; path = Views/WordBoxImageView.swift; sourceTree = "<group>"; };
 		4A47BD7A2256E7AA008D4342 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = "View Controllers/PhotoViewController.swift"; sourceTree = "<group>"; };
 		4A4F77482252B1320046C393 /* LunarReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +63,12 @@
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
 		4A8E48892253A8FC009A373A /* WordBoxFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxFinder.swift; path = Models/WordBoxFinder.swift; sourceTree = "<group>"; };
 		4AFA7FFC225549A6006BA409 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "View Controllers/CameraViewController.swift"; sourceTree = "<group>"; };
+		51EF382678D93F14C0CF76FD /* Pods-LunarReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderTests/Pods-LunarReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59A8CFCFB3725B2220C140D9 /* Pods-LunarReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderUITests/Pods-LunarReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AE7EA485EE7EED5A3CEE560 /* Pods_LunarReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD86EAF3ABA29D82D032A6D1 /* Pods-LunarReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReader.debug.xcconfig"; path = "Target Support Files/Pods-LunarReader/Pods-LunarReader.debug.xcconfig"; sourceTree = "<group>"; };
+		F8D6A47195B043F6CAF8A347 /* Pods-LunarReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderUITests.release.xcconfig"; path = "Target Support Files/Pods-LunarReaderUITests/Pods-LunarReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FC43472C82DE42313A1180E4 /* Pods-LunarReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderTests.release.xcconfig"; path = "Target Support Files/Pods-LunarReaderTests/Pods-LunarReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B50141ED83ACDAFEA60BC41 /* Pods_LunarReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BFFAC932C47A6E1D876451 /* Pods_LunarReaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,23 +92,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620CB6BB9397DBADA275486E /* Pods_LunarReaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A12CBA5225552DF00756372 /* Pulley */ = {
-			isa = PBXGroup;
-			children = (
-				4A12CBA7225552EE00756372 /* PulleyPassthroughScrollView.swift */,
-				4A12CBA8225552EE00756372 /* PulleyViewController.swift */,
-				4A12CBA9225552EE00756372 /* UIView+constrainToParent.swift */,
-				4A12CBA6225552EE00756372 /* UIViewController+PulleyViewController.swift */,
-			);
-			name = Pulley;
-			sourceTree = "<group>";
-		};
 		4A4F773F2252B1310046C393 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +106,8 @@
 				4A4F775F2252B1330046C393 /* LunarReaderTests */,
 				4A4F776A2252B1330046C393 /* LunarReaderUITests */,
 				4A4F77492252B1320046C393 /* Products */,
+				6D902B54F72BB60241EE7647 /* Pods */,
+				EDEC61790FD614621F852566 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +129,6 @@
 				4A4F77522252B1330046C393 /* Assets.xcassets */,
 				4A4F77542252B1330046C393 /* LaunchScreen.storyboard */,
 				4A4F77572252B1330046C393 /* Info.plist */,
-				4A12CBA5225552DF00756372 /* Pulley */,
 				4A8E48882253A8CC009A373A /* Models */,
 				4A8E488B2253B130009A373A /* Views */,
 				4A8E488E2253B8E8009A373A /* View Controllers */,
@@ -184,6 +181,29 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		6D902B54F72BB60241EE7647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD86EAF3ABA29D82D032A6D1 /* Pods-LunarReader.debug.xcconfig */,
+				3BAC8F131ECFAF3322478AFA /* Pods-LunarReader.release.xcconfig */,
+				51EF382678D93F14C0CF76FD /* Pods-LunarReaderTests.debug.xcconfig */,
+				FC43472C82DE42313A1180E4 /* Pods-LunarReaderTests.release.xcconfig */,
+				59A8CFCFB3725B2220C140D9 /* Pods-LunarReaderUITests.debug.xcconfig */,
+				F8D6A47195B043F6CAF8A347 /* Pods-LunarReaderUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDEC61790FD614621F852566 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AE7EA485EE7EED5A3CEE560 /* Pods_LunarReader.framework */,
+				3B09D576313E81C7455322B7 /* Pods_LunarReaderTests.framework */,
+				1C6CD73E3FE372687FE8DC74 /* Pods_LunarReaderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A4F77702252B1330046C393 /* Build configuration list for PBXNativeTarget "LunarReader" */;
 			buildPhases = (
+				198D421CA598BDB5AA0BFE06 /* [CP] Check Pods Manifest.lock */,
 				4A4F77442252B1310046C393 /* Sources */,
 				4A4F77452252B1310046C393 /* Frameworks */,
 				4A4F77462252B1310046C393 /* Resources */,
+				EC238331F300AB09604445E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A4F77732252B1330046C393 /* Build configuration list for PBXNativeTarget "LunarReaderTests" */;
 			buildPhases = (
+				8F66E9E9FE842664CB9A673D /* [CP] Check Pods Manifest.lock */,
 				4A4F77582252B1330046C393 /* Sources */,
 				4A4F77592252B1330046C393 /* Frameworks */,
 				4A4F775A2252B1330046C393 /* Resources */,
@@ -226,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A4F77762252B1330046C393 /* Build configuration list for PBXNativeTarget "LunarReaderUITests" */;
 			buildPhases = (
+				255B46D0E016B7FE42FB8181 /* [CP] Check Pods Manifest.lock */,
 				4A4F77632252B1330046C393 /* Sources */,
 				4A4F77642252B1330046C393 /* Frameworks */,
 				4A4F77652252B1330046C393 /* Resources */,
@@ -310,6 +334,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		198D421CA598BDB5AA0BFE06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LunarReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		255B46D0E016B7FE42FB8181 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LunarReaderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F66E9E9FE842664CB9A673D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LunarReaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC238331F300AB09604445E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A4F77442252B1310046C393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -317,14 +432,10 @@
 			files = (
 				4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */,
 				4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */,
-				4A12CBAB225552EE00756372 /* PulleyPassthroughScrollView.swift in Sources */,
 				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
-				4A12CBAA225552EE00756372 /* UIViewController+PulleyViewController.swift in Sources */,
 				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
-				4A12CBAD225552EE00756372 /* UIView+constrainToParent.swift in Sources */,
-				4A12CBAC225552EE00756372 /* PulleyViewController.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,15 +609,13 @@
 		};
 		4A4F77712252B1330046C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD86EAF3ABA29D82D032A6D1 /* Pods-LunarReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76333YNXLE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = LunarReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,15 +631,13 @@
 		};
 		4A4F77722252B1330046C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAC8F131ECFAF3322478AFA /* Pods-LunarReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76333YNXLE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = LunarReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,6 +653,7 @@
 		};
 		4A4F77742252B1330046C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51EF382678D93F14C0CF76FD /* Pods-LunarReaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,6 +675,7 @@
 		};
 		4A4F77752252B1330046C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC43472C82DE42313A1180E4 /* Pods-LunarReaderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +697,7 @@
 		};
 		4A4F77772252B1330046C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A8CFCFB3725B2220C140D9 /* Pods-LunarReaderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +718,7 @@
 		};
 		4A4F77782252B1330046C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D6A47195B043F6CAF8A347 /* Pods-LunarReaderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

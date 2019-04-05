@@ -1,0 +1,6 @@
+framework module Pods_LunarReader {
+  umbrella header "Pods-LunarReader-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import Photos
+import Pulley
 
 class CameraViewController: UIViewController, PulleyPrimaryContentControllerDelegate, AVCapturePhotoCaptureDelegate {
     

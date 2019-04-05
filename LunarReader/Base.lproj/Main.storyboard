@@ -58,7 +58,7 @@
         <!--Pulley View Controller-->
         <scene sceneID="dwx-6h-zrj">
             <objects>
-                <viewController id="dt2-Pc-rQf" customClass="PulleyViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dt2-Pc-rQf" customClass="PulleyViewController" customModule="Pulley" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7N-vD-YMc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
