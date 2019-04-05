@@ -61,12 +61,14 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
                 photoCreationRequest.addResource(with: .photo, data: photo.fileDataRepresentation()!, options: nil)
             }, completionHandler: { (success, error) in
                 guard error == nil else { print("Error saving photo: \(error!)"); return }
-                print("Saved photo! Success: \(success)")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "PhotoViewControllerSegue", sender: photo)
+                }
             })
         }
     }
     
-    // MARK: - UIButton Actions
+    // MARK: - Button Actions
     
     @IBAction func didTapCameraButton(sender: UIButton, forEvent event: UIEvent) {
         // Configure photo output settings
@@ -77,4 +79,17 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
         self.photoOutput.capturePhoto(with: photoOutputSettings, delegate: self)
     }
     
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "PhotoViewControllerSegue":
+        let photoViewController = (segue.destination as! UINavigationController).viewControllers.first as! PhotoViewController
+            let photo = sender as! AVCapturePhoto
+            photoViewController.image = UIImage(data: photo.fileDataRepresentation()!)
+        default:
+            break
+        }
+    }
+
 }

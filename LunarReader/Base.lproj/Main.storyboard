@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-71-sh5" customClass="WordBoxImageView" customModule="LunarReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -142,11 +142,49 @@
                         <outlet property="cameraButton" destination="y6t-SY-qSR" id="eME-2B-1s7"/>
                         <outlet property="cameraButtonBottomConstraint" destination="1r3-Z0-DQO" id="4Ix-Eu-Igk"/>
                         <outlet property="cameraView" destination="FNR-rc-Ogg" id="bxP-5p-CnR"/>
+                        <segue destination="X89-y3-MvA" kind="presentation" identifier="PhotoViewControllerSegue" id="aXD-BX-Ozw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrU-Sa-BN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="-763.39285714285711"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="4RE-h3-sBe">
+            <objects>
+                <viewController id="xZM-ZX-77x" customClass="PhotoViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OhC-Rw-8e4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4vL-op-25L">
+                                <rect key="frame" x="0.0" y="88" width="414" height="558"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4vL-op-25L" secondAttribute="trailing" id="4sp-Cz-fFM"/>
+                            <constraint firstItem="4vL-op-25L" firstAttribute="leading" secondItem="OhC-Rw-8e4" secondAttribute="leading" id="VGF-3g-Iyv"/>
+                            <constraint firstAttribute="bottom" secondItem="4vL-op-25L" secondAttribute="bottom" id="g7F-TM-tQ6"/>
+                            <constraint firstItem="4vL-op-25L" firstAttribute="top" secondItem="WOp-Bp-yGr" secondAttribute="top" id="wxI-mm-fqD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WOp-Bp-yGr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jz0-Sj-3ca">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rw6-wa-s6p">
+                            <connections>
+                                <action selector="didTapCancelButton:" destination="xZM-ZX-77x" id="jsh-cS-BNy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BDa-mv-ZNx"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="4vL-op-25L" id="qt7-qA-Xid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOE-jZ-EqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762.3188405797105" y="-763.39285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hj4-Ro-hGM">
@@ -162,6 +200,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADO-IF-Spf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="903" y="-377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C9i-js-j09">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X89-y3-MvA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a3x-x3-WKC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kRi-e3-uf2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="xZM-ZX-77x" kind="relationship" relationship="rootViewController" id="jRE-dZ-j4z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Van-mA-uFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="-763.39285714285711"/>
         </scene>
     </scenes>
     <resources>
