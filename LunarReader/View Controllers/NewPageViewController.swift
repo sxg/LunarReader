@@ -11,6 +11,8 @@ import UIKit
 class NewPageViewController: UITableViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var collectionNameLabel: UILabel!
+    @IBOutlet weak var pageNameLabel: UILabel!
     
     public var image: UIImage?
     

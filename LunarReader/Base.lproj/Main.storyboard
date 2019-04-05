@@ -207,6 +207,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L8h-mE-Ul2" kind="show" id="0fI-KA-MeP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -249,12 +252,70 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="RZK-8e-I2Q"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionNameLabel" destination="Z1J-rE-HEm" id="odh-Mj-C14"/>
                         <outlet property="imageView" destination="ckb-qf-zn8" id="RaB-YR-7xs"/>
+                        <outlet property="pageNameLabel" destination="jL8-P6-trG" id="Mdh-G1-NJb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbL-MJ-0rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2628.985507246377" y="-763.39285714285711"/>
+        </scene>
+        <!--Rename Page-->
+        <scene sceneID="c8y-rp-SWs">
+            <objects>
+                <tableViewController id="L8h-mE-Ul2" customClass="RenamePageTableViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="o2T-4n-6W5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="lgN-Kb-glw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QbL-Md-TGP">
+                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QbL-Md-TGP" id="aHC-uS-Yt9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Page 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-pc-2Ox">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qxX-pc-2Ox" firstAttribute="trailing" secondItem="aHC-uS-Yt9" secondAttribute="trailingMargin" id="J52-5L-1yY"/>
+                                                <constraint firstItem="qxX-pc-2Ox" firstAttribute="top" secondItem="aHC-uS-Yt9" secondAttribute="top" id="OlL-2Y-Vwl"/>
+                                                <constraint firstItem="qxX-pc-2Ox" firstAttribute="centerY" secondItem="aHC-uS-Yt9" secondAttribute="centerY" id="XLB-6J-5tU"/>
+                                                <constraint firstItem="qxX-pc-2Ox" firstAttribute="leading" secondItem="aHC-uS-Yt9" secondAttribute="leadingMargin" id="XrN-fN-XzI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="L8h-mE-Ul2" id="h5U-9n-qNS"/>
+                            <outlet property="delegate" destination="L8h-mE-Ul2" id="mIf-ch-0u6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rename Page" id="fDv-tW-Fhg">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="xr0-OI-daH">
+                            <connections>
+                                <action selector="didTapDoneButton:" destination="L8h-mE-Ul2" id="Osc-os-U7V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageNameField" destination="qxX-pc-2Ox" id="got-4a-Saw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOk-62-4yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3444.9275362318845" y="-763.39285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hj4-Ro-hGM">
