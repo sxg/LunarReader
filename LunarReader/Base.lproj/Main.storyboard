@@ -152,7 +152,7 @@
         <!--New Page-->
         <scene sceneID="8RQ-I4-SP3">
             <objects>
-                <tableViewController id="Ylm-kr-Grd" customClass="NewPageViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ylm-kr-Grd" customClass="NewPageTableViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="gJI-a4-L2g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

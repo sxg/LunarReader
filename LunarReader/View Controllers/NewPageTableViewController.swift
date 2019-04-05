@@ -1,5 +1,5 @@
 //
-//  NewPageViewController.swift
+//  NewPageTableViewController.swift
 //  LunarReader
 //
 //  Created by Satyam Ghodasara on 4/4/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPageViewController: UITableViewController {
+class NewPageTableViewController: UITableViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionNameLabel: UILabel!

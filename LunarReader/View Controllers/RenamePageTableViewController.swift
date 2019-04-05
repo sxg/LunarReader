@@ -23,7 +23,7 @@ class RenamePageTableViewController: UITableViewController {
     
     @IBAction func didTapDoneButton(_ sender: UIBarButtonItem) {
         // Set the page name on the NewPageViewController and go back to it
-        let newPageViewController = self.navigationController!.viewControllers.reversed()[1] as! NewPageViewController
+        let newPageViewController = self.navigationController!.viewControllers.reversed()[1] as! NewPageTableViewController
         newPageViewController.pageNameLabel.text = self.pageNameField.text
         self.navigationController?.popViewController(animated: true)
     }
