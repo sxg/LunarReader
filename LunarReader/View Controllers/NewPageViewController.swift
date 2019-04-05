@@ -8,12 +8,12 @@
 
 import UIKit
 
-class NewPageViewController: UIViewController {
+class NewPageViewController: UITableViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
     public var image: UIImage?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,14 +28,17 @@ class NewPageViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Dynamically calculate the height for the image view's row
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let imageViewSize = self.imageView.bounds.size
+            let imageSize = self.image!.size
+            return imageViewSize.width / imageSize.width * imageSize.height
+        } else {
+            return 44 // Default UITableViewCell height
+        }
     }
-    */
 
 }
