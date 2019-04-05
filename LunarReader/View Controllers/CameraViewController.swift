@@ -85,8 +85,8 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "NewPageViewControllerSegue":
-        // Prepare the NewPageViewController with the captured image
-        let newPageViewController = (segue.destination as! UINavigationController).viewControllers.first as! NewPageViewController
+            // Prepare the NewPageViewController with the captured image
+            let newPageViewController = (segue.destination as! UINavigationController).viewControllers.first as! NewPageViewController
             let photo = sender as! AVCapturePhoto
             newPageViewController.image = UIImage(data: photo.fileDataRepresentation()!)
         default:
