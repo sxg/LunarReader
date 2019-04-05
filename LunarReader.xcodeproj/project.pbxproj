@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
-		4A47BD7B2256E7AA008D4342 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* PhotoViewController.swift */; };
+		4A47BD7B2256E7AA008D4342 /* NewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* NewPageViewController.swift */; };
 		4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774B2252B1320046C393 /* AppDelegate.swift */; };
 		4A4F774E2252B1320046C393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774D2252B1320046C393 /* ViewController.swift */; };
 		4A4F77512252B1320046C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F774F2252B1320046C393 /* Main.storyboard */; };
@@ -46,7 +46,7 @@
 		3B09D576313E81C7455322B7 /* Pods_LunarReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAC8F131ECFAF3322478AFA /* Pods-LunarReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReader.release.xcconfig"; path = "Target Support Files/Pods-LunarReader/Pods-LunarReader.release.xcconfig"; sourceTree = "<group>"; };
 		4A340C652253FECB0043E69D /* WordBoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxImageView.swift; path = Views/WordBoxImageView.swift; sourceTree = "<group>"; };
-		4A47BD7A2256E7AA008D4342 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = "View Controllers/PhotoViewController.swift"; sourceTree = "<group>"; };
+		4A47BD7A2256E7AA008D4342 /* NewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPageViewController.swift; path = "View Controllers/NewPageViewController.swift"; sourceTree = "<group>"; };
 		4A4F77482252B1320046C393 /* LunarReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F774B2252B1320046C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4F774D2252B1320046C393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "View Controllers/ViewController.swift"; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			children = (
 				4A4F774D2252B1320046C393 /* ViewController.swift */,
 				4AFA7FFC225549A6006BA409 /* CameraViewController.swift */,
-				4A47BD7A2256E7AA008D4342 /* PhotoViewController.swift */,
+				4A47BD7A2256E7AA008D4342 /* NewPageViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -436,7 +436,7 @@
 				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
-				4A47BD7B2256E7AA008D4342 /* PhotoViewController.swift in Sources */,
+				4A47BD7B2256E7AA008D4342 /* NewPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

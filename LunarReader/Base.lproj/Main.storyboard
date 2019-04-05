@@ -142,17 +142,17 @@
                         <outlet property="cameraButton" destination="y6t-SY-qSR" id="eME-2B-1s7"/>
                         <outlet property="cameraButtonBottomConstraint" destination="1r3-Z0-DQO" id="4Ix-Eu-Igk"/>
                         <outlet property="cameraView" destination="FNR-rc-Ogg" id="bxP-5p-CnR"/>
-                        <segue destination="X89-y3-MvA" kind="presentation" identifier="PhotoViewControllerSegue" id="aXD-BX-Ozw"/>
+                        <segue destination="X89-y3-MvA" kind="presentation" identifier="NewPageViewControllerSegue" id="aXD-BX-Ozw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrU-Sa-BN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="-763.39285714285711"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--New Page View Controller-->
         <scene sceneID="4RE-h3-sBe">
             <objects>
-                <viewController id="xZM-ZX-77x" customClass="PhotoViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xZM-ZX-77x" customClass="NewPageViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OhC-Rw-8e4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

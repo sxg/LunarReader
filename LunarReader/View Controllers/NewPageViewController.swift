@@ -1,5 +1,5 @@
 //
-//  PhotoViewController.swift
+//  NewPageViewController.swift
 //  LunarReader
 //
 //  Created by Satyam Ghodasara on 4/4/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class NewPageViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     

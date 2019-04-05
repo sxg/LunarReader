@@ -63,7 +63,7 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
             }, completionHandler: { (success, error) in
                 guard error == nil else { print("Error saving photo: \(error!)"); return }
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "PhotoViewControllerSegue", sender: photo)
+                    self.performSegue(withIdentifier: "NewPageViewControllerSegue", sender: photo)
                 }
             })
         }
@@ -84,11 +84,11 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "PhotoViewControllerSegue":
-        // Prepare the PhotoViewController with the captured image
-        let photoViewController = (segue.destination as! UINavigationController).viewControllers.first as! PhotoViewController
+        case "NewPageViewControllerSegue":
+        // Prepare the NewPageViewController with the captured image
+        let newPageViewController = (segue.destination as! UINavigationController).viewControllers.first as! NewPageViewController
             let photo = sender as! AVCapturePhoto
-            photoViewController.image = UIImage(data: photo.fileDataRepresentation()!)
+            newPageViewController.image = UIImage(data: photo.fileDataRepresentation()!)
         default:
             break
         }
