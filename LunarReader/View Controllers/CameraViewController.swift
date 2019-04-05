@@ -73,7 +73,7 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     @IBAction func didTapCameraButton(sender: UIButton, forEvent event: UIEvent) {
         // Configure photo output settings
         let photoOutputSettings = AVCapturePhotoSettings()
-        photoOutputSettings.flashMode = .on
+        photoOutputSettings.flashMode = .auto
         
         // Capture the photo
         self.photoOutput.capturePhoto(with: photoOutputSettings, delegate: self)
