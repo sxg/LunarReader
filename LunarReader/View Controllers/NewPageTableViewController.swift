@@ -8,19 +8,33 @@
 
 import UIKit
 
-class NewPageTableViewController: UITableViewController {
+class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var wordBoxImageView: WordBoxImageView!
     @IBOutlet weak var collectionNameLabel: UILabel!
     @IBOutlet weak var pageNameLabel: UILabel!
     
     public var image: UIImage?
     
+    private var didBeginFindingWords: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.imageView.image = self.image
+        // Set the image and start finding the words
+        self.wordBoxImageView.image = self.image
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Do any additional setup after the view appears.
+        
+        guard self.didBeginFindingWords == false else { return }
+        
+        let wordBoxFinder = WordBoxFinder(image: self.image!, delegate: self)
+        self.didBeginFindingWords = true
+        try? wordBoxFinder.findWordBoxes() // TODO: Improve error handling
     }
     
     // MARK: - Button Actions
@@ -35,12 +49,18 @@ class NewPageTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Dynamically calculate the height for the image view's row
         if indexPath.section == 1 && indexPath.row == 0 {
-            let imageViewSize = self.imageView.bounds.size
+            let imageViewSize = self.wordBoxImageView.bounds.size
             let imageSize = self.image!.size
             return imageViewSize.width / imageSize.width * imageSize.height
         } else {
             return 44 // Default UITableViewCell height
         }
+    }
+    
+    // MARK: - WordBoxFinderDelegate
+    
+    func didFindWordBoxes(wordBoxFinder: WordBoxFinder, wordBoxes: [CGRect]) {
+        self.wordBoxImageView.drawLines(wordBoxes: wordBoxes)
     }
 
 }

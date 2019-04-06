@@ -12,11 +12,12 @@ import Vision
 
 class WordBoxFinder: NSObject {
     
-    weak var delegate: WordBoxFinderDelegate?
-    let requestHandler: VNImageRequestHandler
+    public weak var delegate: WordBoxFinderDelegate?
+    private let requestHandler: VNImageRequestHandler
     
     init(image: UIImage, delegate: WordBoxFinderDelegate) {
-        self.requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
+        let orientation: CGImagePropertyOrientation = .right
+        self.requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, orientation: orientation, options: [:])
         self.delegate = delegate
     }
     
