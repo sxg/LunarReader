@@ -10,51 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.10000000000000001" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-9v-dMh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="IwI-71-sh5" customClass="WordBoxImageView" customModule="LunarReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="IwI-71-sh5" firstAttribute="top" secondItem="KEf-9v-dMh" secondAttribute="top" id="BkE-4Z-BD8"/>
-                                    <constraint firstItem="IwI-71-sh5" firstAttribute="centerY" secondItem="KEf-9v-dMh" secondAttribute="centerY" id="PPC-tc-mpE"/>
-                                    <constraint firstAttribute="trailing" secondItem="IwI-71-sh5" secondAttribute="trailing" id="Tim-aJ-eDC"/>
-                                    <constraint firstItem="IwI-71-sh5" firstAttribute="leading" secondItem="KEf-9v-dMh" secondAttribute="leading" id="X5u-bi-Bea"/>
-                                    <constraint firstAttribute="bottom" secondItem="IwI-71-sh5" secondAttribute="bottom" constant="4.5474735088646412e-13" id="cW2-tQ-p8U"/>
-                                    <constraint firstItem="IwI-71-sh5" firstAttribute="centerX" secondItem="KEf-9v-dMh" secondAttribute="centerX" id="on9-Ji-xb9"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2xp-Ih-gTw"/>
-                                </connections>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="KEf-9v-dMh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="20a-EL-4wp"/>
-                            <constraint firstAttribute="bottom" secondItem="KEf-9v-dMh" secondAttribute="bottom" id="PE0-ED-Ipy"/>
-                            <constraint firstItem="KEf-9v-dMh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ebp-gj-xnf"/>
-                            <constraint firstAttribute="trailing" secondItem="KEf-9v-dMh" secondAttribute="trailing" id="kS6-uz-Qcu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <outlet property="wordBoxImageView" destination="IwI-71-sh5" id="NLy-Ts-sTO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
-        </scene>
         <!--Pulley View Controller-->
         <scene sceneID="dwx-6h-zrj">
             <objects>
@@ -351,11 +306,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Van-mA-uFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="-763.39285714285711"/>
+            <point key="canvasLocation" x="1786" y="-763"/>
         </scene>
     </scenes>
     <resources>
         <image name="CameraButton" width="88" height="88"/>
-        <image name="SampleText" width="1885.5" height="2473"/>
     </resources>
 </document>

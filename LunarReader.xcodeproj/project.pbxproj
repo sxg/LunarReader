@@ -10,7 +10,6 @@
 		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
 		4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */; };
 		4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774B2252B1320046C393 /* AppDelegate.swift */; };
-		4A4F774E2252B1320046C393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774D2252B1320046C393 /* ViewController.swift */; };
 		4A4F77512252B1320046C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F774F2252B1320046C393 /* Main.storyboard */; };
 		4A4F77532252B1330046C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F77522252B1330046C393 /* Assets.xcassets */; };
 		4A4F77562252B1330046C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F77542252B1330046C393 /* LaunchScreen.storyboard */; };
@@ -50,7 +49,6 @@
 		4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPageTableViewController.swift; path = "View Controllers/NewPageTableViewController.swift"; sourceTree = "<group>"; };
 		4A4F77482252B1320046C393 /* LunarReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F774B2252B1320046C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A4F774D2252B1320046C393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "View Controllers/ViewController.swift"; sourceTree = "<group>"; };
 		4A4F77502252B1320046C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A4F77522252B1330046C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A4F77552252B1330046C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		4A8E488E2253B8E8009A373A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A4F774D2252B1320046C393 /* ViewController.swift */,
 				4AFA7FFC225549A6006BA409 /* CameraViewController.swift */,
 				4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */,
 				4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */,
@@ -456,7 +453,6 @@
 				4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */,
 				4ADA98D42257D73300683BFC /* RenamePageTableViewController.swift in Sources */,
 				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
-				4A4F774E2252B1320046C393 /* ViewController.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */,
