@@ -242,6 +242,9 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="iGa-xb-urt" id="DQM-mQ-jOK"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -269,6 +272,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionNameField" destination="1QB-jx-7J7" id="nuT-CE-c7p"/>
+                        <outlet property="doneButton" destination="cx6-S6-UCL" id="wFm-bM-xju"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Oc-Dk-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
