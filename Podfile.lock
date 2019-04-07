@@ -1,16 +1,20 @@
 PODS:
+  - Disk (0.6.2)
   - Pulley (2.6.3)
 
 DEPENDENCIES:
+  - Disk (~> 0.6.2)
   - Pulley
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Disk
     - Pulley
 
 SPEC CHECKSUMS:
+  Disk: d39d76f5369fe369f3129cf4d624a7df572e9811
   Pulley: af7d2347deadc38ef78406579995568f2d6ee158
 
-PODFILE CHECKSUM: 452bfee58ecda6750a03acde69709d0d8497917c
+PODFILE CHECKSUM: d7fad4deb83de58de619b9f2367f37e45fec6a95
 
 COCOAPODS: 1.6.1
