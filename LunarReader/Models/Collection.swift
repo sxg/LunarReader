@@ -11,9 +11,9 @@ import Foundation
 struct Collection: Codable {
     
     let name: String
-    let pages: [Page]?
+    let pages: [Page]
     
-    init(name: String, pages: [Page]? = nil) {
+    init(name: String, pages: [Page]) {
         self.name =  name
         self.pages = pages
     }
