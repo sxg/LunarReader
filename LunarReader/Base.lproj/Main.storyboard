@@ -207,7 +207,11 @@
                                 <action selector="didTapCancelButton:" destination="Ylm-kr-Grd" id="k50-7q-xcW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RZK-8e-I2Q"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RZK-8e-I2Q">
+                            <connections>
+                                <action selector="didTapSaveButton:" destination="Ylm-kr-Grd" id="2fz-8Z-A9W"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionNameLabel" destination="Z1J-rE-HEm" id="odh-Mj-C14"/>

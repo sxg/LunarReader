@@ -44,6 +44,18 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func didTapSaveButton(_ sender: UIBarButtonItem) {
+        // Save the new page and dismiss this modal view controller
+        let page = Page(name: self.pageNameLabel.text!, image: self.wordBoxImageView.image!, wordBoxes: self.wordBoxImageView.wordBoxes!)
+        let collection = Collection(name: self.collectionNameLabel.text!, pages: [page])
+        do {
+            try DataManager.save(collection: collection)
+            self.dismiss(animated: true, completion: nil)
+        } catch {
+            print("Failed to save collection.")
+        }
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
