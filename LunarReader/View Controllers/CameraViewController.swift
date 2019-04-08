@@ -53,20 +53,7 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard error == nil else { print("Error capturing photo: \(error!)"); return }
-        
-        PHPhotoLibrary.requestAuthorization { status in
-            guard status == .authorized else { return }
-            
-            PHPhotoLibrary.shared().performChanges({
-                let photoCreationRequest = PHAssetCreationRequest.forAsset()
-                photoCreationRequest.addResource(with: .photo, data: photo.fileDataRepresentation()!, options: nil)
-            }, completionHandler: { (success, error) in
-                guard error == nil else { print("Error saving photo: \(error!)"); return }
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "NewPageViewControllerSegue", sender: photo)
-                }
-            })
-        }
+        self.performSegue(withIdentifier: "NewPageViewControllerSegue", sender: photo)
     }
     
     // MARK: - Button Actions
