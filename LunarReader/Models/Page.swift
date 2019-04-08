@@ -29,7 +29,7 @@ class Page: Codable {
     
     // MARK: - Codable
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decode(String.self, forKey: CodingKeys.name)
         self.wordBoxes = try container.decode([CGRect].self, forKey: CodingKeys.wordBoxes)
