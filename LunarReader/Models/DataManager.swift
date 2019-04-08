@@ -19,7 +19,7 @@ class DataManager {
     private static let diskDirectory: Disk.Directory = .documents
     
     private init() {
-        DataManager.shared.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
+        self.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
             try Disk.retrieve(filePath, from: DataManager.diskDirectory, as: Collection.self)
         }
     }
