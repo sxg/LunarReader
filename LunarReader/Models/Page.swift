@@ -39,6 +39,8 @@ struct Page: Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.name, forKey: CodingKeys.name)
+        try container.encode(self.wordBoxes, forKey: CodingKeys.wordBoxes)
         let data = self.image.pngData()
         try container.encodeIfPresent(data, forKey: CodingKeys.image)
     }
