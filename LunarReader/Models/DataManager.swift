@@ -19,9 +19,7 @@ class DataManager {
     private static let diskDirectory: Disk.Directory = .documents
     
     private init() {
-        self.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
-            try Disk.retrieve(filePath, from: DataManager.diskDirectory, as: Collection.self)
-        }
+        self.loadCollections()
     }
     
     func save(_ collection: Collection) throws {
@@ -40,6 +38,12 @@ class DataManager {
         guard duplicateCollections.count == 0 else { throw DataManagerError.duplicateCollectionError(collection) }
         
         self.collections.append(collection)
+    }
+    
+    func loadCollections() {
+        self.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
+            try Disk.retrieve(filePath, from: DataManager.diskDirectory, as: Collection.self)
+        }
     }
     
 }
