@@ -15,7 +15,7 @@ class DataManager {
     private static let diskDirectory: Disk.Directory = .documents
     
     class func save(collection: Collection) throws {
-        let fileName = (collection.name as NSString).appendingPathExtension("json")!
+        let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
         try Disk.save(collection, to: self.diskDirectory, as: fileName)
     }
     
