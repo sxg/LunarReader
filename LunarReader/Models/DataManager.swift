@@ -16,10 +16,6 @@ class DataManager {
     
     class func save(collection: Collection) throws {
         let fileName = (collection.name as NSString).appendingPathExtension("json")!
-        let fileURL = self.dataDirectoryURL.appendingPathComponent(fileName)
-        // Throw an error if the file already exists
-        guard !Disk.exists(fileURL.path, in: self.diskDirectory) else { throw DataManagerError.fileAlreadyExists(fileURL: fileURL) }
-        
         try Disk.save(collection, to: self.diskDirectory, as: fileName)
     }
     
@@ -29,8 +25,4 @@ class DataManager {
         }
     }
     
-}
-
-enum DataManagerError: Error {
-    case fileAlreadyExists(fileURL: URL)
 }
