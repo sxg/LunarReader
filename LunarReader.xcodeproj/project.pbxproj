@@ -21,6 +21,7 @@
 		4ADA98D82259418200683BFC /* ChooseCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */; };
 		4ADA98DA225A3D8A00683BFC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D9225A3D8A00683BFC /* Collection.swift */; };
 		4ADA98DC225A3DDF00683BFC /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DB225A3DDF00683BFC /* Page.swift */; };
+		4ADA98DE225A468000683BFC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DD225A468000683BFC /* DataManager.swift */; };
 		4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA7FFC225549A6006BA409 /* CameraViewController.swift */; };
 		620CB6BB9397DBADA275486E /* Pods_LunarReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6CD73E3FE372687FE8DC74 /* Pods_LunarReaderUITests.framework */; };
 		8B50141ED83ACDAFEA60BC41 /* Pods_LunarReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE7EA485EE7EED5A3CEE560 /* Pods_LunarReader.framework */; };
@@ -68,6 +69,7 @@
 		4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCollectionTableViewController.swift; path = "View Controllers/ChooseCollectionTableViewController.swift"; sourceTree = "<group>"; };
 		4ADA98D9225A3D8A00683BFC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = Models/Collection.swift; sourceTree = "<group>"; };
 		4ADA98DB225A3DDF00683BFC /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Page.swift; path = Models/Page.swift; sourceTree = "<group>"; };
+		4ADA98DD225A468000683BFC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Models/DataManager.swift; sourceTree = "<group>"; };
 		4AFA7FFC225549A6006BA409 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "View Controllers/CameraViewController.swift"; sourceTree = "<group>"; };
 		51EF382678D93F14C0CF76FD /* Pods-LunarReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderTests/Pods-LunarReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59A8CFCFB3725B2220C140D9 /* Pods-LunarReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderUITests/Pods-LunarReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4A8E48892253A8FC009A373A /* WordBoxFinder.swift */,
+				4ADA98DD225A468000683BFC /* DataManager.swift */,
 				4ADA98D9225A3D8A00683BFC /* Collection.swift */,
 				4ADA98DB225A3DDF00683BFC /* Page.swift */,
 			);
@@ -468,6 +471,7 @@
 				4ADA98D42257D73300683BFC /* RenamePageTableViewController.swift in Sources */,
 				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
+				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */,
 			);
