@@ -12,7 +12,11 @@ import AVFoundation
 
 class WordBoxImageView: UIImageView {
     
+    var wordBoxes: [CGRect]?
+    
     func drawLines(wordBoxes: [CGRect]) {
+        self.wordBoxes = wordBoxes
+        
         // Calculate image frame and offset within image view
         let imageFrame = AVMakeRect(aspectRatio: self.image!.size, insideRect: self.bounds)
         let yOffset = 0.5 * (self.frame.size.height - imageFrame.size.height)
