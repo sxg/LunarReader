@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Page: Codable {
+class Page: Codable {
     
     let name: String
     let image: UIImage

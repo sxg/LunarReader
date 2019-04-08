@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Collection: Codable {
+class Collection: Codable {
     
     let name: String
     let pages: [Page]
