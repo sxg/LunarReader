@@ -11,18 +11,39 @@ import Disk
 
 class DataManager {
     
+    // Singleton instance
+    public static let shared: DataManager = DataManager()
+    public var collections: [Collection] = []
+    
     private static let dataDirectoryURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private static let diskDirectory: Disk.Directory = .documents
     
-    class func save(collection: Collection) throws {
-        let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
-        try Disk.save(collection, to: self.diskDirectory, as: fileName)
-    }
-    
-    class func loadCollections() throws -> [Collection] {
-        return try FileManager.default.contentsOfDirectory(atPath: self.dataDirectoryURL.path).map { filePath in
-            try Disk.retrieve(filePath, from: self.diskDirectory, as: Collection.self)
+    private init() {
+        DataManager.shared.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
+            try Disk.retrieve(filePath, from: DataManager.diskDirectory, as: Collection.self)
         }
     }
     
+    func save(_ collection: Collection) throws {
+        let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
+        try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
+    }
+    
+    func saveAll() throws {
+        try self.collections.forEach { collection in
+            try self.save(collection)
+        }
+    }
+    
+    func add(collection: Collection) throws {
+        let duplicateCollections = self.collections.filter { $0.uuid == collection.uuid }
+        guard duplicateCollections.count == 0 else { throw DataManagerError.duplicateCollectionError(collection) }
+        
+        self.collections.append(collection)
+    }
+    
+}
+
+enum DataManagerError: Error {
+    case duplicateCollectionError(Collection)
 }

@@ -49,7 +49,7 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
         let page = Page(name: self.pageNameLabel.text!, image: self.wordBoxImageView.image!, wordBoxes: self.wordBoxImageView.wordBoxes!)
         let collection = Collection(name: self.collectionNameLabel.text!, pages: [page])
         do {
-            try DataManager.save(collection: collection)
+            try DataManager.shared.save(collection)
             self.dismiss(animated: true, completion: nil)
         } catch {
             print("Failed to save collection.")
