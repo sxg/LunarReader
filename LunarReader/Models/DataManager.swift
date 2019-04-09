@@ -18,10 +18,6 @@ class DataManager {
     private static let dataDirectoryURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private static let diskDirectory: Disk.Directory = .documents
     
-    private init() {
-        self.loadCollections()
-    }
-    
     func save(_ collection: Collection) throws {
         let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
         try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
