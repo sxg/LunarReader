@@ -227,41 +227,30 @@
         <scene sceneID="U3u-gh-dDV">
             <objects>
                 <tableViewController id="iGa-xb-urt" customClass="ChooseCollectionTableViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2V9-3l-dSN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2V9-3l-dSN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="New Collection" id="sDX-Ki-FWD">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7vt-xn-E5h">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7vt-xn-E5h" id="eRk-IQ-ctM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CollectionTableViewCell" textLabel="2xr-ea-3Mf" style="IBUITableViewCellStyleDefault" id="7vt-xn-E5h">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7vt-xn-E5h" id="eRk-IQ-ctM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2xr-ea-3Mf">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="My collection" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-jx-7J7">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="iGa-xb-urt" id="DQM-mQ-jOK"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1QB-jx-7J7" firstAttribute="top" secondItem="eRk-IQ-ctM" secondAttribute="top" id="Kcg-Xg-hk8"/>
-                                                <constraint firstItem="1QB-jx-7J7" firstAttribute="trailing" secondItem="eRk-IQ-ctM" secondAttribute="trailingMargin" id="Nm6-MY-tl5"/>
-                                                <constraint firstItem="1QB-jx-7J7" firstAttribute="centerY" secondItem="eRk-IQ-ctM" secondAttribute="centerY" id="diO-8n-3Jd"/>
-                                                <constraint firstItem="1QB-jx-7J7" firstAttribute="leading" secondItem="eRk-IQ-ctM" secondAttribute="leadingMargin" id="dzh-eF-TKr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="iGa-xb-urt" id="8ZP-dU-EPD"/>
                             <outlet property="delegate" destination="iGa-xb-urt" id="aaP-Dj-phz"/>
@@ -275,7 +264,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionNameField" destination="1QB-jx-7J7" id="nuT-CE-c7p"/>
                         <outlet property="doneButton" destination="cx6-S6-UCL" id="wFm-bM-xju"/>
                     </connections>
                 </tableViewController>
