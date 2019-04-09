@@ -15,6 +15,7 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     @IBOutlet weak var pageNameLabel: UILabel!
     
     public var image: UIImage?
+    public var collection: Collection?
     
     private var didBeginFindingWords: Bool = false
     
@@ -24,6 +25,18 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
         
         // Set the image and start finding the words
         self.wordBoxImageView.image = self.image
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Do any additional setup before the view appears
+        
+        // Update the collection name label
+        if let name = self.collection?.name {
+            self.collectionNameLabel.text = name
+        } else {
+            self.collectionNameLabel.text = "My collection"
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
