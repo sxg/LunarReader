@@ -26,6 +26,11 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // Load data
+        DispatchQueue.main.async {
+            DataManager.shared.loadCollections()
+        }
+        
         // Configure camera
         self.cameraSession.beginConfiguration()
         let camera = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back)
