@@ -58,11 +58,18 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     }
 
     @IBAction func didTapSaveButton(_ sender: UIBarButtonItem) {
-        // Save the new page and dismiss this modal view controller
+        // Create the new page and add it to the collection
         let page = Page(name: self.pageNameLabel.text!, image: self.wordBoxImageView.image!, wordBoxes: self.wordBoxImageView.wordBoxes!)
-        let collection = Collection(name: self.collectionNameLabel.text!, pages: [page])
+        self.collection!.pages.append(page)
+        
+        // If the collection doesn't already exist, then add it
+        if !DataManager.shared.collections.contains(where: {$0.uuid == self.collection!.uuid}) {
+            try! DataManager.shared.add(collection: self.collection!)
+        }
+        
+        // Save the collection with the new page and dismiss this view controller
         do {
-            try DataManager.shared.save(collection)
+            try DataManager.shared.save(self.collection!)
             self.dismiss(animated: true, completion: nil)
         } catch {
             print("Failed to save collection.")
