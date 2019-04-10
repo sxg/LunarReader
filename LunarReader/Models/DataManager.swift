@@ -30,10 +30,12 @@ class DataManager {
     }
     
     func add(collection: Collection) throws {
-        let duplicateCollections = self.collections.filter { $0.uuid == collection.uuid }
-        guard duplicateCollections.count == 0 else { throw DataManagerError.duplicateCollectionError(collection) }
-        
+        guard !self.contains(collection: collection) else { throw DataManagerError.duplicateCollectionError(collection) }
         self.collections.append(collection)
+    }
+    
+    func contains(collection: Collection) -> Bool {
+        return self.collections.contains(where: {$0.uuid == collection.uuid})
     }
     
     func loadCollections() {
