@@ -19,4 +19,8 @@ class Collection: Codable {
         self.pages = pages
     }
     
+    static func == (left: Collection, right: Collection) -> Bool {
+        return left.uuid == right.uuid
+    }
+    
 }
