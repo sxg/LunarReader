@@ -41,9 +41,11 @@ class DataManager {
     }
     
     func loadCollections() {
-        self.collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
+        // Load collections from disk and sort by name
+        let collections = try! FileManager.default.contentsOfDirectory(atPath: DataManager.dataDirectoryURL.path).map { filePath in
             try Disk.retrieve(filePath, from: DataManager.diskDirectory, as: Collection.self)
         }
+        self.collections = collections.sorted { $0.name < $1.name }
     }
     
 }
