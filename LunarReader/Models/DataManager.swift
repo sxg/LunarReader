@@ -34,6 +34,11 @@ class DataManager {
         self.collections.append(collection)
     }
     
+    func add(page: Page, to collection: Collection) throws {
+        guard self.contains(collection: collection) else { throw DataManagerError.collectionDoesNotExistError(collection) }
+        collection.pages.append(page)
+    }
+    
     func contains(collection: Collection) -> Bool {
         return self.collections.contains(where: {$0.uuid == collection.uuid})
     }
@@ -48,4 +53,5 @@ class DataManager {
 
 enum DataManagerError: Error {
     case duplicateCollectionError(Collection)
+    case collectionDoesNotExistError(Collection)
 }
