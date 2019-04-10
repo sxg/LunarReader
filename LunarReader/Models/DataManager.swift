@@ -18,14 +18,20 @@ class DataManager {
     private static let dataDirectoryURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private static let diskDirectory: Disk.Directory = .documents
     
-    func save(_ collection: Collection) throws {
+    func save(collection: Collection) {
         let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
-        try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
+        DispatchQueue.main.async {
+            do {
+                try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
+            } catch {
+                print("Error saving collection: \(error)")
+            }
+        }
     }
     
-    func saveAll() throws {
-        try self.collections.forEach { collection in
-            try self.save(collection)
+    func saveAll() {
+        self.collections.forEach { collection in
+            self.save(collection: collection)
         }
     }
     
