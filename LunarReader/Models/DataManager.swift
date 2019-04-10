@@ -29,12 +29,6 @@ class DataManager {
         }
     }
     
-    func saveAll() {
-        self.collections.forEach { collection in
-            self.save(collection: collection)
-        }
-    }
-    
     func add(collection: Collection) throws {
         guard !self.collections.contains(where: {$0.uuid == collection.uuid}) else { throw DataManagerError.duplicateCollectionError(collection) }
         self.collections.append(collection)
