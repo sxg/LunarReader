@@ -30,17 +30,8 @@ class DataManager {
     }
     
     func add(collection: Collection) throws {
-        guard !self.contains(collection: collection) else { throw DataManagerError.duplicateCollectionError(collection) }
+        guard !self.collections.contains(where: {$0.uuid == collection.uuid}) else { throw DataManagerError.duplicateCollectionError(collection) }
         self.collections.append(collection)
-    }
-    
-    func add(page: Page, to collection: Collection) throws {
-        guard self.contains(collection: collection) else { throw DataManagerError.collectionDoesNotExistError(collection) }
-        collection.pages.append(page)
-    }
-    
-    func contains(collection: Collection) -> Bool {
-        return self.collections.contains(where: {$0.uuid == collection.uuid})
     }
     
     func loadCollections() {
