@@ -30,7 +30,7 @@ class DataManager {
     }
     
     func add(collection: Collection) throws {
-        guard !self.collections.contains(where: {$0.uuid == collection.uuid}) else { throw DataManagerError.duplicateCollectionError(collection) }
+        guard !self.collections.contains(where: {$0.uuid == collection.uuid}) else { throw DataManagerError.duplicateCollection(collection) }
         self.collections.append(collection)
     }
     
@@ -45,6 +45,5 @@ class DataManager {
 }
 
 enum DataManagerError: Error {
-    case duplicateCollectionError(Collection)
-    case collectionDoesNotExistError(Collection)
+    case duplicateCollection(Collection)
 }
