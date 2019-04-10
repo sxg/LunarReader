@@ -20,7 +20,7 @@ class DataManager {
     
     func save(collection: Collection) {
         let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .background).async {
             do {
                 try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
             } catch {

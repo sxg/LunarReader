@@ -27,7 +27,7 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
         // Do any additional setup after loading the view.
         
         // Load data
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .background).async {
             DataManager.shared.loadCollections()
         }
         
