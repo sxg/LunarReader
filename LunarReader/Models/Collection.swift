@@ -10,9 +10,9 @@ import Foundation
 
 class Collection: Codable {
     
-    let name: String
-    let pages: [Page]
     let uuid: UUID = UUID()
+    let name: String
+    var pages: [Page]
     
     init(name: String, pages: [Page]) {
         self.name =  name
