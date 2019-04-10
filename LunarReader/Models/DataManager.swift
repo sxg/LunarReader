@@ -18,13 +18,18 @@ class DataManager {
     private static let dataDirectoryURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private static let diskDirectory: Disk.Directory = .documents
     
-    func save(collection: Collection) {
+    func save(collection: Collection, completionHandler: ((Result<Void, Error>) -> Void)? = nil) {
         let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
         DispatchQueue.global(qos: .background).async {
             do {
                 try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
-            } catch {
-                print("Error saving collection: \(error)")
+                if let completionHandler = completionHandler {
+                    completionHandler(Result.success(()))
+                }
+            } catch let error {
+                if let completionHandler = completionHandler {
+                    completionHandler(Result.failure(error))
+                }
             }
         }
     }

@@ -68,7 +68,15 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
         }
         
         // Save the collection with the new page and dismiss this view controller
-        DataManager.shared.save(collection: self.collection!)
+        DataManager.shared.save(collection: self.collection!) { result in
+            switch result {
+            case .success(()):
+                return
+            case .failure(let error):
+                print("Failed to save collection: \(self.collection!)")
+                print("Error: \(error)")
+            }
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
