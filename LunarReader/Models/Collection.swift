@@ -11,6 +11,7 @@ import Foundation
 class Collection: Codable {
     
     let uuid: UUID = UUID()
+    let createdAt: Date = Date()
     let name: String
     var pages: [Page]
     
