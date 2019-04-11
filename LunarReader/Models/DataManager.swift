@@ -22,11 +22,14 @@ class DataManager {
         let fileName = (collection.uuid.uuidString as NSString).appendingPathExtension("json")!
         DispatchQueue.global(qos: .background).async {
             do {
+                NotificationCenter.default.post(name: Notification.Name.willSaveCollection, object: collection)
                 try Disk.save(collection, to: DataManager.diskDirectory, as: fileName)
+                NotificationCenter.default.post(name: Notification.Name.didSaveCollection, object: collection)
                 if let completionHandler = completionHandler {
                     completionHandler(Result.success(()))
                 }
             } catch let error {
+                NotificationCenter.default.post(name: Notification.Name.didFailToSaveCollection, object: collection)
                 if let completionHandler = completionHandler {
                     completionHandler(Result.failure(error))
                 }
