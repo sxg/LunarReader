@@ -50,7 +50,7 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
         cell.pageLabel.text = DataManager.shared.collections[indexPath.row].name
-        cell.thumbnailView.image = DataManager.shared.collections[indexPath.row].pages[0].image
+        cell.thumbnailView.image = UIImage(cgImage: DataManager.shared.collections[indexPath.row].pages[0].image.cgImage!, scale: 1, orientation: .right)
         return cell
     }
 
