@@ -137,6 +137,7 @@
                             <constraint firstItem="Duh-rQ-CYf" firstAttribute="trailing" secondItem="wve-jK-NkO" secondAttribute="trailing" id="jRE-nR-ZZk"/>
                             <constraint firstItem="Duh-rQ-CYf" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="top" priority="999" constant="21" id="sUm-4q-pg1"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dg4-Ck-K86"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rom-Oe-nef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,5 +491,4 @@
     <resources>
         <image name="CameraButton" width="88" height="88"/>
     </resources>
-    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
