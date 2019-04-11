@@ -29,6 +29,11 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         
+        // Reload the table when a new collection is saved
+        NotificationCenter.default.addObserver(forName: .didSaveCollection, object: nil, queue: OperationQueue.main) { notification in
+            self.tableView.reloadData()
+        }
+        
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
     }
