@@ -24,6 +24,9 @@
 		4ADA98DE225A468000683BFC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98DD225A468000683BFC /* DataManager.swift */; };
 		4ADA98E9225BB48D00683BFC /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98E7225BB48D00683BFC /* TextFieldTableViewCell.swift */; };
 		4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADA98E8225BB48D00683BFC /* TextFieldTableViewCell.xib */; };
+		4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D7D4225E6C0200DB42D3 /* DrawerViewController.swift */; };
+		4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9D7D6225E6F6200DB42D3 /* DrawerTableViewCell.swift */; };
+		4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */; };
 		4AFA7FFD225549A6006BA409 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA7FFC225549A6006BA409 /* CameraViewController.swift */; };
 		620CB6BB9397DBADA275486E /* Pods_LunarReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6CD73E3FE372687FE8DC74 /* Pods_LunarReaderUITests.framework */; };
 		8B50141ED83ACDAFEA60BC41 /* Pods_LunarReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE7EA485EE7EED5A3CEE560 /* Pods_LunarReader.framework */; };
@@ -74,6 +77,9 @@
 		4ADA98DD225A468000683BFC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Models/DataManager.swift; sourceTree = "<group>"; };
 		4ADA98E7225BB48D00683BFC /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldTableViewCell.swift; path = Views/TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		4ADA98E8225BB48D00683BFC /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextFieldTableViewCell.xib; path = Views/TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		4AF9D7D4225E6C0200DB42D3 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerViewController.swift; path = "View Controllers/DrawerViewController.swift"; sourceTree = "<group>"; };
+		4AF9D7D6225E6F6200DB42D3 /* DrawerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerTableViewCell.swift; path = Views/DrawerTableViewCell.swift; sourceTree = "<group>"; };
+		4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DrawerTableViewCell.xib; path = Views/DrawerTableViewCell.xib; sourceTree = "<group>"; };
 		4AFA7FFC225549A6006BA409 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "View Controllers/CameraViewController.swift"; sourceTree = "<group>"; };
 		51EF382678D93F14C0CF76FD /* Pods-LunarReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderTests/Pods-LunarReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59A8CFCFB3725B2220C140D9 /* Pods-LunarReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-LunarReaderUITests/Pods-LunarReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,8 @@
 				4A64E130225642FC00CE7A89 /* CameraView.swift */,
 				4ADA98E7225BB48D00683BFC /* TextFieldTableViewCell.swift */,
 				4ADA98E8225BB48D00683BFC /* TextFieldTableViewCell.xib */,
+				4AF9D7D6225E6F6200DB42D3 /* DrawerTableViewCell.swift */,
+				4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				4AFA7FFC225549A6006BA409 /* CameraViewController.swift */,
+				4AF9D7D4225E6C0200DB42D3 /* DrawerViewController.swift */,
 				4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */,
 				4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */,
 				4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */,
@@ -333,6 +342,7 @@
 			files = (
 				4A4F77562252B1330046C393 /* LaunchScreen.storyboard in Resources */,
 				4A4F77532252B1330046C393 /* Assets.xcassets in Resources */,
+				4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
 				4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */,
 			);
@@ -480,6 +490,8 @@
 				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
+				4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */,
+				4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */,
 			);
