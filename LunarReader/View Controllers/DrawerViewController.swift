@@ -18,6 +18,7 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        // Make the background of the navigation title clear
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
         // Load data
