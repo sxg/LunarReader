@@ -468,6 +468,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="XwQ-Lb-z9G" id="hzG-oJ-oCh"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="itP-G6-PHA"/>
+                        <segue destination="XiY-E8-0yF" kind="show" identifier="DrawerDetailTableViewControllerSegue" id="wyV-ej-kPW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fou-ey-XP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -482,6 +483,67 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2628.985507246377" y="-389.39732142857139"/>
+        </scene>
+        <!--Drawer Detail View Controller-->
+        <scene sceneID="ete-nq-29M">
+            <objects>
+                <viewController id="XiY-E8-0yF" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Tt-vM-oAq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y05-28-zcJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="97"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XiY-E8-0yF" id="rJY-eS-q4X"/>
+                                    <outlet property="delegate" destination="XiY-E8-0yF" id="CE3-qe-dRm"/>
+                                </connections>
+                            </tableView>
+                            <searchBar opaque="NO" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="QxJ-ca-CE5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Jpd-QC-Ien"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XiY-E8-0yF" id="u0r-UZ-hp5"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QxJ-ca-CE5" firstAttribute="leading" secondItem="3Tt-vM-oAq" secondAttribute="leading" id="4jT-T3-7PL"/>
+                            <constraint firstItem="y05-28-zcJ" firstAttribute="top" secondItem="QxJ-ca-CE5" secondAttribute="bottom" id="edu-XP-loz"/>
+                            <constraint firstAttribute="trailing" secondItem="y05-28-zcJ" secondAttribute="trailing" id="gZS-3M-ydq"/>
+                            <constraint firstAttribute="trailing" secondItem="QxJ-ca-CE5" secondAttribute="trailing" id="jtM-Hd-jcE"/>
+                            <constraint firstItem="QxJ-ca-CE5" firstAttribute="top" secondItem="rys-fi-t3E" secondAttribute="top" id="tCi-7k-6gR"/>
+                            <constraint firstItem="y05-28-zcJ" firstAttribute="leading" secondItem="3Tt-vM-oAq" secondAttribute="leading" id="u7h-1Y-N0E"/>
+                            <constraint firstAttribute="bottom" secondItem="y05-28-zcJ" secondAttribute="bottom" id="w0e-F6-DYJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rys-fi-t3E"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="sif-rK-h15" id="BER-VY-9rP"/>
+                        <outlet property="tableView" destination="y05-28-zcJ" id="UiS-DG-JHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnC-Sw-Ock" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="sif-rK-h15">
+                    <connections>
+                        <outlet property="delegate" destination="XiY-E8-0yF" id="mHB-Kh-SUM"/>
+                        <outlet property="searchBar" destination="QxJ-ca-CE5" id="aN7-jy-Ekd"/>
+                        <outlet property="searchContentsController" destination="XiY-E8-0yF" id="48A-L6-lau"/>
+                        <outlet property="searchResultsDataSource" destination="XiY-E8-0yF" id="Nnw-le-0bA"/>
+                        <outlet property="searchResultsDelegate" destination="XiY-E8-0yF" id="Og9-BS-whz"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="3446" y="-390"/>
         </scene>
     </scenes>
     <resources>

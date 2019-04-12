@@ -10,7 +10,7 @@ import UIKit
 
 class DrawerTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var pageLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var thumbnailView: UIImageView!
     
     override func awakeFromNib() {

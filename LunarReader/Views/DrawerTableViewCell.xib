@@ -44,7 +44,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="pageLabel" destination="hyF-4e-GgO" id="uib-51-o8m"/>
+                <outlet property="label" destination="hyF-4e-GgO" id="uib-51-o8m"/>
                 <outlet property="thumbnailView" destination="xdQ-AA-IhX" id="3H2-ig-78r"/>
             </connections>
             <point key="canvasLocation" x="37.681159420289859" y="40.178571428571423"/>

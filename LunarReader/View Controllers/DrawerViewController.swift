@@ -55,7 +55,7 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
-        cell.pageLabel.text = DataManager.shared.collections[indexPath.row].name
+        cell.label.text = DataManager.shared.collections[indexPath.row].name
         cell.thumbnailView.image = UIImage(cgImage: DataManager.shared.collections[indexPath.row].pages[0].image.cgImage!, scale: 1, orientation: .right)
         return cell
     }
@@ -94,15 +94,20 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         return true
     }
     */
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let collection = DataManager.shared.collections[indexPath.row]
+        self.performSegue(withIdentifier: "DrawerDetailTableViewControllerSegue", sender: collection)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let drawerDetailViewController = segue.destination as! DrawerDetailViewController
+        let collection = sender as! Collection
+        drawerDetailViewController.collection = collection
     }
-    */
 
 }
