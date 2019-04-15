@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Pulley
 
-class DrawerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     @IBOutlet var tableView: UITableView!
     
@@ -19,6 +20,9 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Set the Pulley delegate
+        self.pulleyViewController?.delegate = self
         
         // Make the background of the navigation title clear
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -135,6 +139,14 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+    }
+    
+    // MARK: - PulleyDrawerViewControllerDelegate
+    
+    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
+        let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
+        let maxDistance: CGFloat = 44 // Distance over which to fade the table view
+        self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
 
     // MARK: - Navigation
