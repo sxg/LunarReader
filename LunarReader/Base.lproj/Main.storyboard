@@ -29,7 +29,6 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-G9-dpu">
                                 <rect key="frame" x="0.0" y="646" width="414" height="250"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="bPs-bd-vtu"/>
                                 </constraints>
@@ -128,7 +127,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3jk-aN-hUa" firstAttribute="centerX" secondItem="wve-jK-NkO" secondAttribute="centerX" id="CEV-ds-ag7"/>
                             <constraint firstItem="3jk-aN-hUa" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="top" constant="8" id="RCP-Cm-5uO"/>
@@ -396,20 +395,13 @@
         <!--Navigation Controller-->
         <scene sceneID="126-tz-LsE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gex-jJ-dPY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gex-jJ-dPY" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="8hY-j3-eaI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8hY-j3-eaI">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -420,67 +412,41 @@
             </objects>
             <point key="canvasLocation" x="1787" y="-387"/>
         </scene>
-        <!--Collections-->
+        <!--Drawer View Controller-->
         <scene sceneID="Nw9-Cd-yfg">
             <objects>
                 <viewController id="H4D-YD-FAT" customClass="DrawerViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="D6X-GS-Iwz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CJt-1q-u6j">
-                                <rect key="frame" x="0.0" y="44" width="414" height="97"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="H4D-YD-FAT" id="4Dj-zw-8d4"/>
                                     <outlet property="delegate" destination="H4D-YD-FAT" id="Viu-zu-vdW"/>
                                 </connections>
                             </tableView>
-                            <searchBar opaque="NO" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-UX-lfu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="m26-Lk-Vs9"/>
-                                </constraints>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="H4D-YD-FAT" id="mvX-bq-ICc"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CJt-1q-u6j" firstAttribute="trailing" secondItem="kb9-fP-dNc" secondAttribute="trailing" id="9iZ-ul-er2"/>
                             <constraint firstAttribute="bottom" secondItem="CJt-1q-u6j" secondAttribute="bottom" id="AcT-W0-et7"/>
                             <constraint firstItem="CJt-1q-u6j" firstAttribute="leading" secondItem="kb9-fP-dNc" secondAttribute="leading" id="Jwt-Dz-CqP"/>
-                            <constraint firstItem="bqS-UX-lfu" firstAttribute="leading" secondItem="D6X-GS-Iwz" secondAttribute="leading" id="NgG-eC-vlN"/>
-                            <constraint firstItem="CJt-1q-u6j" firstAttribute="top" secondItem="bqS-UX-lfu" secondAttribute="bottom" id="cwi-lt-GTl"/>
-                            <constraint firstItem="bqS-UX-lfu" firstAttribute="top" secondItem="kb9-fP-dNc" secondAttribute="top" id="jlW-Xi-kQO"/>
-                            <constraint firstAttribute="trailing" secondItem="bqS-UX-lfu" secondAttribute="trailing" id="jpZ-Kb-Zed"/>
+                            <constraint firstItem="CJt-1q-u6j" firstAttribute="top" secondItem="kb9-fP-dNc" secondAttribute="top" id="mMw-yR-h51"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kb9-fP-dNc"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Collections" largeTitleDisplayMode="always" id="NzH-3r-O4c"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NzH-3r-O4c"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="XwQ-Lb-z9G" id="hzG-oJ-oCh"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="itP-G6-PHA"/>
                         <segue destination="XiY-E8-0yF" kind="show" identifier="DrawerDetailTableViewControllerSegue" id="wyV-ej-kPW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fou-ey-XP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="XwQ-Lb-z9G">
-                    <connections>
-                        <outlet property="delegate" destination="H4D-YD-FAT" id="6QZ-LT-B1Q"/>
-                        <outlet property="searchBar" destination="bqS-UX-lfu" id="bNM-5n-5Tu"/>
-                        <outlet property="searchContentsController" destination="H4D-YD-FAT" id="eeE-Be-NTT"/>
-                        <outlet property="searchResultsDataSource" destination="H4D-YD-FAT" id="v4P-fq-kpD"/>
-                        <outlet property="searchResultsDelegate" destination="H4D-YD-FAT" id="78S-LX-Vw2"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2628.985507246377" y="-389.39732142857139"/>
         </scene>
@@ -489,11 +455,11 @@
             <objects>
                 <viewController id="XiY-E8-0yF" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Tt-vM-oAq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y05-28-zcJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="97"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="141"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -502,12 +468,12 @@
                                 </connections>
                             </tableView>
                             <searchBar opaque="NO" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="QxJ-ca-CE5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Jpd-QC-Ien"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -549,4 +515,5 @@
     <resources>
         <image name="CameraButton" width="88" height="88"/>
     </resources>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

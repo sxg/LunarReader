@@ -8,9 +8,11 @@
 
 import UIKit
 
-class DrawerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DrawerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     @IBOutlet var tableView: UITableView!
+    
+    private var filteredCollections: [Collection] = DataManager.shared.collections
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,18 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Make the background of the navigation title clear
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        // Setup the search controller
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchBar.barStyle = .blackTranslucent
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.definesPresentationContext = true
         
         // Load data
         DispatchQueue.global(qos: .background).async {
@@ -38,11 +52,6 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
-
     // MARK: - UITableViewDataSource
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,13 +59,23 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.shared.collections.count
+        if self.isSearching() {
+            return self.filteredCollections.count
+        } else {
+            return DataManager.shared.collections.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
-        cell.label.text = DataManager.shared.collections[indexPath.row].name
-        cell.thumbnailView.image = UIImage(cgImage: DataManager.shared.collections[indexPath.row].pages[0].image.cgImage!, scale: 1, orientation: .right)
+        let collection: Collection
+        if self.isSearching() {
+            collection = self.filteredCollections[indexPath.row]
+        } else {
+            collection = DataManager.shared.collections[indexPath.row]
+        }
+        cell.label.text = collection.name
+        cell.thumbnailView.image = UIImage(cgImage: collection.pages[0].image.cgImage!, scale: 1, orientation: .right)
         return cell
     }
 
@@ -101,6 +120,24 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         let collection = DataManager.shared.collections[indexPath.row]
         self.performSegue(withIdentifier: "DrawerDetailTableViewControllerSegue", sender: collection)
     }
+    
+    // MARK: - UISearchResultsUpdating
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!.lowercased()
+        self.filteredCollections = DataManager.shared.collections.filter { $0.name.lowercased().contains(searchText) }
+        self.tableView.reloadData()
+    }
+    
+    // MARK: - UISearchBarDelegate
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.pulleyViewController?.setDrawerPosition(position: .open, animated: true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+    }
 
     // MARK: - Navigation
 
@@ -108,6 +145,16 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
         let drawerDetailViewController = segue.destination as! DrawerDetailViewController
         let collection = sender as! Collection
         drawerDetailViewController.collection = collection
+    }
+    
+    // MARK: - Helpers
+    
+    private func isSearchBarEmpty() -> Bool {
+        return self.navigationItem.searchController!.searchBar.text?.isEmpty ?? true
+    }
+    
+    private func isSearching() -> Bool {
+        return self.navigationItem.searchController!.isActive && !self.isSearchBarEmpty()
     }
 
 }
