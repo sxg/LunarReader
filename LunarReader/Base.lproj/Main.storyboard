@@ -112,29 +112,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jk-aN-hUa" userLabel="Gripper View">
-                                <rect key="frame" x="189" y="8" width="36" height="5"/>
-                                <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="3F9-fF-BP8"/>
-                                    <constraint firstAttribute="height" constant="5" id="KbM-Cb-Bmx"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Duh-rQ-CYf">
                                 <rect key="frame" x="0.0" y="21" width="414" height="229"/>
                                 <connections>
                                     <segue destination="gex-jJ-dPY" kind="embed" id="smj-Gd-WOA"/>
                                 </connections>
                             </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pill" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-ek-tAf">
+                                <rect key="frame" x="189" y="8" width="36" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="58l-DV-GfI"/>
+                                    <constraint firstAttribute="width" constant="36" id="wks-Dp-31r"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3jk-aN-hUa" firstAttribute="centerX" secondItem="wve-jK-NkO" secondAttribute="centerX" id="CEV-ds-ag7"/>
-                            <constraint firstItem="3jk-aN-hUa" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="top" constant="8" id="RCP-Cm-5uO"/>
+                            <constraint firstItem="zgC-ek-tAf" firstAttribute="centerX" secondItem="wve-jK-NkO" secondAttribute="centerX" id="DEO-rs-ImX"/>
                             <constraint firstAttribute="bottom" secondItem="Duh-rQ-CYf" secondAttribute="bottom" id="YPP-KT-Gci"/>
                             <constraint firstItem="Duh-rQ-CYf" firstAttribute="leading" secondItem="wve-jK-NkO" secondAttribute="leading" id="fFo-Qq-7Sk"/>
                             <constraint firstItem="Duh-rQ-CYf" firstAttribute="trailing" secondItem="wve-jK-NkO" secondAttribute="trailing" id="jRE-nR-ZZk"/>
                             <constraint firstItem="Duh-rQ-CYf" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="top" priority="999" constant="21" id="sUm-4q-pg1"/>
+                            <constraint firstItem="zgC-ek-tAf" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="top" constant="8" id="xkW-PN-0gg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dg4-Ck-K86"/>
                     </view>
@@ -497,6 +496,7 @@
     </scenes>
     <resources>
         <image name="CameraButton" width="88" height="88"/>
+        <image name="Pill" width="36" height="5"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
