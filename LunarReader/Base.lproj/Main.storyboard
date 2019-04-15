@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="-763.39285714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Drawer Container View Controller-->
         <scene sceneID="WmW-24-dFK">
             <objects>
-                <viewController id="smL-mW-cj1" sceneMemberID="viewController">
+                <viewController id="smL-mW-cj1" customClass="DrawerContainerViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wve-jK-NkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
