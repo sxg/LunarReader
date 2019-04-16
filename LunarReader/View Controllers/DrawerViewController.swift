@@ -113,7 +113,12 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let collection = DataManager.shared.collections[indexPath.row]
+        let collection: Collection
+        if self.isSearching() {
+            collection = self.filteredCollections[indexPath.row]
+        } else {
+            collection = DataManager.shared.collections[indexPath.row]
+        }
         self.performSegue(withIdentifier: "DrawerDetailTableViewControllerSegue", sender: collection)
     }
     
