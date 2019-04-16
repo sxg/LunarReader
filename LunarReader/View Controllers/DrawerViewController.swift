@@ -108,6 +108,8 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         let collection: Collection
         if self.isSearching {
             collection = self.filteredCollections[indexPath.row]
+            self.searchBar.resignFirstResponder()
+            self.pulleyViewController!.setDrawerPosition(position: .open, animated: true)
         } else {
             collection = DataManager.shared.collections[indexPath.row]
         }
