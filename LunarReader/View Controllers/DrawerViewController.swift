@@ -111,7 +111,7 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         } else {
             collection = DataManager.shared.collections[indexPath.row]
         }
-        self.performSegue(withIdentifier: "DrawerDetailTableViewControllerSegue", sender: collection)
+        self.performSegue(withIdentifier: "DrawerDetailViewControllerSegue", sender: collection)
     }
     
     // MARK: - UISearchBarDelegate
