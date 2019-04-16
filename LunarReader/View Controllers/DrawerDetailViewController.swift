@@ -9,13 +9,15 @@
 import UIKit
 import Pulley
 
-class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
     
     var collection: Collection?
     
     private var filteredPages: [Page] = []
+    private var isSearching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +27,6 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         
         // Set the Pulley delegate
         self.pulleyViewController?.delegate = self
-        
-        // Setup the search controller
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.delegate = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
-        self.navigationItem.searchController = searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.definesPresentationContext = true
         
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
@@ -47,7 +39,7 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.isSearching() {
+        if self.isSearching {
             return self.filteredPages.count
         } else {
             return self.collection!.pages.count
@@ -57,7 +49,7 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
         let page: Page
-        if self.isSearching() {
+        if self.isSearching {
             page = self.filteredPages[indexPath.row]
         } else {
             page = self.collection!.pages[indexPath.row]
@@ -102,22 +94,25 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     }
     */
     
-    // MARK: - UISearchResultsUpdating
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text!.lowercased()
-        self.filteredPages = self.collection!.pages.filter { $0.name.lowercased().contains(searchText) }
-        self.tableView.reloadData()
-    }
-    
     // MARK: - UISearchBarDelegate
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.isSearching = true
         self.pulleyViewController?.setDrawerPosition(position: .open, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.isSearching = false
         self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty {
+            self.filteredPages = self.collection!.pages.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        } else {
+            self.filteredPages = self.collection!.pages
+        }
+        self.tableView.reloadData()
     }
     
     // MARK: - PulleyDrawerViewControllerDelegate
@@ -137,15 +132,5 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
      // Pass the selected object to the new view controller.
      }
      */
-    
-    // MARK: - Helpers
-    
-    private func isSearchBarEmpty() -> Bool {
-        return self.navigationItem.searchController!.searchBar.text?.isEmpty ?? true
-    }
-    
-    private func isSearching() -> Bool {
-        return self.navigationItem.searchController!.isActive && !self.isSearchBarEmpty()
-    }
 
 }

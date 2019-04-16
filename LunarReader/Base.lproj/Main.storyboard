@@ -460,6 +460,7 @@
                         <viewLayoutGuide key="safeArea" id="R8S-5L-NMF"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="aEo-e3-hSF" id="NA9-dx-K8M"/>
                         <outlet property="tableView" destination="CNu-Tr-KdC" id="vTF-Ea-QmH"/>
                     </connections>
                 </viewController>

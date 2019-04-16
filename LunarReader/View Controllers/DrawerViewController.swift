@@ -127,7 +127,11 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.filteredCollections = DataManager.shared.collections.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        if !searchText.isEmpty {
+            self.filteredCollections = DataManager.shared.collections.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        } else {
+            self.filteredCollections = DataManager.shared.collections
+        }
         self.tableView.reloadData()
     }
     
