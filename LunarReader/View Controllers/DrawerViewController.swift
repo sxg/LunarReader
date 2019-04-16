@@ -138,6 +138,7 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     // MARK: - PulleyDrawerViewControllerDelegate
     
     func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
+        // Fade the table view when the drawer collapses
         let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
         let maxDistance: CGFloat = 44 // Distance over which to fade the table view
         self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
