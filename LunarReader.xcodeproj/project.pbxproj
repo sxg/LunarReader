@@ -16,6 +16,7 @@
 		4A4F77612252B1330046C393 /* LunarReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F77602252B1330046C393 /* LunarReaderTests.swift */; };
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
+		4A6C5ED42266309A001F98C8 /* UIStoryboardDrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED32266309A001F98C8 /* UIStoryboardDrawerSegue.swift */; };
 		4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E48892253A8FC009A373A /* WordBoxFinder.swift */; };
 		4ADA98D42257D73300683BFC /* RenamePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */; };
 		4ADA98D82259418200683BFC /* ChooseCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */; };
@@ -71,6 +72,7 @@
 		4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarReaderUITests.swift; sourceTree = "<group>"; };
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
+		4A6C5ED32266309A001F98C8 /* UIStoryboardDrawerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIStoryboardDrawerSegue.swift; path = "View Controllers/UIStoryboardDrawerSegue.swift"; sourceTree = "<group>"; };
 		4A8E48892253A8FC009A373A /* WordBoxFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxFinder.swift; path = Models/WordBoxFinder.swift; sourceTree = "<group>"; };
 		4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RenamePageTableViewController.swift; path = "View Controllers/RenamePageTableViewController.swift"; sourceTree = "<group>"; };
 		4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCollectionTableViewController.swift; path = "View Controllers/ChooseCollectionTableViewController.swift"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */,
 				4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */,
 				4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */,
+				4A6C5ED32266309A001F98C8 /* UIStoryboardDrawerSegue.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */,
+				4A6C5ED42266309A001F98C8 /* UIStoryboardDrawerSegue.swift in Sources */,
 				4AF9D7E52260045500DB42D3 /* DrawerDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

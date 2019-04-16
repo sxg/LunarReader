@@ -150,12 +150,13 @@
                             <constraint firstItem="CJt-1q-u6j" firstAttribute="top" secondItem="zmC-aV-Rhm" secondAttribute="bottom" priority="999" id="thK-Ko-fyr"/>
                             <constraint firstAttribute="bottom" secondItem="CJt-1q-u6j" secondAttribute="bottom" id="yu7-cK-Ez9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hVV-ma-qTY"/>
+                        <viewLayoutGuide key="safeArea" id="pGE-bW-Y3Q"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="rsP-AX-WpU"/>
-                        <segue destination="Tmg-2h-t8B" kind="show" identifier="DrawerDetailViewControllerSegue" id="dvC-zZ-Ksx"/>
+                        <segue destination="Tmg-2h-t8B" kind="custom" identifier="DrawerDetailViewControllerSegue" customClass="UIStoryboardDrawerSegue" customModule="LunarReader" customModuleProvider="target" id="dvC-zZ-Ksx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rom-Oe-nef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,7 +415,7 @@
         <!--Drawer Detail View Controller-->
         <scene sceneID="vEJ-OR-LnP">
             <objects>
-                <viewController id="Tmg-2h-t8B" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawerDetailViewController" id="Tmg-2h-t8B" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XzP-AJ-SRC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,6 +460,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R8S-5L-NMF"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
+                    <size key="freeformSize" width="414" height="250"/>
                     <connections>
                         <outlet property="searchBar" destination="aEo-e3-hSF" id="NA9-dx-K8M"/>
                         <outlet property="tableView" destination="CNu-Tr-KdC" id="vTF-Ea-QmH"/>
