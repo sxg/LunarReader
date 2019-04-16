@@ -17,15 +17,9 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         // Set the Pulley delegate
         self.pulleyViewController?.delegate = self
-        
-        // Make the background of the navigation title clear
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
         // Setup the search controller
         let searchController = UISearchController(searchResultsController: nil)
