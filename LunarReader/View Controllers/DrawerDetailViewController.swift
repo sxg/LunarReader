@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import Pulley
 
-class DrawerDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     @IBOutlet var tableView: UITableView!
     
     var collection: Collection?
+    
+    private var filteredPages: [Page] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the filtered pages
+        self.filteredPages = self.collection!.pages
+        
+        // Set the Pulley delegate
+        self.pulleyViewController?.delegate = self
+        
+        // Setup the search controller
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.definesPresentationContext = true
         
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
@@ -28,13 +47,23 @@ class DrawerDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.collection!.pages.count
+        if self.isSearching() {
+            return self.filteredPages.count
+        } else {
+            return self.collection!.pages.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
-        cell.label.text = self.collection!.pages[indexPath.row].name
-        cell.thumbnailView.image = UIImage(cgImage: self.collection!.pages[indexPath.row].image.cgImage!, scale: 1, orientation: .right)
+        let page: Page
+        if self.isSearching() {
+            page = self.filteredPages[indexPath.row]
+        } else {
+            page = self.collection!.pages[indexPath.row]
+        }
+        cell.label.text = page.name
+        cell.thumbnailView.image = UIImage(cgImage: page.image.cgImage!, scale: 1, orientation: .right)
         return cell
     }
     
@@ -72,15 +101,51 @@ class DrawerDetailViewController: UIViewController, UITableViewDataSource, UITab
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - UISearchResultsUpdating
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!.lowercased()
+        self.filteredPages = self.collection!.pages.filter { $0.name.lowercased().contains(searchText) }
+        self.tableView.reloadData()
     }
-    */
+    
+    // MARK: - UISearchBarDelegate
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.pulleyViewController?.setDrawerPosition(position: .open, animated: true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+    }
+    
+    // MARK: - PulleyDrawerViewControllerDelegate
+    
+    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
+        let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
+        let maxDistance: CGFloat = 44 // Distance over which to fade the table view
+        self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    // MARK: - Helpers
+    
+    private func isSearchBarEmpty() -> Bool {
+        return self.navigationItem.searchController!.searchBar.text?.isEmpty ?? true
+    }
+    
+    private func isSearching() -> Bool {
+        return self.navigationItem.searchController!.isActive && !self.isSearchBarEmpty()
+    }
 
 }
