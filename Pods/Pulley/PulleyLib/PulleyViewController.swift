@@ -13,6 +13,11 @@ import UIKit
  */
 @objc public protocol PulleyDelegate: class {
     
+    /** This is called before size changes.
+     * NOTE: It's not called *during* the transition between sizes (such as in an animation coordinator), but rather before the resize is complete.
+     */
+    @objc optional func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat)
+    
     /** This is called after size changes, so if you care about the bottomSafeArea property for custom UI layout, you can use this value.
      * NOTE: It's not called *during* the transition between sizes (such as in an animation coordinator), but rather after the resize is complete.
      */
@@ -1202,6 +1207,9 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
         
         if animated && self.view.window != nil
         {
+            self.delegate?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
+            (self.drawerContentViewController as? PulleyDrawerViewControllerDelegate)?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
+            (self.primaryContentViewController as? PulleyPrimaryContentControllerDelegate)?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
             isAnimatingDrawerPosition = true
             UIView.animate(withDuration: animationDuration, delay: animationDelay, usingSpringWithDamping: animationSpringDamping, initialSpringVelocity: animationSpringInitialVelocity, options: animationOptions, animations: { [weak self] () -> Void in
                 
@@ -1229,6 +1237,10 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
         }
         else
         {
+            self.delegate?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
+            (self.drawerContentViewController as? PulleyDrawerViewControllerDelegate)?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
+            (self.primaryContentViewController as? PulleyPrimaryContentControllerDelegate)?.drawerPositionWillChange?(drawer: self, to: drawerPosition, bottomSafeArea: self.pulleySafeAreaInsets.bottom)
+            
             drawerScrollView.setContentOffset(CGPoint(x: 0, y: stopToMoveTo - lowestStop), animated: false)
             
             // Move backgroundDimmingView to avoid drawer background being darkened
@@ -1435,6 +1447,12 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
             return supportedPositions
         } else {
             return PulleyPosition.all
+        }
+    }
+    
+    open func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
+        if let drawerVCCompliant = drawerContentViewController as? PulleyDrawerViewControllerDelegate {
+            drawerVCCompliant.drawerPositionWillChange?(drawer: drawer, to: position, bottomSafeArea: bottomSafeArea)
         }
     }
     
