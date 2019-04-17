@@ -153,6 +153,7 @@
                         <viewLayoutGuide key="safeArea" id="pGE-bW-Y3Q"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
+                    <size key="freeformSize" width="414" height="250"/>
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="rsP-AX-WpU"/>
@@ -428,7 +429,7 @@
                                 </constraints>
                             </imageView>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-Tr-KdC">
-                                <rect key="frame" x="0.0" y="65" width="414" height="185"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="144"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Tmg-2h-t8B" id="n6I-Qm-6ru"/>
@@ -436,7 +437,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-e3-hSF">
-                                <rect key="frame" x="0.0" y="21" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="62" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="HBj-fh-tZd"/>
                                 </constraints>
@@ -445,16 +446,38 @@
                                     <outlet property="delegate" destination="Tmg-2h-t8B" id="sJN-0p-HFF"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-M4-paA">
+                                <rect key="frame" x="20" y="23" width="332" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRX-Xd-xvP">
+                                <rect key="frame" x="360" y="15" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Z6L-Qu-k7b"/>
+                                    <constraint firstAttribute="height" constant="44" id="rDV-dF-nC1"/>
+                                </constraints>
+                                <state key="normal" image="CloseIcon"/>
+                                <connections>
+                                    <segue destination="kYz-Jt-6Jx" kind="unwind" identifier="DrawerViewControllerSegue" customClass="UIStoryboardDrawerUnwindSegue" customModule="LunarReader" customModuleProvider="target" unwindAction="dismissDrawerDetailViewController:" id="e9m-lP-w5B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CNu-Tr-KdC" secondAttribute="bottom" id="0Pe-23-OFp"/>
-                            <constraint firstItem="aEo-e3-hSF" firstAttribute="top" secondItem="AIS-wv-u5t" secondAttribute="bottom" constant="8" id="7KI-pj-xgm"/>
+                            <constraint firstItem="aEo-e3-hSF" firstAttribute="top" secondItem="iI2-M4-paA" secondAttribute="bottom" constant="10" id="7KI-pj-xgm"/>
+                            <constraint firstItem="iI2-M4-paA" firstAttribute="leading" secondItem="XzP-AJ-SRC" secondAttribute="leading" constant="20" id="8V1-Es-Qvt"/>
+                            <constraint firstAttribute="trailing" secondItem="vRX-Xd-xvP" secondAttribute="trailing" constant="10" id="8hq-3b-S4e"/>
+                            <constraint firstItem="iI2-M4-paA" firstAttribute="top" secondItem="XzP-AJ-SRC" secondAttribute="topMargin" constant="23" id="9U4-3c-u3k"/>
                             <constraint firstItem="CNu-Tr-KdC" firstAttribute="leading" secondItem="XzP-AJ-SRC" secondAttribute="leading" id="AfN-8j-nxE"/>
                             <constraint firstAttribute="trailing" secondItem="CNu-Tr-KdC" secondAttribute="trailing" id="KYT-bO-PB6"/>
                             <constraint firstAttribute="trailing" secondItem="aEo-e3-hSF" secondAttribute="trailing" id="P7g-cw-dgz"/>
                             <constraint firstItem="CNu-Tr-KdC" firstAttribute="top" secondItem="aEo-e3-hSF" secondAttribute="bottom" priority="999" id="Wp7-Bn-x6L"/>
+                            <constraint firstItem="vRX-Xd-xvP" firstAttribute="leading" secondItem="iI2-M4-paA" secondAttribute="trailing" constant="8" id="cLD-Ma-VWA"/>
                             <constraint firstItem="AIS-wv-u5t" firstAttribute="centerX" secondItem="XzP-AJ-SRC" secondAttribute="centerX" id="eba-y4-gxk"/>
+                            <constraint firstItem="vRX-Xd-xvP" firstAttribute="top" secondItem="XzP-AJ-SRC" secondAttribute="topMargin" constant="15" id="r9Q-0A-Qjy"/>
                             <constraint firstItem="aEo-e3-hSF" firstAttribute="leading" secondItem="XzP-AJ-SRC" secondAttribute="leading" id="uo1-6f-Ye7"/>
                             <constraint firstItem="AIS-wv-u5t" firstAttribute="top" secondItem="XzP-AJ-SRC" secondAttribute="topMargin" constant="8" id="xWe-MZ-jPs"/>
                         </constraints>
@@ -463,17 +486,20 @@
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
                     <size key="freeformSize" width="414" height="250"/>
                     <connections>
+                        <outlet property="label" destination="iI2-M4-paA" id="gKf-Wh-L6t"/>
                         <outlet property="searchBar" destination="aEo-e3-hSF" id="NA9-dx-K8M"/>
                         <outlet property="tableView" destination="CNu-Tr-KdC" id="vTF-Ea-QmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbM-pH-8CZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kYz-Jt-6Jx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="-396"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="-396.42857142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="CameraButton" width="88" height="88"/>
+        <image name="CloseIcon" width="24" height="24"/>
         <image name="Pill" width="36" height="5"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

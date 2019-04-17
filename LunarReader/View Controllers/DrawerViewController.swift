@@ -159,6 +159,10 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     }
 
     // MARK: - Navigation
+    
+    @IBAction func dismissDrawerDetailViewController(_ sender: UIStoryboardSegue) {
+        
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let drawerDetailViewController = segue.destination as! DrawerDetailViewController

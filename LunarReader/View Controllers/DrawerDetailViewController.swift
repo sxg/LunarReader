@@ -13,6 +13,7 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var label: UILabel!
     
     var collection: Collection?
     
@@ -21,6 +22,9 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the title
+        self.label.text = self.collection!.name
         
         // Set the filtered pages
         self.filteredPages = self.collection!.pages
@@ -130,9 +134,9 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         }
     }
     
+    // MARK: - Navigation
+    
     /*
-     // MARK: - Navigation
-     
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
