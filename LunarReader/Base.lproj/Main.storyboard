@@ -120,7 +120,7 @@
                                 </constraints>
                             </imageView>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CJt-1q-u6j">
-                                <rect key="frame" x="0.0" y="65" width="414" height="185"/>
+                                <rect key="frame" x="0.0" y="61" width="414" height="189"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="smL-mW-cj1" id="0bU-0W-Mf5"/>
@@ -128,7 +128,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="zmC-aV-Rhm">
-                                <rect key="frame" x="0.0" y="21" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="17" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ppk-IT-aKV"/>
                                 </constraints>
@@ -140,7 +140,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zmC-aV-Rhm" firstAttribute="top" secondItem="zgC-ek-tAf" secondAttribute="bottom" constant="8" id="7i5-R3-5qN"/>
+                            <constraint firstItem="zmC-aV-Rhm" firstAttribute="top" secondItem="zgC-ek-tAf" secondAttribute="bottom" constant="4" id="7i5-R3-5qN"/>
                             <constraint firstItem="zgC-ek-tAf" firstAttribute="top" secondItem="wve-jK-NkO" secondAttribute="topMargin" constant="8" id="CWj-oA-kTn"/>
                             <constraint firstAttribute="trailing" secondItem="zmC-aV-Rhm" secondAttribute="trailing" id="CXr-G2-WPd"/>
                             <constraint firstItem="zgC-ek-tAf" firstAttribute="centerX" secondItem="wve-jK-NkO" secondAttribute="centerX" id="Fgf-wF-faP"/>
