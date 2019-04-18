@@ -165,9 +165,11 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let drawerDetailViewController = segue.destination as! DrawerDetailViewController
-        let collection = sender as! Collection
-        drawerDetailViewController.collection = collection
+        if segue.identifier == "DrawerDetailViewControllerSegue" {
+            let drawerDetailViewController = segue.destination as! DrawerDetailViewController
+            let collection = sender as! Collection
+            drawerDetailViewController.collection = collection
+        }
     }
 
 }
