@@ -1,5 +1,5 @@
 //
-//  UIStoryboardDrawerUnwindSegue.swift
+//  DrawerUnwindSegue.swift
 //  LunarReader
 //
 //  Created by Satyam Ghodasara on 4/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIStoryboardDrawerUnwindSegue: UIStoryboardSegue {
+class DrawerUnwindSegue: UIStoryboardSegue {
     
     override func perform() {
         // Create a "curtain" view to un-dim the background

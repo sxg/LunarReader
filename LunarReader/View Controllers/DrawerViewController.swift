@@ -113,7 +113,7 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         } else {
             collection = DataManager.shared.collections[indexPath.row]
         }
-        self.performSegue(withIdentifier: "DrawerDetailViewControllerSegue", sender: collection)
+        self.performSegue(withIdentifier: "DrawerSegue", sender: collection)
     }
     
     // MARK: - UISearchBarDelegate
@@ -165,7 +165,7 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DrawerDetailViewControllerSegue" {
+        if segue.identifier == "DrawerSegue" {
             let drawerDetailViewController = segue.destination as! DrawerDetailViewController
             let collection = sender as! Collection
             drawerDetailViewController.collection = collection

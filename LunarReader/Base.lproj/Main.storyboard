@@ -157,7 +157,7 @@
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="rsP-AX-WpU"/>
-                        <segue destination="Tmg-2h-t8B" kind="presentation" identifier="DrawerDetailViewControllerSegue" customClass="UIStoryboardDrawerSegue" customModule="LunarReader" customModuleProvider="target" modalPresentationStyle="currentContext" id="dvC-zZ-Ksx"/>
+                        <segue destination="Tmg-2h-t8B" kind="presentation" identifier="DrawerSegue" customClass="DrawerSegue" customModule="LunarReader" customModuleProvider="target" modalPresentationStyle="currentContext" id="dvC-zZ-Ksx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rom-Oe-nef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -460,7 +460,7 @@
                                 </constraints>
                                 <state key="normal" image="CloseIcon"/>
                                 <connections>
-                                    <segue destination="kYz-Jt-6Jx" kind="unwind" identifier="DrawerViewControllerSegue" customClass="UIStoryboardDrawerUnwindSegue" customModule="LunarReader" customModuleProvider="target" unwindAction="dismissDrawerDetailViewController:" id="e9m-lP-w5B"/>
+                                    <segue destination="kYz-Jt-6Jx" kind="unwind" identifier="DrawerUnwindSegue" customClass="DrawerUnwindSegue" customModule="LunarReader" customModuleProvider="target" unwindAction="dismissDrawerDetailViewController:" id="e9m-lP-w5B"/>
                                 </connections>
                             </button>
                         </subviews>

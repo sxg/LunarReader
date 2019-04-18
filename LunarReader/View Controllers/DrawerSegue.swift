@@ -1,5 +1,5 @@
 //
-//  UIStoryboardDrawerSegue.swift
+//  DrawerSegue.swift
 //  LunarReader
 //
 //  Created by Satyam Ghodasara on 4/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIStoryboardDrawerSegue: UIStoryboardSegue {
+class DrawerSegue: UIStoryboardSegue {
     
     override func perform() {
         // Create a "curtain" view to dim the background
