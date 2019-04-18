@@ -43,21 +43,12 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.isSearching {
-            return self.filteredPages.count
-        } else {
-            return self.collection!.pages.count
-        }
+        return self.isSearching ? self.filteredPages.count : self.collection!.pages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerTableViewCell", for: indexPath) as! DrawerTableViewCell
-        let page: Page
-        if self.isSearching {
-            page = self.filteredPages[indexPath.row]
-        } else {
-            page = self.collection!.pages[indexPath.row]
-        }
+        let page = self.isSearching ? self.filteredPages[indexPath.row] : self.collection!.pages[indexPath.row]
         cell.label.text = page.name
         cell.thumbnailView.image = UIImage(cgImage: page.image.cgImage!, scale: 1, orientation: .right)
         return cell
