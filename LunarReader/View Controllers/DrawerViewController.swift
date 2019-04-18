@@ -105,6 +105,7 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let collection: Collection
         if self.isSearching {
             collection = self.filteredCollections[indexPath.row]
