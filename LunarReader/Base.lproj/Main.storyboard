@@ -159,7 +159,7 @@
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="rsP-AX-WpU"/>
-                        <segue destination="Tmg-2h-t8B" kind="presentation" identifier="DrawerSegue" modalPresentationStyle="currentContext" id="dvC-zZ-Ksx"/>
+                        <segue destination="Tmg-2h-t8B" kind="show" identifier="DrawerSegue" id="dvC-zZ-Ksx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rom-Oe-nef" userLabel="First Responder" sceneMemberID="firstResponder"/>

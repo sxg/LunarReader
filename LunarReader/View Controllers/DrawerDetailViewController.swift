@@ -32,13 +32,6 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Set the Pulley delegate
-        self.presentingViewController!.pulleyViewController!.delegate = self
-    }
 
     // MARK: - UITableViewDataSource
 
@@ -112,14 +105,6 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
             self.filteredPages = self.collection!.pages
         }
         self.tableView.reloadData()
-    }
-    
-    // MARK: - PulleyDrawerViewControllerDelegate
-    
-    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
-        let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
-        let maxDistance: CGFloat = 44 // Distance over which to fade the table view
-        self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
     
     // MARK: - Navigation

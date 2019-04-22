@@ -28,9 +28,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
             }
         }
         
-        // Set the Pulley delegate
-        self.pulleyViewController!.delegate = self
-        
         // Reload the table when a new collection is saved
         NotificationCenter.default.addObserver(forName: .didSaveCollection, object: nil, queue: OperationQueue.main) { notification in
             self.tableView.reloadData()
@@ -38,13 +35,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Set the Pulley delegate
-        self.pulleyViewController!.delegate = self
     }
     
     // MARK: - UITableViewDataSource
@@ -134,15 +124,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
             self.filteredCollections = DataManager.shared.collections
         }
         self.tableView.reloadData()
-    }
-    
-    // MARK: - PulleyDrawerViewControllerDelegate
-    
-    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
-        // Fade the table view when the drawer collapses
-        let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
-        let maxDistance: CGFloat = 44 // Distance over which to fade the table view
-        self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
 
     // MARK: - Navigation

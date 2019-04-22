@@ -15,7 +15,6 @@
 		4A4F77562252B1330046C393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F77542252B1330046C393 /* LaunchScreen.storyboard */; };
 		4A4F77612252B1330046C393 /* LunarReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F77602252B1330046C393 /* LunarReaderTests.swift */; };
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
-		4A530E43226E444B00013EDB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A530E42226E444A00013EDB /* Default-568h@2x.png */; };
 		4A530E47226E49DB00013EDB /* DrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */; };
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
 		4A6C5ED42266309A001F98C8 /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */; };
@@ -74,7 +73,6 @@
 		4A4F77672252B1330046C393 /* LunarReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunarReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarReaderUITests.swift; sourceTree = "<group>"; };
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A530E42226E444A00013EDB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerNavigationController.swift; path = "View Controllers/DrawerNavigationController.swift"; sourceTree = "<group>"; };
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
 		4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerSegue.swift; path = "View Controllers/DrawerSegue.swift"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		4A4F773F2252B1310046C393 = {
 			isa = PBXGroup;
 			children = (
-				4A530E42226E444A00013EDB /* Default-568h@2x.png */,
 				4A4F774A2252B1320046C393 /* LunarReader */,
 				4A4F775F2252B1330046C393 /* LunarReaderTests */,
 				4A4F776A2252B1330046C393 /* LunarReaderUITests */,
@@ -363,7 +360,6 @@
 				4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
 				4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */,
-				4A530E43226E444B00013EDB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,21 @@ class DrawerNavigationController: UINavigationController, PulleyDrawerViewContro
         return bottomSafeArea + 73
     }
     
+    func drawerChangedDistanceFromBottom(drawer: PulleyViewController, distance: CGFloat, bottomSafeArea: CGFloat) {
+        let minDistance: CGFloat = bottomSafeArea + 73 // Returned by collapsedDrawerHeight()
+        let maxDistance: CGFloat = 44 // Distance over which to fade the table view
+        let tableView: UITableView?
+        switch self.topViewController! {
+        case is DrawerViewController:
+            tableView = (self.topViewController! as! DrawerViewController).tableView
+        case is DrawerDetailViewController:
+            tableView = (self.topViewController as! DrawerDetailViewController).tableView
+        default:
+            tableView = nil
+        }
+        tableView?.alpha = min((distance - minDistance) / maxDistance, 1)
+    }
+    
     func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
         // Dismiss the keyboard when the drawer is collapsing
         if position != .open {
