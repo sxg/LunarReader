@@ -36,7 +36,7 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
     }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
