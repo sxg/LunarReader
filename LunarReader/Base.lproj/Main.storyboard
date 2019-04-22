@@ -499,10 +499,10 @@
             </objects>
             <point key="canvasLocation" x="2629" y="-395"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Drawer Navigation Controller-->
         <scene sceneID="ISj-pp-H0x">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XXl-Gb-Mwx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XXl-Gb-Mwx" customClass="DrawerNavigationController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L8U-nM-gOZ">

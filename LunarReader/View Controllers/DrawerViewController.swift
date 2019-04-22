@@ -28,6 +28,9 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
             }
         }
         
+        // Set the Pulley delegate
+        self.pulleyViewController!.delegate = self
+        
         // Reload the table when a new collection is saved
         NotificationCenter.default.addObserver(forName: .didSaveCollection, object: nil, queue: OperationQueue.main) { notification in
             self.tableView.reloadData()
@@ -147,10 +150,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         if position != .open {
             self.searchBar.resignFirstResponder()
         }
-    }
-    
-    func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-        return bottomSafeArea + 73
     }
 
     // MARK: - Navigation
