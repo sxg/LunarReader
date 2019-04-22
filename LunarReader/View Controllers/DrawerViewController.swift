@@ -144,13 +144,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         let maxDistance: CGFloat = 44 // Distance over which to fade the table view
         self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
-    
-    func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
-        // Dismiss the keyboard when the drawer is collapsing
-        if position != .open {
-            self.searchBar.resignFirstResponder()
-        }
-    }
 
     // MARK: - Navigation
     

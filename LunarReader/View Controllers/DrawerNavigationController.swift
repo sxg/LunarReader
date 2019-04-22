@@ -17,4 +17,11 @@ class DrawerNavigationController: UINavigationController, PulleyDrawerViewContro
         return bottomSafeArea + 73
     }
     
+    func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
+        // Dismiss the keyboard when the drawer is collapsing
+        if position != .open {
+            self.view.endEditing(true)
+        }
+    }
+    
 }

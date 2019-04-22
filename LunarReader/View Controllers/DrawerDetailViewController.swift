@@ -122,13 +122,6 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
     
-    func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
-        // Dismiss the keyboard when the drawer is collapsing
-        if position != .open {
-            self.searchBar.resignFirstResponder()
-        }
-    }
-    
     // MARK: - Navigation
     
     /*
