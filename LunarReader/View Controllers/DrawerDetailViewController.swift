@@ -29,11 +29,15 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         // Set the filtered pages
         self.filteredPages = self.collection!.pages
         
-        // Set the Pulley delegate
-        self.pulleyViewController?.delegate = self
-        
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Set the Pulley delegate
+        self.presentingViewController!.pulleyViewController!.delegate = self
     }
 
     // MARK: - UITableViewDataSource
@@ -93,12 +97,12 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.isSearching = true
-        self.pulleyViewController?.setDrawerPosition(position: .open, animated: true)
+        self.presentingViewController!.pulleyViewController!.setDrawerPosition(position: .open, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.isSearching = false
-        self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+        self.presentingViewController!.pulleyViewController!.setDrawerPosition(position: .partiallyRevealed, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

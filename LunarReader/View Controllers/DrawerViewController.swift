@@ -20,9 +20,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the Pulley delegate
-        self.pulleyViewController?.delegate = self
-        
         // Load data
         DispatchQueue.global(qos: .background).async {
             DataManager.shared.loadCollections()
@@ -38,6 +35,13 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         
         // Register xib for table view
         self.tableView.register(UINib(nibName: "DrawerTableViewCell", bundle: nil), forCellReuseIdentifier: "DrawerTableViewCell")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Set the Pulley delegate
+        self.pulleyViewController!.delegate = self
     }
     
     // MARK: - UITableViewDataSource
@@ -137,7 +141,6 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         let maxDistance: CGFloat = 44 // Distance over which to fade the table view
         self.tableView.alpha = min((distance - minDistance) / maxDistance, 1)
     }
-    
     
     func drawerPositionWillChange(drawer: PulleyViewController, to position: PulleyPosition, bottomSafeArea: CGFloat) {
         // Dismiss the keyboard when the drawer is collapsing
