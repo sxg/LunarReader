@@ -504,8 +504,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="wv9-Os-t4J">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="558.00000000000045"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wv9-Os-t4J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -519,7 +519,7 @@
                         <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
                     </view>
                     <navigationItem key="navigationItem" id="LQ2-Da-v9r">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="rOb-PB-UcK">
+                        <barButtonItem key="leftBarButtonItem" title="Close" style="done" id="rOb-PB-UcK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="close:" destination="TYg-l4-Eyh" id="SCg-aU-YqU"/>
@@ -527,6 +527,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="646"/>
+                    <connections>
+                        <outlet property="imageView" destination="wv9-Os-t4J" id="6HL-Bs-zP6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XV4-6o-A0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -575,7 +578,6 @@
         <image name="CameraButton" width="88" height="88"/>
         <image name="CloseIcon" width="24" height="24"/>
         <image name="Pill" width="36" height="5"/>
-        <image name="SampleText" width="1885.5" height="2473"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

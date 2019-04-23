@@ -19,6 +19,9 @@ class ReaderViewController: UIViewController {
 
         // Set the title
         self.navigationItem.title = self.page!.name
+        
+        // Set the page
+        self.imageView.image = self.page!.image
     }
 
     // MARK: - Navigation
