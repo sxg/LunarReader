@@ -500,10 +500,24 @@
         <scene sceneID="SMw-KC-zdp">
             <objects>
                 <viewController id="TYg-l4-Eyh" customClass="ReaderViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" id="HmG-U9-FXf">
+                    <view key="view" contentMode="scaleToFill" id="404-qM-ppR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" translatesAutoresizingMaskIntoConstraints="NO" id="wv9-Os-t4J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="558.00000000000045"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wv9-Os-t4J" secondAttribute="bottom" id="7Ay-c3-c7F"/>
+                            <constraint firstItem="wv9-Os-t4J" firstAttribute="trailing" secondItem="rKl-5Y-hWh" secondAttribute="trailing" id="D5y-hW-T9x"/>
+                            <constraint firstItem="wv9-Os-t4J" firstAttribute="leading" secondItem="rKl-5Y-hWh" secondAttribute="leading" id="MAI-DE-fMD"/>
+                            <constraint firstItem="wv9-Os-t4J" firstAttribute="top" secondItem="rKl-5Y-hWh" secondAttribute="top" id="ljk-oC-8YF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
+                    </view>
                     <navigationItem key="navigationItem" id="LQ2-Da-v9r">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="rOb-PB-UcK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,13 +527,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="646"/>
-                    <connections>
-                        <outlet property="imageView" destination="HmG-U9-FXf" id="Znv-mE-j1a"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XV4-6o-A0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4341" y="-263"/>
+            <point key="canvasLocation" x="4340.579710144928" y="-263.16964285714283"/>
         </scene>
         <!--Drawer Navigation Controller-->
         <scene sceneID="ISj-pp-H0x">
