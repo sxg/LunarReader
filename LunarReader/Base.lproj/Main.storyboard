@@ -107,7 +107,7 @@
         <!--Drawer View Controller-->
         <scene sceneID="WmW-24-dFK">
             <objects>
-                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="smL-mW-cj1" customClass="DrawerViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="smL-mW-cj1" customClass="DrawerViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wve-jK-NkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,8 +153,6 @@
                         <viewLayoutGuide key="safeArea" id="pGE-bW-Y3Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="bGN-vY-Qrm"/>
-                    <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="414" height="250"/>
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
@@ -485,13 +483,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R8S-5L-NMF"/>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="414" height="250"/>
                     <connections>
                         <outlet property="label" destination="iI2-M4-paA" id="gKf-Wh-L6t"/>
                         <outlet property="searchBar" destination="aEo-e3-hSF" id="NA9-dx-K8M"/>
                         <outlet property="tableView" destination="CNu-Tr-KdC" id="vTF-Ea-QmH"/>
-                        <segue destination="TYg-l4-Eyh" kind="presentation" identifier="ReaderSegue" id="n9w-eX-6Kf"/>
+                        <segue destination="qIZ-OL-oZV" kind="show" identifier="ReaderSegue" id="n9w-eX-6Kf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbM-pH-8CZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,29 +496,36 @@
             </objects>
             <point key="canvasLocation" x="2629" y="-395"/>
         </scene>
-        <!--View Controller-->
+        <!--Reader View Controller-->
         <scene sceneID="SMw-KC-zdp">
             <objects>
-                <viewController id="TYg-l4-Eyh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tcm-Wi-fgy">
+                <viewController id="TYg-l4-Eyh" customClass="ReaderViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleText" id="HmG-U9-FXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="a7S-Wc-HSp"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" id="LQ2-Da-v9r">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="rOb-PB-UcK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="close:" destination="TYg-l4-Eyh" id="SCg-aU-YqU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="646"/>
+                    <connections>
+                        <outlet property="imageView" destination="HmG-U9-FXf" id="Znv-mE-j1a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XV4-6o-A0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3446" y="-262"/>
+            <point key="canvasLocation" x="4341" y="-263"/>
         </scene>
         <!--Drawer Navigation Controller-->
         <scene sceneID="ISj-pp-H0x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XXl-Gb-Mwx" customClass="DrawerNavigationController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L8U-nM-gOZ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -534,11 +538,33 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="-395.08928571428572"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iC2-2E-5od">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qIZ-OL-oZV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <size key="freeformSize" width="414" height="646"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="b1c-pg-hzO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TYg-l4-Eyh" kind="relationship" relationship="rootViewController" id="dcE-rG-4Qo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrD-D6-jv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3445" y="-263"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CameraButton" width="88" height="88"/>
         <image name="CloseIcon" width="24" height="24"/>
         <image name="Pill" width="36" height="5"/>
+        <image name="SampleText" width="1885.5" height="2473"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
