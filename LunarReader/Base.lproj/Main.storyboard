@@ -518,7 +518,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LQ2-Da-v9r">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LQ2-Da-v9r">
                         <barButtonItem key="leftBarButtonItem" title="Close" style="done" id="rOb-PB-UcK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -563,6 +563,12 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
