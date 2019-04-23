@@ -34,7 +34,8 @@ class Page: Codable {
         self.name = try container.decode(String.self, forKey: CodingKeys.name)
         self.wordBoxes = try container.decode([CGRect].self, forKey: CodingKeys.wordBoxes)
         let data = try container.decode(Data.self, forKey: CodingKeys.image)
-        self.image = UIImage(data: data)!
+        let image = UIImage(data: data)!
+        self.image = UIImage(cgImage: image.cgImage!, scale: 1.0, orientation: .right)
     }
     
     func encode(to encoder: Encoder) throws {
