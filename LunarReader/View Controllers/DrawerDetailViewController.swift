@@ -51,6 +51,21 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         return cell
     }
     
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let page: Page
+        if self.isSearching {
+            page = self.filteredPages[indexPath.row]
+            self.searchBar.resignFirstResponder()
+            self.pulleyViewController!.setDrawerPosition(position: .open, animated: true)
+        } else {
+            page = self.collection!.pages[indexPath.row]
+        }
+        self.performSegue(withIdentifier: "ReaderSegue", sender: page)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

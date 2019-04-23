@@ -159,7 +159,7 @@
                     <connections>
                         <outlet property="searchBar" destination="zmC-aV-Rhm" id="nyT-0G-VOR"/>
                         <outlet property="tableView" destination="CJt-1q-u6j" id="rsP-AX-WpU"/>
-                        <segue destination="Tmg-2h-t8B" kind="show" identifier="DrawerSegue" id="dvC-zZ-Ksx"/>
+                        <segue destination="Tmg-2h-t8B" kind="presentation" identifier="DrawerSegue" id="dvC-zZ-Ksx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rom-Oe-nef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,7 +418,7 @@
         <!--Drawer Detail View Controller-->
         <scene sceneID="vEJ-OR-LnP">
             <objects>
-                <viewController storyboardIdentifier="DrawerDetailViewController" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="Tmg-2h-t8B" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawerDetailViewController" modalPresentationStyle="currentContext" id="Tmg-2h-t8B" customClass="DrawerDetailViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XzP-AJ-SRC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,19 +485,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R8S-5L-NMF"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="414" height="250"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="414" height="250"/>
                     <connections>
                         <outlet property="label" destination="iI2-M4-paA" id="gKf-Wh-L6t"/>
                         <outlet property="searchBar" destination="aEo-e3-hSF" id="NA9-dx-K8M"/>
                         <outlet property="tableView" destination="CNu-Tr-KdC" id="vTF-Ea-QmH"/>
+                        <segue destination="TYg-l4-Eyh" kind="presentation" identifier="ReaderSegue" id="n9w-eX-6Kf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbM-pH-8CZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kYz-Jt-6Jx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2629" y="-395"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SMw-KC-zdp">
+            <objects>
+                <viewController id="TYg-l4-Eyh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tcm-Wi-fgy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a7S-Wc-HSp"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <size key="freeformSize" width="414" height="646"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XV4-6o-A0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3446" y="-262"/>
         </scene>
         <!--Drawer Navigation Controller-->
         <scene sceneID="ISj-pp-H0x">
