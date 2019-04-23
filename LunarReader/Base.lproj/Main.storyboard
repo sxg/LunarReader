@@ -501,11 +501,11 @@
             <objects>
                 <viewController id="TYg-l4-Eyh" customClass="ReaderViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="404-qM-ppR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wv9-Os-t4J">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -518,6 +518,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="ColorPickerIcon" id="Scq-Fj-6N7"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LQ2-Da-v9r">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="rOb-PB-UcK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -534,6 +537,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="646"/>
                     <connections>
                         <outlet property="imageView" destination="wv9-Os-t4J" id="6HL-Bs-zP6"/>
@@ -596,6 +600,7 @@
     <resources>
         <image name="CameraButton" width="88" height="88"/>
         <image name="CloseIcon" width="24" height="24"/>
+        <image name="ColorPickerIcon" width="28" height="28"/>
         <image name="Pill" width="36" height="5"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
