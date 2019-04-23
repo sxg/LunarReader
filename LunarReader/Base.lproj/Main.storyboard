@@ -519,12 +519,20 @@
                         <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LQ2-Da-v9r">
-                        <barButtonItem key="leftBarButtonItem" title="Close" style="done" id="rOb-PB-UcK">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="rOb-PB-UcK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="close:" destination="TYg-l4-Eyh" id="SCg-aU-YqU"/>
+                                <action selector="done:" destination="TYg-l4-Eyh" id="SCg-aU-YqU"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="TTX-Ts-JCn">
+                                <color key="tintColor" red="1" green="0.001108647791" blue="0.13219545960000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="qlq-4I-s9X">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="646"/>
                     <connections>

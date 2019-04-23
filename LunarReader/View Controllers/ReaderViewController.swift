@@ -26,7 +26,7 @@ class ReaderViewController: UIViewController {
 
     // MARK: - Navigation
     
-    @IBAction func close(_ sender: UIBarButtonItem) {
+    @IBAction func done(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 
