@@ -519,7 +519,17 @@
                         <viewLayoutGuide key="safeArea" id="rKl-5Y-hWh"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="ColorPickerIcon" id="Scq-Fj-6N7"/>
+                        <barButtonItem image="RotateIcon" id="wO2-QB-fQy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EQr-vD-ffJ"/>
+                        <barButtonItem image="LineWidthIcon" id="cAK-f5-1T0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="l7U-q0-Yhf"/>
+                        <barButtonItem image="ColorPickerIcon" id="Scq-Fj-6N7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LQ2-Da-v9r">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="rOb-PB-UcK">
@@ -601,7 +611,9 @@
         <image name="CameraButton" width="88" height="88"/>
         <image name="CloseIcon" width="24" height="24"/>
         <image name="ColorPickerIcon" width="28" height="28"/>
+        <image name="LineWidthIcon" width="28" height="28"/>
         <image name="Pill" width="36" height="5"/>
+        <image name="RotateIcon" width="28" height="28"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
