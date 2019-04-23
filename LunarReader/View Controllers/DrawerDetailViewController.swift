@@ -105,12 +105,12 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.isSearching = true
-        self.pulleyViewController!.setDrawerPosition(position: .open, animated: true)
+        self.navigationController!.pulleyViewController!.setDrawerPosition(position: .open, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.isSearching = false
-        self.pulleyViewController!.setDrawerPosition(position: .partiallyRevealed, animated: true)
+        self.navigationController!.pulleyViewController!.setDrawerPosition(position: .partiallyRevealed, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
