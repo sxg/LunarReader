@@ -501,11 +501,11 @@
             <objects>
                 <viewController id="TYg-l4-Eyh" customClass="ReaderViewController" customModule="LunarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="404-qM-ppR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wv9-Os-t4J">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -563,7 +563,7 @@
         <!--Navigation Controller-->
         <scene sceneID="iC2-2E-5od">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qIZ-OL-oZV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" hidesBarsOnTap="YES" id="qIZ-OL-oZV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <size key="freeformSize" width="414" height="646"/>
@@ -579,6 +579,11 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9iE-3P-0fU">
+                        <rect key="frame" x="0.0" y="563" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </toolbar>
                     <connections>
                         <segue destination="TYg-l4-Eyh" kind="relationship" relationship="rootViewController" id="dcE-rG-4Qo"/>
                     </connections>
