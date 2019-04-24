@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorPickerView" customModule="LunarReader" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="ColorPickerView" customModule="LunarReader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-sg-8Wb">
+                    <rect key="frame" x="16" y="0.0" width="382" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjE-fm-ii0">
+                            <rect key="frame" x="0.0" y="14" width="28" height="28"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.9888872504234314" green="0.23221346735954285" blue="0.18796840310096741" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-02-PDs">
+                            <rect key="frame" x="44.5" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.99039822816848755" green="0.58519846200942993" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFx-pQ-ayn">
+                            <rect key="frame" x="88.5" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.99233239889144897" green="0.79852920770645142" blue="0.0015083680627867579" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bK-M6-cin">
+                            <rect key="frame" x="133" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.29940930008888245" green="0.85256093740463257" blue="0.39200848340988159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-tt-b0L">
+                            <rect key="frame" x="177" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.35192972421646118" green="0.78413540124893188" blue="0.98044592142105103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMk-NI-h7B">
+                            <rect key="frame" x="221.5" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.12534564733505249" green="0.47802114486694336" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-FA-6M9">
+                            <rect key="frame" x="265.5" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="1" green="0.9999879002571106" blue="0.99999207258224487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2S-PF-M2x">
+                            <rect key="frame" x="310" y="14" width="28" height="28"/>
+                            <color key="tintColor" red="0.55709534883499146" green="0.55649173259735107" blue="0.57647097110748291" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="ColorPickerIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-fk-y3B">
+                            <rect key="frame" x="354" y="14" width="28" height="28"/>
+                            <state key="normal" image="ColorPickerBlackIcon"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jhK-sg-8Wb" secondAttribute="bottom" id="PfL-f4-qBD"/>
+                <constraint firstItem="jhK-sg-8Wb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="hUs-VE-z9M"/>
+                <constraint firstAttribute="trailing" secondItem="jhK-sg-8Wb" secondAttribute="trailing" constant="16" id="rXe-NZ-hy4"/>
+                <constraint firstItem="jhK-sg-8Wb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rgY-UB-fiv"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="blackButton" destination="a8G-fk-y3B" id="9zz-Rd-Q0w"/>
+                <outlet property="blueButton" destination="HMk-NI-h7B" id="0pb-ga-Sar"/>
+                <outlet property="grayButton" destination="b2S-PF-M2x" id="xqy-eq-lmI"/>
+                <outlet property="greenButton" destination="3bK-M6-cin" id="iwz-Xj-1nR"/>
+                <outlet property="lightBlueButton" destination="Jjo-tt-b0L" id="aAU-QY-tlD"/>
+                <outlet property="orangeButton" destination="VW3-02-PDs" id="lub-CV-XTX"/>
+                <outlet property="redButton" destination="HjE-fm-ii0" id="HQ5-pr-UoE"/>
+                <outlet property="whiteButton" destination="vOY-FA-6M9" id="wzl-xb-axM"/>
+                <outlet property="yellowButton" destination="YFx-pQ-ayn" id="97S-Wu-3Bw"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ColorPickerBlackIcon" width="28" height="28"/>
+        <image name="ColorPickerIcon" width="28" height="28"/>
+    </resources>
+</document>
