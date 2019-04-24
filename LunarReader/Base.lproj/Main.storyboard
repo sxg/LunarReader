@@ -532,6 +532,9 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="l7U-q0-Yhf"/>
                         <barButtonItem title="Item" image="ColorPickerIcon" id="Scq-Fj-6N7">
                             <color key="tintColor" red="1" green="0.001108647791" blue="0.13219545960000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="didTapColorPickerButton:" destination="TYg-l4-Eyh" id="4rv-Bx-rdP"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LQ2-Da-v9r">

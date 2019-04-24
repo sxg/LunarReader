@@ -62,6 +62,41 @@ class ReaderViewController: UIViewController {
             self.controlBarView = lineWidthView
         }
     }
+    
+    @IBAction func didTapColorPickerButton(_ sender: UIBarButtonItem) {
+        switch self.controlBarView {
+        case is ColorPickerView:
+            // Dismiss the color picker
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+                self.controlBarView!.frame = self.controlBarView!.frame.offsetBy(dx: 0, dy: self.controlBarView!.frame.height)
+                self.controlBarView!.alpha = 0
+            }) { finished in
+                // Unset the control bar
+                self.controlBarView!.removeFromSuperview()
+                self.controlBarView = nil
+            }
+        case is UIView:
+            // Replace the control bar
+            let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
+            colorPicker.frame = self.controlBarView!.frame
+            self.view.addSubview(colorPicker)
+            self.controlBarView!.removeFromSuperview()
+            // Set the new control bar
+            self.controlBarView = colorPicker
+        default:
+            // Slide the color picker up if there is no control bar
+            let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
+            colorPicker.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.height, width: self.view.frame.width, height: 56)
+            colorPicker.alpha = 0
+            self.view.addSubview(colorPicker)
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+                colorPicker.frame = colorPicker.frame.offsetBy(dx: 0, dy: -colorPicker.frame.height)
+                colorPicker.alpha = 1
+            })
+            // Set the new control bar
+            self.controlBarView = colorPicker
+        }
+    }
 
     // MARK: - Navigation
     
