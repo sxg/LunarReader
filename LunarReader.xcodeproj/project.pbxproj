@@ -17,6 +17,7 @@
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
 		4A530E47226E49DB00013EDB /* DrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */; };
 		4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E48226F8ADB00013EDB /* ReaderViewController.swift */; };
+		4A530E4B2270E15900013EDB /* LineWidthStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E4A2270E15900013EDB /* LineWidthStepperView.swift */; };
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
 		4A6C5ED42266309A001F98C8 /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */; };
 		4A6C5ED62266679C001F98C8 /* DrawerUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */; };
@@ -76,6 +77,7 @@
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerNavigationController.swift; path = "View Controllers/DrawerNavigationController.swift"; sourceTree = "<group>"; };
 		4A530E48226F8ADB00013EDB /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReaderViewController.swift; path = "View Controllers/ReaderViewController.swift"; sourceTree = "<group>"; };
+		4A530E4A2270E15900013EDB /* LineWidthStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineWidthStepperView.swift; path = Views/LineWidthStepperView.swift; sourceTree = "<group>"; };
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
 		4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerSegue.swift; path = "View Controllers/DrawerSegue.swift"; sourceTree = "<group>"; };
 		4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerUnwindSegue.swift; path = "View Controllers/DrawerUnwindSegue.swift"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				4ADA98E8225BB48D00683BFC /* TextFieldTableViewCell.xib */,
 				4AF9D7D6225E6F6200DB42D3 /* DrawerTableViewCell.swift */,
 				4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */,
+				4A530E4A2270E15900013EDB /* LineWidthStepperView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -473,18 +476,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
-				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -511,6 +507,7 @@
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
 				4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */,
+				4A530E4B2270E15900013EDB /* LineWidthStepperView.swift in Sources */,
 				4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */,

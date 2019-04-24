@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-LunarReader/Pods-LunarReader-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Disk/Disk.framework
+${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework
+${BUILT_PRODUCTS_DIR}/ValueStepper/ValueStepper.framework

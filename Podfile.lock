@@ -1,20 +1,24 @@
 PODS:
   - Disk (0.6.2)
   - Pulley (2.6.3)
+  - ValueStepper (1.6)
 
 DEPENDENCIES:
   - Disk (~> 0.6.2)
   - Pulley
+  - ValueStepper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Disk
     - Pulley
+    - ValueStepper
 
 SPEC CHECKSUMS:
   Disk: d39d76f5369fe369f3129cf4d624a7df572e9811
   Pulley: af7d2347deadc38ef78406579995568f2d6ee158
+  ValueStepper: 8b120c72c8d1391cd874a427485e2e57fda1a0b9
 
-PODFILE CHECKSUM: d7fad4deb83de58de619b9f2367f37e45fec6a95
+PODFILE CHECKSUM: 0b2c5f997cab91761f04eedca2465fb5345eb8a2
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.0.beta.3
