@@ -17,8 +17,8 @@
 		4A4F776C2252B1330046C393 /* LunarReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F776B2252B1330046C393 /* LunarReaderUITests.swift */; };
 		4A530E47226E49DB00013EDB /* DrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */; };
 		4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E48226F8ADB00013EDB /* ReaderViewController.swift */; };
-		4A530E4D2270E21200013EDB /* LineWidthStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E4C2270E21200013EDB /* LineWidthStepperView.swift */; };
-		4A530E4F2270E22800013EDB /* LineWidthStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A530E4E2270E22800013EDB /* LineWidthStepperView.xib */; };
+		4A530E532270E45300013EDB /* LineWidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E522270E45300013EDB /* LineWidthView.swift */; };
+		4A530E572270E65A00013EDB /* LineWidthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A530E562270E65A00013EDB /* LineWidthView.xib */; };
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
 		4A6C5ED42266309A001F98C8 /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */; };
 		4A6C5ED62266679C001F98C8 /* DrawerUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */; };
@@ -78,8 +78,8 @@
 		4A4F776D2252B1330046C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A530E46226E49DB00013EDB /* DrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerNavigationController.swift; path = "View Controllers/DrawerNavigationController.swift"; sourceTree = "<group>"; };
 		4A530E48226F8ADB00013EDB /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReaderViewController.swift; path = "View Controllers/ReaderViewController.swift"; sourceTree = "<group>"; };
-		4A530E4C2270E21200013EDB /* LineWidthStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineWidthStepperView.swift; path = Views/LineWidthStepperView.swift; sourceTree = "<group>"; };
-		4A530E4E2270E22800013EDB /* LineWidthStepperView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LineWidthStepperView.xib; path = Views/LineWidthStepperView.xib; sourceTree = "<group>"; };
+		4A530E522270E45300013EDB /* LineWidthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineWidthView.swift; path = Views/LineWidthView.swift; sourceTree = "<group>"; };
+		4A530E562270E65A00013EDB /* LineWidthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LineWidthView.xib; path = Views/LineWidthView.xib; sourceTree = "<group>"; };
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
 		4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerSegue.swift; path = "View Controllers/DrawerSegue.swift"; sourceTree = "<group>"; };
 		4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerUnwindSegue.swift; path = "View Controllers/DrawerUnwindSegue.swift"; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 				4ADA98E8225BB48D00683BFC /* TextFieldTableViewCell.xib */,
 				4AF9D7D6225E6F6200DB42D3 /* DrawerTableViewCell.swift */,
 				4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */,
-				4A530E4C2270E21200013EDB /* LineWidthStepperView.swift */,
-				4A530E4E2270E22800013EDB /* LineWidthStepperView.xib */,
+				4A530E522270E45300013EDB /* LineWidthView.swift */,
+				4A530E562270E65A00013EDB /* LineWidthView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -365,9 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4F77562252B1330046C393 /* LaunchScreen.storyboard in Resources */,
-				4A530E4F2270E22800013EDB /* LineWidthStepperView.xib in Resources */,
 				4A4F77532252B1330046C393 /* Assets.xcassets in Resources */,
 				4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */,
+				4A530E572270E65A00013EDB /* LineWidthView.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
 				4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */,
 			);
@@ -501,6 +501,7 @@
 				4ADA98DA225A3D8A00683BFC /* Collection.swift in Sources */,
 				4ADA98D82259418200683BFC /* ChooseCollectionTableViewController.swift in Sources */,
 				4A6C5ED62266679C001F98C8 /* DrawerUnwindSegue.swift in Sources */,
+				4A530E532270E45300013EDB /* LineWidthView.swift in Sources */,
 				4AF9D7E3225FC65500DB42D3 /* Notification+Name.swift in Sources */,
 				4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */,
 				4ADA98E9225BB48D00683BFC /* TextFieldTableViewCell.swift in Sources */,
@@ -511,7 +512,6 @@
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
 				4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */,
-				4A530E4D2270E21200013EDB /* LineWidthStepperView.swift in Sources */,
 				4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */,
