@@ -31,71 +31,58 @@ class ReaderViewController: UIViewController {
     @IBAction func didTapLineWidthButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
         case is LineWidthView:
-            // Dismiss the line width stepper
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-                self.controlBarView!.frame = self.controlBarView!.frame.offsetBy(dx: 0, dy: self.controlBarView!.frame.height)
-                self.controlBarView!.alpha = 0
-            }) { finished in
-                // Unset the control bar
-                self.controlBarView!.removeFromSuperview()
-                self.controlBarView = nil
-            }
+            self.dismissControlBar()
         case is UIView:
-            // Replace the control bar
             let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
-            lineWidthView.frame = self.controlBarView!.frame
-            self.view.addSubview(lineWidthView)
-            self.controlBarView!.removeFromSuperview()
-            // Set the new control bar
-            self.controlBarView = lineWidthView
+            self.replaceControlBar(with: lineWidthView)
         default:
-            // Slide the line width stepper up if there is no control bar
             let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
-            lineWidthView.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.height, width: self.view.frame.width, height: 56)
-            lineWidthView.alpha = 0
-            self.view.addSubview(lineWidthView)
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-                lineWidthView.frame = lineWidthView.frame.offsetBy(dx: 0, dy: -lineWidthView.frame.height)
-                lineWidthView.alpha = 1
-            })
-            // Set the new control bar
-            self.controlBarView = lineWidthView
+            self.presentControlBar(view: lineWidthView)
         }
     }
     
     @IBAction func didTapColorPickerButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
         case is ColorPickerView:
-            // Dismiss the color picker
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-                self.controlBarView!.frame = self.controlBarView!.frame.offsetBy(dx: 0, dy: self.controlBarView!.frame.height)
-                self.controlBarView!.alpha = 0
-            }) { finished in
-                // Unset the control bar
-                self.controlBarView!.removeFromSuperview()
-                self.controlBarView = nil
-            }
+            self.dismissControlBar()
         case is UIView:
-            // Replace the control bar
             let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
-            colorPicker.frame = self.controlBarView!.frame
-            self.view.addSubview(colorPicker)
-            self.controlBarView!.removeFromSuperview()
-            // Set the new control bar
-            self.controlBarView = colorPicker
+            self.replaceControlBar(with: colorPicker)
         default:
-            // Slide the color picker up if there is no control bar
             let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
-            colorPicker.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.height, width: self.view.frame.width, height: 56)
-            colorPicker.alpha = 0
-            self.view.addSubview(colorPicker)
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-                colorPicker.frame = colorPicker.frame.offsetBy(dx: 0, dy: -colorPicker.frame.height)
-                colorPicker.alpha = 1
-            })
-            // Set the new control bar
-            self.controlBarView = colorPicker
+            self.presentControlBar(view: colorPicker)
         }
+    }
+    
+    func presentControlBar(view: UIView) {
+        view.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.height, width: self.view.frame.width, height: 56)
+        view.alpha = 0
+        self.view.addSubview(view)
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+            view.frame = view.frame.offsetBy(dx: 0, dy: -view.frame.height)
+            view.alpha = 1
+        })
+        // Set the new control bar
+        self.controlBarView = view
+    }
+    
+    func dismissControlBar() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+            self.controlBarView!.frame = self.controlBarView!.frame.offsetBy(dx: 0, dy: self.controlBarView!.frame.height)
+            self.controlBarView!.alpha = 0
+        }) { finished in
+            // Unset the control bar
+            self.controlBarView!.removeFromSuperview()
+            self.controlBarView = nil
+        }
+    }
+    
+    func replaceControlBar(with view: UIView) {
+        view.frame = self.controlBarView!.frame
+        self.view.addSubview(view)
+        self.controlBarView!.removeFromSuperview()
+        // Set the new control bar
+        self.controlBarView = view
     }
 
     // MARK: - Navigation
