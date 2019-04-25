@@ -32,7 +32,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is RotationSliderView:
             self.dismissControlBar()
-        case is UIView:
+        case is LineWidthView, is ColorPickerView:
             let rotationSliderView = UINib(nibName: "RotationSliderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSliderView
             self.replaceControlBar(with: rotationSliderView)
         default:
@@ -45,7 +45,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is LineWidthView:
             self.dismissControlBar()
-        case is UIView:
+        case is RotationSliderView, is ColorPickerView:
             let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
             self.replaceControlBar(with: lineWidthView)
         default:
@@ -58,7 +58,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is ColorPickerView:
             self.dismissControlBar()
-        case is UIView:
+        case is RotationSliderView, is LineWidthView:
             let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
             self.replaceControlBar(with: colorPicker)
         default:
