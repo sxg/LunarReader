@@ -38,6 +38,9 @@
                         <userDefinedRuntimeAttribute type="size" keyPath="contentOffset">
                             <size key="value" width="135" height="0.0"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="decelerationRate">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </scrollView>
             </subviews>
@@ -58,6 +61,6 @@
         </view>
     </objects>
     <resources>
-        <image name="RotationSlider" width="684" height="56"/>
+        <image name="RotationSlider" width="687" height="56"/>
     </resources>
 </document>
