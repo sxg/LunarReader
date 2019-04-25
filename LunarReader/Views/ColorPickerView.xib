@@ -22,46 +22,46 @@
                             <rect key="frame" x="0.0" y="14" width="28" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" red="0.9888872504234314" green="0.23221346735954285" blue="0.18796840310096741" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-02-PDs">
                             <rect key="frame" x="44.5" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.99039822816848755" green="0.58519846200942993" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFx-pQ-ayn">
                             <rect key="frame" x="88.5" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.99233239889144897" green="0.79852920770645142" blue="0.0015083680627867579" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bK-M6-cin">
                             <rect key="frame" x="133" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.29940930008888245" green="0.85256093740463257" blue="0.39200848340988159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-tt-b0L">
                             <rect key="frame" x="177" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.35192972421646118" green="0.78413540124893188" blue="0.98044592142105103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMk-NI-h7B">
                             <rect key="frame" x="221.5" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.12534564733505249" green="0.47802114486694336" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-FA-6M9">
                             <rect key="frame" x="265.5" y="14" width="28" height="28"/>
                             <color key="tintColor" red="1" green="0.9999879002571106" blue="0.99999207258224487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2S-PF-M2x">
                             <rect key="frame" x="310" y="14" width="28" height="28"/>
                             <color key="tintColor" red="0.55709534883499146" green="0.55649173259735107" blue="0.57647097110748291" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" image="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-fk-y3B">
                             <rect key="frame" x="354" y="14" width="28" height="28"/>
-                            <state key="normal" image="ColorPickerBlackIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerBlackIcon"/>
                         </button>
                     </subviews>
                 </stackView>
