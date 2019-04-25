@@ -28,6 +28,19 @@ class ReaderViewController: UIViewController {
     
     // MARK: - Button Actions
     
+    @IBAction func didTapRotationButton(_ sender: UIBarButtonItem) {
+        switch self.controlBarView {
+        case is RotationSliderView:
+            self.dismissControlBar()
+        case is UIView:
+            let rotationSliderView = UINib(nibName: "RotationSliderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSliderView
+            self.replaceControlBar(with: rotationSliderView)
+        default:
+            let rotationSliderView = UINib(nibName: "RotationSliderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSliderView
+            self.presentControlBar(view: rotationSliderView)
+        }
+    }
+    
     @IBAction func didTapLineWidthButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
         case is LineWidthView:

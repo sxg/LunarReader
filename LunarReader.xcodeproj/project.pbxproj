@@ -10,6 +10,8 @@
 		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
 		4A42302E2271054F00B36D1A /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42302D2271054F00B36D1A /* ColorPickerView.swift */; };
 		4A4230302271055F00B36D1A /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A42302F2271055F00B36D1A /* ColorPickerView.xib */; };
+		4A423032227201AF00B36D1A /* RotationSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A423031227201AE00B36D1A /* RotationSliderView.swift */; };
+		4A423034227201BB00B36D1A /* RotationSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A423033227201BB00B36D1A /* RotationSliderView.xib */; };
 		4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */; };
 		4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774B2252B1320046C393 /* AppDelegate.swift */; };
 		4A4F77512252B1320046C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F774F2252B1320046C393 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		4A340C652253FECB0043E69D /* WordBoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxImageView.swift; path = Views/WordBoxImageView.swift; sourceTree = "<group>"; };
 		4A42302D2271054F00B36D1A /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = Views/ColorPickerView.swift; sourceTree = "<group>"; };
 		4A42302F2271055F00B36D1A /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ColorPickerView.xib; path = Views/ColorPickerView.xib; sourceTree = "<group>"; };
+		4A423031227201AE00B36D1A /* RotationSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RotationSliderView.swift; path = Views/RotationSliderView.swift; sourceTree = "<group>"; };
+		4A423033227201BB00B36D1A /* RotationSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RotationSliderView.xib; path = Views/RotationSliderView.xib; sourceTree = "<group>"; };
 		4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPageTableViewController.swift; path = "View Controllers/NewPageTableViewController.swift"; sourceTree = "<group>"; };
 		4A4F77482252B1320046C393 /* LunarReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunarReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4F774B2252B1320046C393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				4A530E562270E65A00013EDB /* LineWidthView.xib */,
 				4A42302D2271054F00B36D1A /* ColorPickerView.swift */,
 				4A42302F2271055F00B36D1A /* ColorPickerView.xib */,
+				4A423031227201AE00B36D1A /* RotationSliderView.swift */,
+				4A423033227201BB00B36D1A /* RotationSliderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */,
 				4A530E572270E65A00013EDB /* LineWidthView.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
+				4A423034227201BB00B36D1A /* RotationSliderView.xib in Resources */,
 				4A4230302271055F00B36D1A /* ColorPickerView.xib in Resources */,
 				4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */,
 			);
@@ -525,6 +532,7 @@
 				4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */,
 				4A530E47226E49DB00013EDB /* DrawerNavigationController.swift in Sources */,
 				4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */,
+				4A423032227201AF00B36D1A /* RotationSliderView.swift in Sources */,
 				4A6C5ED42266309A001F98C8 /* DrawerSegue.swift in Sources */,
 				4AF9D7E52260045500DB42D3 /* DrawerDetailViewController.swift in Sources */,
 			);

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RotationSliderView" customModule="LunarReader" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="RotationSliderView" customModule="LunarReader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="own-OD-v4w">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKB-C3-ooU" userLabel="Content View">
+                            <rect key="frame" x="-194.5" y="-44" width="803" height="56"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RotationSlider" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-rI-Pj7">
+                                    <rect key="frame" x="0.0" y="0.0" width="803" height="56"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="PTQ-rI-Pj7" secondAttribute="bottom" id="0IS-pL-D9x"/>
+                                <constraint firstAttribute="width" constant="803" id="49l-LA-1aa"/>
+                                <constraint firstItem="PTQ-rI-Pj7" firstAttribute="top" secondItem="tKB-C3-ooU" secondAttribute="top" id="HSM-iZ-BKy"/>
+                                <constraint firstAttribute="height" constant="56" id="Hzi-N7-pGz"/>
+                                <constraint firstItem="PTQ-rI-Pj7" firstAttribute="leading" secondItem="tKB-C3-ooU" secondAttribute="leading" id="bXK-E3-fZ9"/>
+                                <constraint firstAttribute="trailing" secondItem="PTQ-rI-Pj7" secondAttribute="trailing" id="xMI-Bd-gvD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tKB-C3-ooU" firstAttribute="height" secondItem="own-OD-v4w" secondAttribute="height" id="5TP-6k-aHH"/>
+                        <constraint firstAttribute="trailing" secondItem="tKB-C3-ooU" secondAttribute="trailing" constant="-194.5" id="IQx-eO-bXJ"/>
+                        <constraint firstAttribute="bottom" secondItem="tKB-C3-ooU" secondAttribute="bottom" id="Yum-Uf-TBn"/>
+                        <constraint firstItem="tKB-C3-ooU" firstAttribute="centerX" secondItem="own-OD-v4w" secondAttribute="centerX" id="dIU-Fs-J4i"/>
+                        <constraint firstItem="tKB-C3-ooU" firstAttribute="top" secondItem="own-OD-v4w" secondAttribute="top" constant="-44" id="qYp-D9-zG9"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="own-OD-v4w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0zM-hq-fcW"/>
+                <constraint firstAttribute="trailing" secondItem="own-OD-v4w" secondAttribute="trailing" id="LSy-dG-N6S"/>
+                <constraint firstItem="own-OD-v4w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gEd-hI-QXe"/>
+                <constraint firstAttribute="bottom" secondItem="own-OD-v4w" secondAttribute="bottom" id="ndA-nq-Qmw"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scrollView" destination="own-OD-v4w" id="XYC-bG-ieQ"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="RotationSlider" width="803" height="56"/>
+    </resources>
+</document>
