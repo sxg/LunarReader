@@ -32,8 +32,8 @@ class ReaderViewController: UIViewController {
         switch sender {
         case is RotationSlider:
             print((sender as! RotationSlider).rotationAngle)
-        case is LineWidthView:
-            return
+        case is LineWidthStepper:
+            print((sender as! LineWidthStepper).value)
         case is ColorPickerView:
             return
         default:
@@ -47,7 +47,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is RotationSlider:
             self.dismissControlBar()
-        case is LineWidthView, is ColorPickerView:
+        case is LineWidthStepper, is ColorPickerView:
             let rotationSlider = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
             rotationSlider.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
             self.replaceControlBar(with: rotationSlider)
@@ -60,14 +60,16 @@ class ReaderViewController: UIViewController {
     
     @IBAction func didTapLineWidthButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
-        case is LineWidthView:
+        case is LineWidthStepper:
             self.dismissControlBar()
         case is RotationSlider, is ColorPickerView:
-            let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
-            self.replaceControlBar(with: lineWidthView)
+            let lineWidth = UINib(nibName: "LineWidthStepper", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthStepper
+            lineWidth.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
+            self.replaceControlBar(with: lineWidth)
         default:
-            let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
-            self.presentControlBar(view: lineWidthView)
+            let lineWidth = UINib(nibName: "LineWidthStepper", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthStepper
+            lineWidth.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
+            self.presentControlBar(view: lineWidth)
         }
     }
     
@@ -75,7 +77,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is ColorPickerView:
             self.dismissControlBar()
-        case is RotationSlider, is LineWidthView:
+        case is RotationSlider, is LineWidthStepper:
             let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
             self.replaceControlBar(with: colorPicker)
         default:
