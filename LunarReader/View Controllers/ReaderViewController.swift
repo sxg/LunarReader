@@ -26,6 +26,21 @@ class ReaderViewController: UIViewController {
         self.imageView.image = self.page!.image
     }
     
+    // MARK: - UI Actions
+    
+    @objc func controlValueReceived(_ sender: UIControl) {
+        switch sender {
+        case is RotationSlider:
+            print((sender as! RotationSlider).rotationAngle)
+        case is LineWidthView:
+            return
+        case is ColorPickerView:
+            return
+        default:
+            return
+        }
+    }
+    
     // MARK: - Button Actions
     
     @IBAction func didTapRotationButton(_ sender: UIBarButtonItem) {
@@ -33,11 +48,13 @@ class ReaderViewController: UIViewController {
         case is RotationSlider:
             self.dismissControlBar()
         case is LineWidthView, is ColorPickerView:
-            let rotationSliderView = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
-            self.replaceControlBar(with: rotationSliderView)
+            let rotationSlider = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
+            rotationSlider.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
+            self.replaceControlBar(with: rotationSlider)
         default:
-            let rotationSliderView = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
-            self.presentControlBar(view: rotationSliderView)
+            let rotationSlider = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
+            rotationSlider.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
+            self.presentControlBar(view: rotationSlider)
         }
     }
     
