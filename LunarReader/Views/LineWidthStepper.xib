@@ -42,7 +42,7 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                            <real key="value" value="0.0"/>
+                            <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
                             <real key="value" value="0.5"/>
@@ -56,6 +56,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                             <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableManualEditing" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="stepperValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="6iU-go-ixH"/>
