@@ -11,5 +11,11 @@ import UIKit
 class RotationSliderView: UIView {
 
     @IBOutlet weak var scrollView: UIScrollView!
-
+    
+    var rotationAngle: CGFloat {
+        get {
+            return (self.scrollView.contentOffset.x - 135) / 135 * 37
+        }
+    }
+    
 }
