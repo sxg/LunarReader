@@ -1,5 +1,5 @@
 //
-//  RotationSliderView.swift
+//  RotationSlider.swift
 //  LunarReader
 //
 //  Created by Satyam Ghodasara on 4/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RotationSliderView: UIView {
+class RotationSlider: UIControl, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -16,6 +16,12 @@ class RotationSliderView: UIView {
         get {
             return (self.scrollView.contentOffset.x - 135) / 135 * 37
         }
+    }
+    
+    // MARK: UIScrollViewDelegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.sendActions(for: .valueChanged)
     }
     
 }

@@ -30,13 +30,13 @@ class ReaderViewController: UIViewController {
     
     @IBAction func didTapRotationButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
-        case is RotationSliderView:
+        case is RotationSlider:
             self.dismissControlBar()
         case is LineWidthView, is ColorPickerView:
-            let rotationSliderView = UINib(nibName: "RotationSliderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSliderView
+            let rotationSliderView = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
             self.replaceControlBar(with: rotationSliderView)
         default:
-            let rotationSliderView = UINib(nibName: "RotationSliderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSliderView
+            let rotationSliderView = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
             self.presentControlBar(view: rotationSliderView)
         }
     }
@@ -45,7 +45,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is LineWidthView:
             self.dismissControlBar()
-        case is RotationSliderView, is ColorPickerView:
+        case is RotationSlider, is ColorPickerView:
             let lineWidthView = UINib(nibName: "LineWidthView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthView
             self.replaceControlBar(with: lineWidthView)
         default:
@@ -58,7 +58,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is ColorPickerView:
             self.dismissControlBar()
-        case is RotationSliderView, is LineWidthView:
+        case is RotationSlider, is LineWidthView:
             let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
             self.replaceControlBar(with: colorPicker)
         default:
