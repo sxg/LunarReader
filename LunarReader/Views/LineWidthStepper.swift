@@ -13,7 +13,7 @@ class LineWidthStepper: UIControl {
 
     @IBOutlet weak var stepper: ValueStepper!
     
-    var value: Double {
+    var lineWidth: Double {
         get {
             return stepper.value
         }

@@ -33,7 +33,7 @@ class ReaderViewController: UIViewController {
         case is RotationSlider:
             print((sender as! RotationSlider).rotationAngle)
         case is LineWidthStepper:
-            print((sender as! LineWidthStepper).value)
+            print((sender as! LineWidthStepper).lineWidth)
         case is ColorPicker:
             print((sender as! ColorPicker).color)
         default:
