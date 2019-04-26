@@ -20,33 +20,59 @@ class ColorPicker: UIControl {
     @IBOutlet weak var grayButton: UIButton!
     @IBOutlet weak var blackButton: UIButton!
     
-    var color: UIColor = UIColor(named: "Red")!
+    private static let checkmarkIcon: UIImage = UIImage(named: "CheckmarkIcon")!
+    private static let whiteCheckmarkIcon: UIImage = UIImage(named: "CheckmarkIcon")!.withRenderingMode(.alwaysTemplate)
+    
+    private static let redColor: UIColor = UIColor(named: "Red")!
+    private static let orangeColor: UIColor = UIColor(named: "Orange")!
+    private static let yellowColor: UIColor = UIColor(named: "Yellow")!
+    private static let greenColor: UIColor = UIColor(named: "Green")!
+    private static let lightBlueColor: UIColor = UIColor(named: "LightBlue")!
+    private static let blueColor: UIColor = UIColor(named: "Blue")!
+    private static let whiteColor: UIColor = UIColor(named: "White")!
+    private static let grayColor: UIColor = UIColor(named: "Gray")!
+    private static let blackColor: UIColor = UIColor(named: "Black")!
+    
+    private lazy var selectedColorButton: UIButton = self.redButton
+    
+    lazy var color: UIColor = ColorPicker.redColor
     
     // MARK: UI Actions
     
     @IBAction func didTapColorButton(_ sender: UIButton) {
         switch sender {
         case redButton:
-            color = UIColor(named: "Red")!
+            self.color = ColorPicker.redColor
         case orangeButton:
-            color = UIColor(named: "Orange")!
+            self.color = ColorPicker.orangeColor
         case yellowButton:
-            color = UIColor(named: "Yellow")!
+            self.color = ColorPicker.yellowColor
         case greenButton:
-            color = UIColor(named: "Green")!
+            self.color = ColorPicker.greenColor
         case lightBlueButton:
-            color = UIColor(named: "LightBlue")!
+            self.color = ColorPicker.lightBlueColor
         case blueButton:
-            color = UIColor(named: "Blue")!
+            self.color = ColorPicker.blueColor
         case whiteButton:
-            color = UIColor(named: "White")!
+            self.color = ColorPicker.whiteColor
         case grayButton:
-            color = UIColor(named: "Gray")!
+            self.color = ColorPicker.grayColor
         case blackButton:
-            color = UIColor(named: "Black")!
+            self.color = ColorPicker.blackColor
         default:
             return
         }
+        
+        // Remove the checkmark from the previous selection and add it to the new one
+        self.selectedColorButton.setImage(nil, for: .normal)
+        self.selectedColorButton = sender
+        if sender != self.blackButton {
+            self.selectedColorButton.setImage(ColorPicker.checkmarkIcon, for: .normal)
+        } else {
+            self.blackButton.imageView?.tintColor = ColorPicker.whiteColor
+            self.blackButton.setImage(ColorPicker.whiteCheckmarkIcon, for: .normal)
+        }
+        
         self.sendActions(for: .valueChanged)
     }
     

@@ -23,7 +23,7 @@
                             <rect key="frame" x="0.0" y="14" width="28" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" name="Red"/>
-                            <state key="normal" backgroundImage="ColorPickerIcon"/>
+                            <state key="normal" image="CheckmarkIcon" backgroundImage="ColorPickerIcon"/>
                             <connections>
                                 <action selector="didTapColorButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="I9A-a1-7Wa"/>
                             </connections>
@@ -120,6 +120,7 @@
         </view>
     </objects>
     <resources>
+        <image name="CheckmarkIcon" width="11" height="8"/>
         <image name="ColorPickerBlackIcon" width="28" height="28"/>
         <image name="ColorPickerIcon" width="28" height="28"/>
         <namedColor name="Black">
