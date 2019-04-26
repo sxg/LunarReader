@@ -34,8 +34,8 @@ class ReaderViewController: UIViewController {
             print((sender as! RotationSlider).rotationAngle)
         case is LineWidthStepper:
             print((sender as! LineWidthStepper).value)
-        case is ColorPickerView:
-            return
+        case is ColorPicker:
+            print((sender as! ColorPicker).color)
         default:
             return
         }
@@ -47,7 +47,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is RotationSlider:
             self.dismissControlBar()
-        case is LineWidthStepper, is ColorPickerView:
+        case is LineWidthStepper, is ColorPicker:
             let rotationSlider = UINib(nibName: "RotationSlider", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! RotationSlider
             rotationSlider.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
             self.replaceControlBar(with: rotationSlider)
@@ -62,7 +62,7 @@ class ReaderViewController: UIViewController {
         switch self.controlBarView {
         case is LineWidthStepper:
             self.dismissControlBar()
-        case is RotationSlider, is ColorPickerView:
+        case is RotationSlider, is ColorPicker:
             let lineWidth = UINib(nibName: "LineWidthStepper", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LineWidthStepper
             lineWidth.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
             self.replaceControlBar(with: lineWidth)
@@ -75,13 +75,15 @@ class ReaderViewController: UIViewController {
     
     @IBAction func didTapColorPickerButton(_ sender: UIBarButtonItem) {
         switch self.controlBarView {
-        case is ColorPickerView:
+        case is ColorPicker:
             self.dismissControlBar()
         case is RotationSlider, is LineWidthStepper:
-            let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
+            let colorPicker = UINib(nibName: "ColorPicker", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPicker
+            colorPicker.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
             self.replaceControlBar(with: colorPicker)
         default:
-            let colorPicker = UINib(nibName: "ColorPickerView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPickerView
+            let colorPicker = UINib(nibName: "ColorPicker", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorPicker
+            colorPicker.addTarget(self, action: #selector(controlValueReceived(_:)), for: .valueChanged)
             self.presentControlBar(view: colorPicker)
         }
     }

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A340C662253FECB0043E69D /* WordBoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A340C652253FECB0043E69D /* WordBoxImageView.swift */; };
-		4A42302E2271054F00B36D1A /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42302D2271054F00B36D1A /* ColorPickerView.swift */; };
-		4A4230302271055F00B36D1A /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A42302F2271055F00B36D1A /* ColorPickerView.xib */; };
+		4A42302E2271054F00B36D1A /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42302D2271054F00B36D1A /* ColorPicker.swift */; };
+		4A4230302271055F00B36D1A /* ColorPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A42302F2271055F00B36D1A /* ColorPicker.xib */; };
 		4A423032227201AF00B36D1A /* RotationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A423031227201AE00B36D1A /* RotationSlider.swift */; };
 		4A423034227201BB00B36D1A /* RotationSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A423033227201BB00B36D1A /* RotationSlider.xib */; };
 		4A47BD7B2256E7AA008D4342 /* NewPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */; };
@@ -67,8 +67,8 @@
 		3B09D576313E81C7455322B7 /* Pods_LunarReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAC8F131ECFAF3322478AFA /* Pods-LunarReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunarReader.release.xcconfig"; path = "Target Support Files/Pods-LunarReader/Pods-LunarReader.release.xcconfig"; sourceTree = "<group>"; };
 		4A340C652253FECB0043E69D /* WordBoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxImageView.swift; path = Views/WordBoxImageView.swift; sourceTree = "<group>"; };
-		4A42302D2271054F00B36D1A /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPickerView.swift; path = Views/ColorPickerView.swift; sourceTree = "<group>"; };
-		4A42302F2271055F00B36D1A /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ColorPickerView.xib; path = Views/ColorPickerView.xib; sourceTree = "<group>"; };
+		4A42302D2271054F00B36D1A /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPicker.swift; path = Views/ColorPicker.swift; sourceTree = "<group>"; };
+		4A42302F2271055F00B36D1A /* ColorPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ColorPicker.xib; path = Views/ColorPicker.xib; sourceTree = "<group>"; };
 		4A423031227201AE00B36D1A /* RotationSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RotationSlider.swift; path = Views/RotationSlider.swift; sourceTree = "<group>"; };
 		4A423033227201BB00B36D1A /* RotationSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RotationSlider.xib; path = Views/RotationSlider.xib; sourceTree = "<group>"; };
 		4A47BD7A2256E7AA008D4342 /* NewPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPageTableViewController.swift; path = "View Controllers/NewPageTableViewController.swift"; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 				4AF9D7D7225E6F6200DB42D3 /* DrawerTableViewCell.xib */,
 				4A530E522270E45300013EDB /* LineWidthStepper.swift */,
 				4A530E562270E65A00013EDB /* LineWidthStepper.xib */,
-				4A42302D2271054F00B36D1A /* ColorPickerView.swift */,
-				4A42302F2271055F00B36D1A /* ColorPickerView.xib */,
+				4A42302D2271054F00B36D1A /* ColorPicker.swift */,
+				4A42302F2271055F00B36D1A /* ColorPicker.xib */,
 				4A423031227201AE00B36D1A /* RotationSlider.swift */,
 				4A423033227201BB00B36D1A /* RotationSlider.xib */,
 			);
@@ -382,7 +382,7 @@
 				4A530E572270E65A00013EDB /* LineWidthStepper.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
 				4A423034227201BB00B36D1A /* RotationSlider.xib in Resources */,
-				4A4230302271055F00B36D1A /* ColorPickerView.xib in Resources */,
+				4A4230302271055F00B36D1A /* ColorPicker.xib in Resources */,
 				4ADA98EA225BB48D00683BFC /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +527,7 @@
 				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
 				4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */,
 				4AF9D7D5225E6C0300DB42D3 /* DrawerViewController.swift in Sources */,
-				4A42302E2271054F00B36D1A /* ColorPickerView.swift in Sources */,
+				4A42302E2271054F00B36D1A /* ColorPicker.swift in Sources */,
 				4A4F774C2252B1320046C393 /* AppDelegate.swift in Sources */,
 				4A530E49226F8ADB00013EDB /* ReaderViewController.swift in Sources */,
 				4A530E47226E49DB00013EDB /* DrawerNavigationController.swift in Sources */,
