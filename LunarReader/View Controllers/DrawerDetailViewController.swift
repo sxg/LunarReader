@@ -66,40 +66,32 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         self.performSegue(withIdentifier: "ReaderSegue", sender: page)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
+ 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
+        switch editingStyle {
+        case .none:
+            return
+        case .insert:
+            return
+        case .delete:
+            let page = self.collection!.pages[indexPath.row]
+            DataManager.shared.remove(page: page, from: self.collection!) { result in
+                switch result {
+                case .success(()):
+                    return
+                case .failure(let error):
+                    print("Failed to delete page in collection: \(page) \(self.collection!)")
+                    print("Error: \(error)")
+                }
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        default:
+            return
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
     // MARK: - UISearchBarDelegate
     
@@ -128,7 +120,8 @@ class DrawerDetailViewController: UIViewController, PulleyDrawerViewControllerDe
         if segue.identifier == "ReaderSegue" {
             let readerViewController = (segue.destination as! UINavigationController).topViewController as! ReaderViewController
             let page = sender as! Page
-            readerViewController.page = page
+            readerViewController.collection = self.collection!
+            readerViewController.currentIndex = self.collection!.pages.firstIndex(where: { $0 == page }) ?? 0
         }
     }
 

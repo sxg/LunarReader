@@ -24,9 +24,12 @@
 		4A530E532270E45300013EDB /* LineWidthStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A530E522270E45300013EDB /* LineWidthStepper.swift */; };
 		4A530E572270E65A00013EDB /* LineWidthStepper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A530E562270E65A00013EDB /* LineWidthStepper.xib */; };
 		4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64E130225642FC00CE7A89 /* CameraView.swift */; };
+		4A683672228658CB0021F268 /* LineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A683671228658CB0021F268 /* LineColor.swift */; };
 		4A6C5ED42266309A001F98C8 /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */; };
 		4A6C5ED62266679C001F98C8 /* DrawerUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */; };
 		4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8E48892253A8FC009A373A /* WordBoxFinder.swift */; };
+		4AB8B3DF2277BD8600DA367F /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB8B3DD2277BD8600DA367F /* PageCollectionViewCell.swift */; };
+		4AB8B3E02277BD8600DA367F /* PageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB8B3DE2277BD8600DA367F /* PageCollectionViewCell.xib */; };
 		4ADA98D42257D73300683BFC /* RenamePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */; };
 		4ADA98D82259418200683BFC /* ChooseCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */; };
 		4ADA98DA225A3D8A00683BFC /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA98D9225A3D8A00683BFC /* Collection.swift */; };
@@ -89,9 +92,12 @@
 		4A530E522270E45300013EDB /* LineWidthStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineWidthStepper.swift; path = Views/LineWidthStepper.swift; sourceTree = "<group>"; };
 		4A530E562270E65A00013EDB /* LineWidthStepper.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LineWidthStepper.xib; path = Views/LineWidthStepper.xib; sourceTree = "<group>"; };
 		4A64E130225642FC00CE7A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Views/CameraView.swift; sourceTree = "<group>"; };
+		4A683671228658CB0021F268 /* LineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineColor.swift; path = Models/LineColor.swift; sourceTree = "<group>"; };
 		4A6C5ED32266309A001F98C8 /* DrawerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerSegue.swift; path = "View Controllers/DrawerSegue.swift"; sourceTree = "<group>"; };
 		4A6C5ED52266679C001F98C8 /* DrawerUnwindSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerUnwindSegue.swift; path = "View Controllers/DrawerUnwindSegue.swift"; sourceTree = "<group>"; };
 		4A8E48892253A8FC009A373A /* WordBoxFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WordBoxFinder.swift; path = Models/WordBoxFinder.swift; sourceTree = "<group>"; };
+		4AB8B3DD2277BD8600DA367F /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageCollectionViewCell.swift; path = Views/PageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AB8B3DE2277BD8600DA367F /* PageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PageCollectionViewCell.xib; path = Views/PageCollectionViewCell.xib; sourceTree = "<group>"; };
 		4ADA98D32257D73300683BFC /* RenamePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RenamePageTableViewController.swift; path = "View Controllers/RenamePageTableViewController.swift"; sourceTree = "<group>"; };
 		4ADA98D72259418200683BFC /* ChooseCollectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCollectionTableViewController.swift; path = "View Controllers/ChooseCollectionTableViewController.swift"; sourceTree = "<group>"; };
 		4ADA98D9225A3D8A00683BFC /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = Models/Collection.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				4ADA98D9225A3D8A00683BFC /* Collection.swift */,
 				4ADA98DB225A3DDF00683BFC /* Page.swift */,
 				4AF9D7E2225FC65500DB42D3 /* Notification+Name.swift */,
+				4A683671228658CB0021F268 /* LineColor.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -223,6 +230,8 @@
 				4A42302F2271055F00B36D1A /* ColorPicker.xib */,
 				4A423031227201AE00B36D1A /* RotationSlider.swift */,
 				4A423033227201BB00B36D1A /* RotationSlider.xib */,
+				4AB8B3DD2277BD8600DA367F /* PageCollectionViewCell.swift */,
+				4AB8B3DE2277BD8600DA367F /* PageCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 				4A4F77462252B1310046C393 /* Resources */,
 				EC238331F300AB09604445E9 /* [CP] Embed Pods Frameworks */,
 				4ADA98D62257ED9D00683BFC /* Increment Build Number */,
+				4A68366C2285F5840021F268 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -380,6 +390,7 @@
 				4A4F77532252B1330046C393 /* Assets.xcassets in Resources */,
 				4AF9D7D9225E6F6200DB42D3 /* DrawerTableViewCell.xib in Resources */,
 				4A530E572270E65A00013EDB /* LineWidthStepper.xib in Resources */,
+				4AB8B3E02277BD8600DA367F /* PageCollectionViewCell.xib in Resources */,
 				4A4F77512252B1320046C393 /* Main.storyboard in Resources */,
 				4A423034227201BB00B36D1A /* RotationSlider.xib in Resources */,
 				4A4230302271055F00B36D1A /* ColorPicker.xib in Resources */,
@@ -448,6 +459,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A68366C2285F5840021F268 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" c0946e755af032a6ed749d647f73248bc823fb73 7b703fcd45f2ddb3461fa62ed1d9b0687fe331dbf94dda507c8db790932343c9\n";
+		};
 		4ADA98D62257ED9D00683BFC /* Increment Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A683672228658CB0021F268 /* LineColor.swift in Sources */,
 				4ADA98DA225A3D8A00683BFC /* Collection.swift in Sources */,
 				4ADA98D82259418200683BFC /* ChooseCollectionTableViewController.swift in Sources */,
 				4A6C5ED62266679C001F98C8 /* DrawerUnwindSegue.swift in Sources */,
@@ -523,6 +554,7 @@
 				4ADA98DC225A3DDF00683BFC /* Page.swift in Sources */,
 				4ADA98D42257D73300683BFC /* RenamePageTableViewController.swift in Sources */,
 				4A64E131225642FC00CE7A89 /* CameraView.swift in Sources */,
+				4AB8B3DF2277BD8600DA367F /* PageCollectionViewCell.swift in Sources */,
 				4A8E488A2253A8FC009A373A /* WordBoxFinder.swift in Sources */,
 				4ADA98DE225A468000683BFC /* DataManager.swift in Sources */,
 				4AF9D7D8225E6F6200DB42D3 /* DrawerTableViewCell.swift in Sources */,
@@ -712,6 +744,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 76333YNXLE;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = LunarReader/Info.plist;

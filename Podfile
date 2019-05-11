@@ -8,6 +8,8 @@ target 'LunarReader' do
   pod 'Pulley'
   pod 'Disk', '~> 0.6.2'
   pod 'ValueStepper'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   # Pods for LunarReader
 

@@ -23,7 +23,7 @@
                             <rect key="frame" x="0.0" y="14" width="28" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" name="Red"/>
-                            <state key="normal" image="CheckmarkIcon" backgroundImage="ColorPickerIcon"/>
+                            <state key="normal" backgroundImage="ColorPickerIcon"/>
                             <connections>
                                 <action selector="didTapColorButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="I9A-a1-7Wa"/>
                             </connections>
@@ -86,7 +86,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-fk-y3B">
                             <rect key="frame" x="354" y="14" width="28" height="28"/>
-                            <color key="tintColor" name="Black"/>
+                            <color key="tintColor" name="White"/>
                             <state key="normal" backgroundImage="ColorPickerBlackIcon"/>
                             <connections>
                                 <action selector="didTapColorButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="8fe-ov-FyP"/>
@@ -120,12 +120,8 @@
         </view>
     </objects>
     <resources>
-        <image name="CheckmarkIcon" width="11" height="8"/>
         <image name="ColorPickerBlackIcon" width="28" height="28"/>
         <image name="ColorPickerIcon" width="28" height="28"/>
-        <namedColor name="Black">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Blue">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

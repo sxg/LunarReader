@@ -12,14 +12,20 @@ import AVFoundation
 
 class WordBoxImageView: UIImageView {
     
-    var wordBoxes: [CGRect]?
+    var page: Page? {
+        didSet {
+            self.image = self.page!.image
+            self.drawLines(wordBoxes: self.page!.wordBoxes, lineWidth: self.page!.lineWidth, lineColor: self.page!.lineColor, lineRotationAngle: self.page!.lineRotationAngle)
+        }
+    }
     
-    func drawLines(wordBoxes: [CGRect]) {
-        self.wordBoxes = wordBoxes
+    func drawLines(wordBoxes: [CGRect], lineWidth: CGFloat, lineColor: LineColor, lineRotationAngle: CGFloat) {
+        // Remove previous lines
+        self.layer.sublayers?.removeAll()
         
         // Calculate image frame and offset within image view
         let imageFrame = AVMakeRect(aspectRatio: self.image!.size, insideRect: self.bounds)
-        let yOffset = 0.5 * (self.frame.size.height - imageFrame.size.height)
+        let yOffset = 0.5 * (self.bounds.size.height - imageFrame.size.height)
         
         // Draw each word box's lines
         wordBoxes.forEach { wordBox in
@@ -40,23 +46,27 @@ class WordBoxImageView: UIImageView {
             
             // Draw each line
             let topLinePath = UIBezierPath()
-            topLinePath.move(to: topLineStart)
-            topLinePath.addLine(to: topLineEnd)
+            topLinePath.move(to: CGPoint(x: 0, y: 0.5 * lineWidth))
+            topLinePath.addLine(to: CGPoint(x: topLineEnd.x - topLineStart.x, y: 0.5 * lineWidth))
             let bottomLinePath = UIBezierPath()
-            bottomLinePath.move(to: bottomLineStart)
-            bottomLinePath.addLine(to: bottomLineEnd)
+            bottomLinePath.move(to: CGPoint(x: 0, y: 0.5 * lineWidth))
+            bottomLinePath.addLine(to: CGPoint(x: bottomLineEnd.x - bottomLineStart.x, y: 0.5 * lineWidth))
             let topLine = CAShapeLayer()
+            topLine.frame = CGRect(x: topLineStart.x, y: topLineStart.y - 0.5 * lineWidth, width: topLineEnd.x - topLineStart.x, height: lineWidth)
             topLine.path = topLinePath.cgPath
             topLine.fillColor = nil
-            topLine.strokeColor = UIColor.black.cgColor
-            topLine.lineWidth = 0.7
+            topLine.strokeColor = lineColor.uiColor().cgColor
+            topLine.lineWidth = lineWidth
             topLine.lineCap = .round
+            topLine.setAffineTransform(CGAffineTransform(rotationAngle: -lineRotationAngle))
             let bottomLine = CAShapeLayer()
+            bottomLine.frame = CGRect(x: bottomLineStart.x, y: bottomLineStart.y - 0.5 * lineWidth, width: bottomLineEnd.x - bottomLineStart.x, height: lineWidth)
             bottomLine.path = bottomLinePath.cgPath
             bottomLine.fillColor = nil
-            bottomLine.strokeColor = UIColor.black.cgColor
-            bottomLine.lineWidth = 0.7
+            bottomLine.strokeColor = lineColor.uiColor().cgColor
+            bottomLine.lineWidth = lineWidth
             bottomLine.lineCap = .round
+            bottomLine.setAffineTransform(CGAffineTransform(rotationAngle: -lineRotationAngle))
             self.layer.addSublayer(topLine)
             self.layer.addSublayer(bottomLine)
         }

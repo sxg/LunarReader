@@ -23,56 +23,67 @@ class ColorPicker: UIControl {
     private static let checkmarkIcon: UIImage = UIImage(named: "CheckmarkIcon")!
     private static let whiteCheckmarkIcon: UIImage = UIImage(named: "CheckmarkIcon")!.withRenderingMode(.alwaysTemplate)
     
-    private static let redColor: UIColor = UIColor(named: "Red")!
-    private static let orangeColor: UIColor = UIColor(named: "Orange")!
-    private static let yellowColor: UIColor = UIColor(named: "Yellow")!
-    private static let greenColor: UIColor = UIColor(named: "Green")!
-    private static let lightBlueColor: UIColor = UIColor(named: "LightBlue")!
-    private static let blueColor: UIColor = UIColor(named: "Blue")!
-    private static let whiteColor: UIColor = UIColor(named: "White")!
-    private static let grayColor: UIColor = UIColor(named: "Gray")!
-    private static let blackColor: UIColor = UIColor(named: "Black")!
+    private weak var selectedColorButton: UIButton? {
+        didSet {
+            // Remove the old checkmark
+            oldValue?.setImage(nil, for: .normal)
+            // Assign the new checkmark
+            switch color {
+            case .red, .orange, .yellow, .green, .lightBlue, .blue, .white, .gray:
+                self.selectedColorButton!.setImage(ColorPicker.checkmarkIcon, for: .normal)
+            case .black:
+                self.selectedColorButton!.setImage(ColorPicker.whiteCheckmarkIcon, for: .normal)
+            }
+        }
+    }
     
-    private lazy var selectedColorButton: UIButton = self.redButton
+    var color = LineColor.black {
+        didSet {
+            self.selectedColorButton = { // Update the selected color button
+                switch self.color {
+                case .red: return self.redButton
+                case .orange: return self.orangeButton
+                case .yellow: return self.yellowButton
+                case .green: return self.greenButton
+                case .lightBlue: return self.lightBlueButton
+                case .blue: return self.blueButton
+                case .white: return self.whiteButton
+                case .gray: return self.grayButton
+                case .black: return self.blackButton
+                }
+            }()
+        }
+    }
     
-    lazy var color: UIColor = ColorPicker.redColor
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Add observer for page changes
+        NotificationCenter.default.addObserver(forName: .didChangePage, object: nil, queue: OperationQueue.main) { notification in
+            let wordBoxImageView = notification.userInfo!["WordBoxImageView"] as! WordBoxImageView
+            self.color = wordBoxImageView.page!.lineColor
+        }
+    }
     
     // MARK: UI Actions
     
     @IBAction func didTapColorButton(_ sender: UIButton) {
-        switch sender {
-        case redButton:
-            self.color = ColorPicker.redColor
-        case orangeButton:
-            self.color = ColorPicker.orangeColor
-        case yellowButton:
-            self.color = ColorPicker.yellowColor
-        case greenButton:
-            self.color = ColorPicker.greenColor
-        case lightBlueButton:
-            self.color = ColorPicker.lightBlueColor
-        case blueButton:
-            self.color = ColorPicker.blueColor
-        case whiteButton:
-            self.color = ColorPicker.whiteColor
-        case grayButton:
-            self.color = ColorPicker.grayColor
-        case blackButton:
-            self.color = ColorPicker.blackColor
-        default:
-            return
-        }
+        self.color = { // Set the color based on which color button was tapped
+            switch sender {
+            case redButton: return .red
+            case orangeButton: return .orange
+            case yellowButton: return .yellow
+            case greenButton: return .green
+            case lightBlueButton: return .lightBlue
+            case blueButton: return .blue
+            case whiteButton: return .white
+            case grayButton: return .gray
+            case blackButton: return .black
+            default: return .black
+            }
+        }()
         
-        // Remove the checkmark from the previous selection and add it to the new one
-        self.selectedColorButton.setImage(nil, for: .normal)
-        self.selectedColorButton = sender
-        if sender != self.blackButton {
-            self.selectedColorButton.setImage(ColorPicker.checkmarkIcon, for: .normal)
-        } else {
-            self.blackButton.imageView?.tintColor = ColorPicker.whiteColor
-            self.blackButton.setImage(ColorPicker.whiteCheckmarkIcon, for: .normal)
-        }
-        
+        // Inform the target
         self.sendActions(for: .valueChanged)
     }
     
