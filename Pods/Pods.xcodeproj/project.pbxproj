@@ -3,45 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		ABB048B191245233986A7CD75FE412A5 /* Fabric */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 13B185864087F75D556AC109B2D70BF7 /* Build configuration list for PBXAggregateTarget "Fabric" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Fabric;
+			productName = Fabric;
+		};
+		C0E41540D6862472ED7F2FA11669BE1F /* Crashlytics */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A084C0089544D8EEE7DA4C6D8EEEF9ED /* Build configuration list for PBXAggregateTarget "Crashlytics" */;
+			buildPhases = (
+			);
+			dependencies = (
+				C9CEFEFAAAEDB8CD947737FA56C849D4 /* PBXTargetDependency */,
+			);
+			name = Crashlytics;
+			productName = Crashlytics;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		104795F1A49E077DDD2D4AD190CFD716 /* Disk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC74DC3FB4520985D00A58B39A0B60D /* Disk-dummy.m */; };
-		14F81D55BEC2C431D9638AB4024B7B0F /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE77C349412BB28E5073CDEA9D1A88 /* PulleyPassthroughScrollView.swift */; };
-		1A17E0FC289BBA63AB18A6359FEFA164 /* Pulley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BF8C67A0BE19E1A7CDBE6FE8083E45 /* Pulley-dummy.m */; };
-		1A4D5AE038AB59EFD58CB2511EAF5948 /* ValueStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BFCE233AE24F13ECB4853CC989CF4B /* ValueStepper-dummy.m */; };
-		28C89143E0E686BD4FBCE9F4D580853B /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE952725BE05BBAD7CE24570C498AA /* PulleyViewController.swift */; };
-		2946961F84714E76FC4060F4594ED951 /* Pods-LunarReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E9C0A3F31F20D84B9BA0AB854C7320 /* Pods-LunarReader-dummy.m */; };
+		104795F1A49E077DDD2D4AD190CFD716 /* Disk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14761A27120E2D0432144C5B59068361 /* Disk-dummy.m */; };
+		14F81D55BEC2C431D9638AB4024B7B0F /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3A45DE77C35428DC55014923F9E2A /* PulleyPassthroughScrollView.swift */; };
+		1A17E0FC289BBA63AB18A6359FEFA164 /* Pulley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D0718931209F7D2D7C5E62151F24E2 /* Pulley-dummy.m */; };
+		1A4D5AE038AB59EFD58CB2511EAF5948 /* ValueStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EEAE1E8B221F0B49CC797628A3430 /* ValueStepper-dummy.m */; };
+		2240C5AFAD6AC4728B59937EB70BEF93 /* Pods-LunarReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E9C0A3F31F20D84B9BA0AB854C7320 /* Pods-LunarReader-dummy.m */; };
+		28C89143E0E686BD4FBCE9F4D580853B /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73616A1EC575829DACBA6B4178C62498 /* PulleyViewController.swift */; };
 		39FB89C9BDAFB75D43130F49B622E472 /* Pods-LunarReaderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F676FC99438045135D69C6530314DAA7 /* Pods-LunarReaderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AAC70DCCE13E645B4E8E27554AC3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		4479F2046D0E05C2EBD0F41A505040AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		474E92959BBCEC7415BD199683CD4FE6 /* Pods-LunarReaderUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 885EA4840FAE1A2F772147FD6D964CF3 /* Pods-LunarReaderUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52FE8BC308715A8878C95C3140B8C413 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BAD12D6298F2B2C068E66376C441C7 /* Disk+UIImage.swift */; };
+		52FE8BC308715A8878C95C3140B8C413 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78756861AD0DF436CDC351D359FFAD85 /* Disk+UIImage.swift */; };
 		56DCC63A834D0CF2FF94162EC891DE09 /* Pods-LunarReaderUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67FB57047F6514D2A389B4802A96E25 /* Pods-LunarReaderUITests-dummy.m */; };
 		601FFE93EDAAF8FDE736559453857777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		6862C746BBFB6A487E4CA98603BA054F /* ValueStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F401FF3EB87E979562ED2C92F5AA5963 /* ValueStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B84A28D22705A5E6B7CDF2110E25863 /* Disk+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6FE877960690394F8A89556AF8D3B /* Disk+Errors.swift */; };
-		6EAE659C14D14E143EA68B78103D8700 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		6862C746BBFB6A487E4CA98603BA054F /* ValueStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F13DAE24581C54BD53FBE392835F3846 /* ValueStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B84A28D22705A5E6B7CDF2110E25863 /* Disk+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC332BC27224E114097E7A90FCD75C41 /* Disk+Errors.swift */; };
 		77253D51FF4D72B4FC1165182C545017 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
-		7B34789BCB38BA679E0F676868796A6F /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A0BD976FD820F5F5CAF6441F327A90 /* UIView+constrainToParent.swift */; };
-		7DB5F52D783E73050FB4E7C844FD760F /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBFD3929AEFA8F52C2CF41E82C8D22 /* Disk+[Data].swift */; };
-		814DF9C8184EDC65531556B9647F80FA /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBBC93438E43C07DD13B237346F356 /* Disk+InternalHelpers.swift */; };
-		83F9038CE542F3A56D0013043D4CFA19 /* Pulley-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D3A799C455F1F4AE7CD77D3DFA9E7 /* Pulley-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83F92DDF8879F722ECDEBA142509D0CC /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94FB994679B5D46E07944301FA40480 /* Disk.swift */; };
-		8AA1E0B34ED1E2014B04A51ABE1DB315 /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD49C8FEEF52FCD6373EBA91F3E8F20 /* Disk+Data.swift */; };
-		8C7D25733B3966A89D14A7AA51D3083F /* Disk.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1AD3B124456B15CEA5AB8C30D70FDF /* Disk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B34789BCB38BA679E0F676868796A6F /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52937A89151955579F860095893E72E4 /* UIView+constrainToParent.swift */; };
+		7DB5F52D783E73050FB4E7C844FD760F /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DE05346D5DE2ADE49F05F775DB6661 /* Disk+[Data].swift */; };
+		814DF9C8184EDC65531556B9647F80FA /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61587E173ABF37D038D7D2EB158660C4 /* Disk+InternalHelpers.swift */; };
+		83F9038CE542F3A56D0013043D4CFA19 /* Pulley-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 108E804FDEC84B668A9FD09C55F7807A /* Pulley-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83F92DDF8879F722ECDEBA142509D0CC /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FE2C5AF147C5AE493BF72C581E5E /* Disk.swift */; };
+		8AA1E0B34ED1E2014B04A51ABE1DB315 /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554F2F754D443552D47BCB3C18C2DD6 /* Disk+Data.swift */; };
+		8C7D25733B3966A89D14A7AA51D3083F /* Disk.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2BF03AB989DDD461B9FEB29C446DCB /* Disk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9501969A20033797A7BEEEEA8C004D88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		9641F7E706FF3F7780D9DB0A2DEA1BBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
-		A1232FDABFE581B11297255AD074985A /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5AF53A6839E4D18C65D5CDCFE005B /* Disk+Helpers.swift */; };
-		A3442DB56D382A0E1D1C2860D4BB2989 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60E9F719BA60FBB51FC3FB0FAF3A44 /* Disk+VolumeInformation.swift */; };
-		B452823269FB9B01A79C701905BB99DD /* Pods-LunarReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6C2D39E6614E90A6D455107FAB9184 /* Pods-LunarReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C14C5831244E00CB926D470E8FDAF552 /* Disk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 005F05C17DF0014833E756B7ACB7B13F /* Disk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1232FDABFE581B11297255AD074985A /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296977F754A47DA25EBBFFCE4FACF17 /* Disk+Helpers.swift */; };
+		A3442DB56D382A0E1D1C2860D4BB2989 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFB8FD2E71EA9A329D7347D140F105 /* Disk+VolumeInformation.swift */; };
+		B0A864DF52B5B73C615FD0F6713C9C2F /* Pods-LunarReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6C2D39E6614E90A6D455107FAB9184 /* Pods-LunarReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C14C5831244E00CB926D470E8FDAF552 /* Disk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D56BE00937E289166C2C98D00F287E3 /* Disk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9D16C5F811E85C63277374BFE27B4C2 /* Pods-LunarReaderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD77495505E222994EA41305CB92774E /* Pods-LunarReaderTests-dummy.m */; };
-		CEDB4B860221633812AF80E1A870496A /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEDC00DDCF8B81308D577D0B65629D1 /* ValueStepper.swift */; };
-		EF5370EFC7BA5AB57833FB9702ADD88F /* Disk+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C632D51512D472016573F187839CDA /* Disk+Codable.swift */; };
-		EFC48ED4BE69E1DBA026377BB499C496 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83FABE598DB469734BB8588B3C99FA /* Disk+[UIImage].swift */; };
-		FFD1A46907487B0A31F32A5DE8E738D2 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EE965DB730B3EA870469B25CE6A0 /* UIViewController+PulleyViewController.swift */; };
+		CEDB4B860221633812AF80E1A870496A /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5425870FAEABAB12B7E0292F66981 /* ValueStepper.swift */; };
+		EF5370EFC7BA5AB57833FB9702ADD88F /* Disk+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639691E63A2F90FEA48CADBDF2D23E35 /* Disk+Codable.swift */; };
+		EFC48ED4BE69E1DBA026377BB499C496 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FF9D24DB2DCF0D9CB5FBA097118D4 /* Disk+[UIImage].swift */; };
+		F4D1F545DE333B0C2625C1D5499143B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		FFD1A46907487B0A31F32A5DE8E738D2 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA93EBBA51BC4F9138856B3A082AD2C /* UIViewController+PulleyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,26 +76,47 @@
 			remoteGlobalIDString = DE6743F195AA4AD7EF5FAB79084A7239;
 			remoteInfo = "Pods-LunarReader";
 		};
-		5FEB99489791633F46185A3B55E2758A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDFBB6677FF11273953A3294FBA7E475;
-			remoteInfo = Pulley;
-		};
-		92ED4C7670079039E2094C931193B034 /* PBXContainerItemProxy */ = {
+		3810D8EEFDF0DF1E1E34DE1FDB257085 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 75626691707CB65882B0D7D67E1235EC;
 			remoteInfo = ValueStepper;
 		};
-		97FF5C2BB3636F21E2645636E0DD75CB /* PBXContainerItemProxy */ = {
+		3B676BA8F9CE2BBB2642F73A2725AC44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB048B191245233986A7CD75FE412A5;
+			remoteInfo = Fabric;
+		};
+		3F0547C8AD79B83CF0614D675212F544 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 914C00A85014D51C5BD9DC8C6E07C79F;
 			remoteInfo = Disk;
+		};
+		9D60FD9B4E0F7E9BB788A46F2D27F953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E41540D6862472ED7F2FA11669BE1F;
+			remoteInfo = Crashlytics;
+		};
+		D465047540D12FD9D95291AE82A76DB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB048B191245233986A7CD75FE412A5;
+			remoteInfo = Fabric;
+		};
+		DB8336CC985CDF1616FE7D78007CB427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFBB6677FF11273953A3294FBA7E475;
+			remoteInfo = Pulley;
 		};
 		E5654F62578CD7E6B4A5515E02009922 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -83,85 +128,90 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005F05C17DF0014833E756B7ACB7B13F /* Disk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-umbrella.h"; sourceTree = "<group>"; };
+		0010CB5A6DA4E02CE35ADB68FD101791 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		01E9C0A3F31F20D84B9BA0AB854C7320 /* Pods-LunarReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LunarReader-dummy.m"; sourceTree = "<group>"; };
 		03390B351236C480F3291423E9EBA26E /* Pods-LunarReaderUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LunarReaderUITests.modulemap"; sourceTree = "<group>"; };
 		0C30A1DEC7A14B55D1881DC2C6D553F1 /* Pods-LunarReader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LunarReader-frameworks.sh"; sourceTree = "<group>"; };
+		108E804FDEC84B668A9FD09C55F7807A /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
+		14761A27120E2D0432144C5B59068361 /* Disk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Disk-dummy.m"; sourceTree = "<group>"; };
+		15BFB8FD2E71EA9A329D7347D140F105 /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+VolumeInformation.swift"; path = "Sources/Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
+		1A2BF03AB989DDD461B9FEB29C446DCB /* Disk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Disk.h; path = Sources/Disk.h; sourceTree = "<group>"; };
+		219A2EF58A87BA61093CD4964AD72A7E /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		22CD61E79D8B5E55630C2B7F92EADE72 /* Pods-LunarReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2523BD72927C0A5B6278345F372B34F9 /* Pods-LunarReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReader.release.xcconfig"; sourceTree = "<group>"; };
-		27BAD12D6298F2B2C068E66376C441C7 /* Disk+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+UIImage.swift"; path = "Sources/Disk+UIImage.swift"; sourceTree = "<group>"; };
+		293092064731B38609708D6CF01A4038 /* ValueStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueStepper.xcconfig; sourceTree = "<group>"; };
 		295B9A5FCE2159746B822851C99851F3 /* Pods_LunarReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29FE77C349412BB28E5073CDEA9D1A88 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = PulleyLib/PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		2BA592E501F356EDAE4082BBBC89E4D2 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		2BCD70E928C409375AF4C7CBA91FD63D /* Pods-LunarReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReader.debug.xcconfig"; sourceTree = "<group>"; };
-		2BEBFD3929AEFA8F52C2CF41E82C8D22 /* Disk+[Data].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[Data].swift"; path = "Sources/Disk+[Data].swift"; sourceTree = "<group>"; };
-		31FBBC93438E43C07DD13B237346F356 /* Disk+InternalHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+InternalHelpers.swift"; path = "Sources/Disk+InternalHelpers.swift"; sourceTree = "<group>"; };
+		2D56BE00937E289166C2C98D00F287E3 /* Disk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-umbrella.h"; sourceTree = "<group>"; };
+		2D5C2B2818466639A8D254D347F252D9 /* Fabric.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fabric.xcconfig; sourceTree = "<group>"; };
 		3370ECFAD8F5D0D56E4E360FDEE6594D /* Pods-LunarReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		349896242EEED8180C02ED93750D94B8 /* ValueStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValueStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		374B083FE178409EDD2207BF6B29453E /* ValueStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-prefix.pch"; sourceTree = "<group>"; };
 		3AECA5DC0C11DF0685635EBB16A62534 /* Pods_LunarReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EADADF89317B1C3363F90E910FC19A4 /* Disk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Disk-Info.plist"; sourceTree = "<group>"; };
 		4074D1FB31B13068EC7D79A218800BB5 /* Pods-LunarReaderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReaderTests-Info.plist"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4233057ABC1B1898CDD4350362137540 /* ValueStepper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ValueStepper-Info.plist"; sourceTree = "<group>"; };
+		42D0718931209F7D2D7C5E62151F24E2 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
 		49B80DE285109435B4CE08C6EE71B8A8 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA0991E60CFF1A393F38A5B48E824D4 /* Pods-LunarReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReaderTests.release.xcconfig"; sourceTree = "<group>"; };
-		4ED6FE877960690394F8A89556AF8D3B /* Disk+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Errors.swift"; path = "Sources/Disk+Errors.swift"; sourceTree = "<group>"; };
-		542A84C92080596225DF20FA73BAA7B4 /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
-		595B73A0D6800953AB22453AE85C277D /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
-		5A1AD3B124456B15CEA5AB8C30D70FDF /* Disk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Disk.h; path = Sources/Disk.h; sourceTree = "<group>"; };
+		52937A89151955579F860095893E72E4 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		5296977F754A47DA25EBBFFCE4FACF17 /* Disk+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Helpers.swift"; path = "Sources/Disk+Helpers.swift"; sourceTree = "<group>"; };
 		5B0B20123E5BA335C9FDA9922F6D57EC /* Pods-LunarReader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReader-Info.plist"; sourceTree = "<group>"; };
-		5BA6E463024367E0A95AF10521200B6A /* ValueStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-prefix.pch"; sourceTree = "<group>"; };
-		5D60E9F719BA60FBB51FC3FB0FAF3A44 /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+VolumeInformation.swift"; path = "Sources/Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
-		5D83FABE598DB469734BB8588B3C99FA /* Disk+[UIImage].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[UIImage].swift"; path = "Sources/Disk+[UIImage].swift"; sourceTree = "<group>"; };
-		5DD49C8FEEF52FCD6373EBA91F3E8F20 /* Disk+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Data.swift"; path = "Sources/Disk+Data.swift"; sourceTree = "<group>"; };
+		5C9EEAE1E8B221F0B49CC797628A3430 /* ValueStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueStepper-dummy.m"; sourceTree = "<group>"; };
+		5DF5425870FAEABAB12B7E0292F66981 /* ValueStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueStepper.swift; path = Pod/Classes/ValueStepper.swift; sourceTree = "<group>"; };
 		5E6C2D39E6614E90A6D455107FAB9184 /* Pods-LunarReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LunarReader-umbrella.h"; sourceTree = "<group>"; };
-		652D3A799C455F1F4AE7CD77D3DFA9E7 /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
-		72BF8C67A0BE19E1A7CDBE6FE8083E45 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
-		72E833CA73F1BCB8843243784CB3849E /* Pulley-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pulley-Info.plist"; sourceTree = "<group>"; };
+		5F7CE6F2E4888DCA4143E00445B38C45 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		5FC5A8F07A78CF68D7A86DA60BB206D3 /* Pulley-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pulley-Info.plist"; sourceTree = "<group>"; };
+		61587E173ABF37D038D7D2EB158660C4 /* Disk+InternalHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+InternalHelpers.swift"; path = "Sources/Disk+InternalHelpers.swift"; sourceTree = "<group>"; };
+		62C2DADE9CFA7D94B5D620C59EB7B9B8 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		639691E63A2F90FEA48CADBDF2D23E35 /* Disk+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Codable.swift"; path = "Sources/Disk+Codable.swift"; sourceTree = "<group>"; };
+		66D63643C8899269132FE86BF76A0214 /* Disk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-prefix.pch"; sourceTree = "<group>"; };
+		70541318560A02228277C06EECBC994B /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		73616A1EC575829DACBA6B4178C62498 /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = PulleyLib/PulleyViewController.swift; sourceTree = "<group>"; };
+		7753D57EEAF6BA0A4BAED6F208ADEAE5 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
+		78756861AD0DF436CDC351D359FFAD85 /* Disk+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+UIImage.swift"; path = "Sources/Disk+UIImage.swift"; sourceTree = "<group>"; };
 		78C3AC0772F9864D008B90B8D3F81F4D /* Pods-LunarReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LunarReader.modulemap"; sourceTree = "<group>"; };
-		7955E57652AE8682717C30688F1A7507 /* Disk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Disk.xcconfig; sourceTree = "<group>"; };
+		78E55B3A7B65E6E9508ED1B956EA1E32 /* ValueStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ValueStepper.modulemap; sourceTree = "<group>"; };
 		7C8B699B108707BB125B4AEF09B414D8 /* Pods-LunarReaderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LunarReaderTests.modulemap"; sourceTree = "<group>"; };
 		885EA4840FAE1A2F772147FD6D964CF3 /* Pods-LunarReaderUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LunarReaderUITests-umbrella.h"; sourceTree = "<group>"; };
-		8BE5AF53A6839E4D18C65D5CDCFE005B /* Disk+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Helpers.swift"; path = "Sources/Disk+Helpers.swift"; sourceTree = "<group>"; };
-		920A32414CD0B944434494DAEEF647E1 /* Disk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Disk.modulemap; sourceTree = "<group>"; };
-		965C608080B48E755EACE00F4471EE8D /* ValueStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ValueStepper.modulemap; sourceTree = "<group>"; };
+		89E6FE2C5AF147C5AE493BF72C581E5E /* Disk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = Sources/Disk.swift; sourceTree = "<group>"; };
+		902F7F8D787F191603D18CFBC5322F33 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		9554F2F754D443552D47BCB3C18C2DD6 /* Disk+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Data.swift"; path = "Sources/Disk+Data.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A069C6FDF9D16EDD672DD38258DE6BDF /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
 		A241787DA1D59149F05AF4B8856451AC /* Pods-LunarReaderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReaderTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A2E280723B0743A38E5259CA975C78C5 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		A4DC4E0ABBB3A973CAA4D3BE8C24A03E /* Pods_LunarReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunarReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A519D17A3FF5D2C12EC14357348DD269 /* Disk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Disk.xcconfig; sourceTree = "<group>"; };
 		A673F527EC762DBDC50B6B0BEB599A50 /* Pods-LunarReader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LunarReader-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A94FB994679B5D46E07944301FA40480 /* Disk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = Sources/Disk.swift; sourceTree = "<group>"; };
+		AC332BC27224E114097E7A90FCD75C41 /* Disk+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Errors.swift"; path = "Sources/Disk+Errors.swift"; sourceTree = "<group>"; };
 		AD77495505E222994EA41305CB92774E /* Pods-LunarReaderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LunarReaderTests-dummy.m"; sourceTree = "<group>"; };
-		ADEDC00DDCF8B81308D577D0B65629D1 /* ValueStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueStepper.swift; path = Pod/Classes/ValueStepper.swift; sourceTree = "<group>"; };
+		B60FF9D24DB2DCF0D9CB5FBA097118D4 /* Disk+[UIImage].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[UIImage].swift"; path = "Sources/Disk+[UIImage].swift"; sourceTree = "<group>"; };
 		B67FB57047F6514D2A389B4802A96E25 /* Pods-LunarReaderUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LunarReaderUITests-dummy.m"; sourceTree = "<group>"; };
+		B99186C9F12D1B4D539C13D8003E786F /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
+		BAED063D454AA28587E41541B505B41E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		BBD7ED94F2D2FF2D12716D1E03F20EA5 /* Pods-LunarReaderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LunarReaderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BDBBE7AFF757D74355FB8D24BA3F331A /* Disk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Disk-prefix.pch"; sourceTree = "<group>"; };
 		BE7F619227FA08AE448E78F394A7E6B4 /* Pods-LunarReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LunarReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C3B24E719C8BDD324999EDE067EF2B5C /* Disk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Disk-Info.plist"; sourceTree = "<group>"; };
-		C3DC2153E90E0BFEA70FFE28611CD52E /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
-		C5BFCE233AE24F13ECB4853CC989CF4B /* ValueStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueStepper-dummy.m"; sourceTree = "<group>"; };
 		C67C910BF3C6DDD70B6C06AC4F2FCC32 /* Pods-LunarReaderUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReaderUITests-Info.plist"; sourceTree = "<group>"; };
+		C8DE05346D5DE2ADE49F05F775DB6661 /* Disk+[Data].swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+[Data].swift"; path = "Sources/Disk+[Data].swift"; sourceTree = "<group>"; };
 		CD809DDBEE39FCF509300A4EE885FB04 /* Pods-LunarReaderUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReaderUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D8CE952725BE05BBAD7CE24570C498AA /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = PulleyLib/PulleyViewController.swift; sourceTree = "<group>"; };
+		CEA93EBBA51BC4F9138856B3A082AD2C /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "PulleyLib/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
+		D169D64B152B0EA0E46D9E73CD844156 /* Crashlytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Crashlytics.xcconfig; sourceTree = "<group>"; };
 		D9A261B5BAF449DC5360A683DEE0ED3D /* Pods-LunarReaderUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LunarReaderUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DB54A8CE8BC5B327A6495D69DD947E4B /* ValueStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueStepper.xcconfig; sourceTree = "<group>"; };
-		E42FDA8D80F56BDB34E755D85CF281E3 /* ValueStepper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ValueStepper-Info.plist"; sourceTree = "<group>"; };
+		E3877B05CEC404600DC6433F83BD677F /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		E5A9E21A8ACFBDC24601CDC2F0BA34E2 /* Disk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Disk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8A0BD976FD820F5F5CAF6441F327A90 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
-		EB90EE965DB730B3EA870469B25CE6A0 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "PulleyLib/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
+		E5ABD25C16507A3CF2CEF1640E61988C /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		E5B3A45DE77C35428DC55014923F9E2A /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = PulleyLib/PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
 		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EEC74DC3FB4520985D00A58B39A0B60D /* Disk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Disk-dummy.m"; sourceTree = "<group>"; };
-		F0C632D51512D472016573F187839CDA /* Disk+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Codable.swift"; path = "Sources/Disk+Codable.swift"; sourceTree = "<group>"; };
-		F401FF3EB87E979562ED2C92F5AA5963 /* ValueStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-umbrella.h"; sourceTree = "<group>"; };
+		EF7CA286BBF34C14589CE7A90DACF257 /* Disk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Disk.modulemap; sourceTree = "<group>"; };
+		F13DAE24581C54BD53FBE392835F3846 /* ValueStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-umbrella.h"; sourceTree = "<group>"; };
 		F676FC99438045135D69C6530314DAA7 /* Pods-LunarReaderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LunarReaderTests-umbrella.h"; sourceTree = "<group>"; };
 		F923ADA39A716C7D0CDA0C3E5295E730 /* Pods-LunarReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LunarReader-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0872A744511FCAC4CE704F308CE1436E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EAE659C14D14E143EA68B78103D8700 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2891A9214A3979225D4BE0B8B1247E56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +225,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				601FFE93EDAAF8FDE736559453857777 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2282B0032375CEAA6C78E2137585254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4D1F545DE333B0C2625C1D5499143B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,16 +264,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070DAC22095CC620DDE1DBE3F40C399C /* Pulley */ = {
+		043427AC51A9FAFC8BD830EC1F92FDA0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				29FE77C349412BB28E5073CDEA9D1A88 /* PulleyPassthroughScrollView.swift */,
-				D8CE952725BE05BBAD7CE24570C498AA /* PulleyViewController.swift */,
-				E8A0BD976FD820F5F5CAF6441F327A90 /* UIView+constrainToParent.swift */,
-				EB90EE965DB730B3EA870469B25CE6A0 /* UIViewController+PulleyViewController.swift */,
-				556D190B946902A15F918950C2E81114 /* Support Files */,
+				EF7CA286BBF34C14589CE7A90DACF257 /* Disk.modulemap */,
+				A519D17A3FF5D2C12EC14357348DD269 /* Disk.xcconfig */,
+				14761A27120E2D0432144C5B59068361 /* Disk-dummy.m */,
+				3EADADF89317B1C3363F90E910FC19A4 /* Disk-Info.plist */,
+				66D63643C8899269132FE86BF76A0214 /* Disk-prefix.pch */,
+				2D56BE00937E289166C2C98D00F287E3 /* Disk-umbrella.h */,
 			);
-			path = Pulley;
+			name = "Support Files";
+			path = "../Target Support Files/Disk";
+			sourceTree = "<group>";
+		};
+		0BF4B32D48C3E1C82FA284C862C58081 /* Disk */ = {
+			isa = PBXGroup;
+			children = (
+				1A2BF03AB989DDD461B9FEB29C446DCB /* Disk.h */,
+				89E6FE2C5AF147C5AE493BF72C581E5E /* Disk.swift */,
+				C8DE05346D5DE2ADE49F05F775DB6661 /* Disk+[Data].swift */,
+				B60FF9D24DB2DCF0D9CB5FBA097118D4 /* Disk+[UIImage].swift */,
+				639691E63A2F90FEA48CADBDF2D23E35 /* Disk+Codable.swift */,
+				9554F2F754D443552D47BCB3C18C2DD6 /* Disk+Data.swift */,
+				AC332BC27224E114097E7A90FCD75C41 /* Disk+Errors.swift */,
+				5296977F754A47DA25EBBFFCE4FACF17 /* Disk+Helpers.swift */,
+				61587E173ABF37D038D7D2EB158660C4 /* Disk+InternalHelpers.swift */,
+				78756861AD0DF436CDC351D359FFAD85 /* Disk+UIImage.swift */,
+				15BFB8FD2E71EA9A329D7347D140F105 /* Disk+VolumeInformation.swift */,
+				043427AC51A9FAFC8BD830EC1F92FDA0 /* Support Files */,
+			);
+			path = Disk;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -224,6 +303,22 @@
 				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D3905607EC8F2B0931FD96B5C8F0074 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				219A2EF58A87BA61093CD4964AD72A7E /* ANSCompatibility.h */,
+				A2E280723B0743A38E5259CA975C78C5 /* Answers.h */,
+				E5ABD25C16507A3CF2CEF1640E61988C /* CLSAttributes.h */,
+				E3877B05CEC404600DC6433F83BD677F /* CLSLogging.h */,
+				62C2DADE9CFA7D94B5D620C59EB7B9B8 /* CLSReport.h */,
+				902F7F8D787F191603D18CFBC5322F33 /* CLSStackFrame.h */,
+				70541318560A02228277C06EECBC994B /* Crashlytics.h */,
+				CD952DDEBDE70783361E6DD595857761 /* Frameworks */,
+				B656501039FD0EA05D6D393C0166ECF8 /* Support Files */,
+			);
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		328E44D7B0478CA27B8E7BD90D7A1CD5 /* Pods-LunarReader */ = {
@@ -243,18 +338,21 @@
 			path = "Target Support Files/Pods-LunarReader";
 			sourceTree = "<group>";
 		};
-		556D190B946902A15F918950C2E81114 /* Support Files */ = {
+		59B9E0034E8B7C548828E930517CDCF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				595B73A0D6800953AB22453AE85C277D /* Pulley.modulemap */,
-				C3DC2153E90E0BFEA70FFE28611CD52E /* Pulley.xcconfig */,
-				72BF8C67A0BE19E1A7CDBE6FE8083E45 /* Pulley-dummy.m */,
-				72E833CA73F1BCB8843243784CB3849E /* Pulley-Info.plist */,
-				542A84C92080596225DF20FA73BAA7B4 /* Pulley-prefix.pch */,
-				652D3A799C455F1F4AE7CD77D3DFA9E7 /* Pulley-umbrella.h */,
+				5F7CE6F2E4888DCA4143E00445B38C45 /* Fabric.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pulley";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65CE2361FB675D95AD478680524D6466 /* ValueStepper */ = {
+			isa = PBXGroup;
+			children = (
+				5DF5425870FAEABAB12B7E0292F66981 /* ValueStepper.swift */,
+				E2465B321BDC3893729BABF76A8AE50E /* Support Files */,
+			);
+			path = ValueStepper;
 			sourceTree = "<group>";
 		};
 		73AE9254323B494E6788844FB36D6BFF /* Pods-LunarReaderTests */ = {
@@ -273,25 +371,6 @@
 			path = "Target Support Files/Pods-LunarReaderTests";
 			sourceTree = "<group>";
 		};
-		73E303630DEDE938B8792433171C3B42 /* Disk */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AD3B124456B15CEA5AB8C30D70FDF /* Disk.h */,
-				A94FB994679B5D46E07944301FA40480 /* Disk.swift */,
-				2BEBFD3929AEFA8F52C2CF41E82C8D22 /* Disk+[Data].swift */,
-				5D83FABE598DB469734BB8588B3C99FA /* Disk+[UIImage].swift */,
-				F0C632D51512D472016573F187839CDA /* Disk+Codable.swift */,
-				5DD49C8FEEF52FCD6373EBA91F3E8F20 /* Disk+Data.swift */,
-				4ED6FE877960690394F8A89556AF8D3B /* Disk+Errors.swift */,
-				8BE5AF53A6839E4D18C65D5CDCFE005B /* Disk+Helpers.swift */,
-				31FBBC93438E43C07DD13B237346F356 /* Disk+InternalHelpers.swift */,
-				27BAD12D6298F2B2C068E66376C441C7 /* Disk+UIImage.swift */,
-				5D60E9F719BA60FBB51FC3FB0FAF3A44 /* Disk+VolumeInformation.swift */,
-				AE32D1304B4E29823C1972659E84FAC1 /* Support Files */,
-			);
-			path = Disk;
-			sourceTree = "<group>";
-		};
 		77E45D78E048567225D778F25C1B6C76 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,16 +379,6 @@
 				A2EEEEEF1C57F393B3D376653A161EC1 /* Pods-LunarReaderUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		932A73A303DFCADEE50AC367BBEF90E9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				73E303630DEDE938B8792433171C3B42 /* Disk */,
-				070DAC22095CC620DDE1DBE3F40C399C /* Pulley */,
-				AC1D304B6AB94DE5261C1BBEBDC864A3 /* ValueStepper */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		A2EEEEEF1C57F393B3D376653A161EC1 /* Pods-LunarReaderUITests */ = {
@@ -328,27 +397,44 @@
 			path = "Target Support Files/Pods-LunarReaderUITests";
 			sourceTree = "<group>";
 		};
-		AC1D304B6AB94DE5261C1BBEBDC864A3 /* ValueStepper */ = {
+		B5B786EB346B009729B23057997F95CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADEDC00DDCF8B81308D577D0B65629D1 /* ValueStepper.swift */,
-				D13011C068166BA58287F05094D5CE92 /* Support Files */,
+				2D3905607EC8F2B0931FD96B5C8F0074 /* Crashlytics */,
+				0BF4B32D48C3E1C82FA284C862C58081 /* Disk */,
+				BE7EA246357A8B1B6ED2EA4637FCB249 /* Fabric */,
+				E9C546AE2775E16E60D49C24FDBD4D98 /* Pulley */,
+				65CE2361FB675D95AD478680524D6466 /* ValueStepper */,
 			);
-			path = ValueStepper;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		AE32D1304B4E29823C1972659E84FAC1 /* Support Files */ = {
+		B656501039FD0EA05D6D393C0166ECF8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				920A32414CD0B944434494DAEEF647E1 /* Disk.modulemap */,
-				7955E57652AE8682717C30688F1A7507 /* Disk.xcconfig */,
-				EEC74DC3FB4520985D00A58B39A0B60D /* Disk-dummy.m */,
-				C3B24E719C8BDD324999EDE067EF2B5C /* Disk-Info.plist */,
-				BDBBE7AFF757D74355FB8D24BA3F331A /* Disk-prefix.pch */,
-				005F05C17DF0014833E756B7ACB7B13F /* Disk-umbrella.h */,
+				D169D64B152B0EA0E46D9E73CD844156 /* Crashlytics.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Disk";
+			path = "../Target Support Files/Crashlytics";
+			sourceTree = "<group>";
+		};
+		BE7EA246357A8B1B6ED2EA4637FCB249 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				0010CB5A6DA4E02CE35ADB68FD101791 /* FABAttributes.h */,
+				2BA592E501F356EDAE4082BBBC89E4D2 /* Fabric.h */,
+				59B9E0034E8B7C548828E930517CDCF5 /* Frameworks */,
+				EF69DF31EF7EB56A29AA624498CA068E /* Support Files */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		CD952DDEBDE70783361E6DD595857761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAED063D454AA28587E41541B505B41E /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -356,24 +442,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				932A73A303DFCADEE50AC367BBEF90E9 /* Pods */,
+				B5B786EB346B009729B23057997F95CE /* Pods */,
 				F5F5FCB01708AE68AA17CD1996C21B6B /* Products */,
 				77E45D78E048567225D778F25C1B6C76 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D13011C068166BA58287F05094D5CE92 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				965C608080B48E755EACE00F4471EE8D /* ValueStepper.modulemap */,
-				DB54A8CE8BC5B327A6495D69DD947E4B /* ValueStepper.xcconfig */,
-				C5BFCE233AE24F13ECB4853CC989CF4B /* ValueStepper-dummy.m */,
-				E42FDA8D80F56BDB34E755D85CF281E3 /* ValueStepper-Info.plist */,
-				5BA6E463024367E0A95AF10521200B6A /* ValueStepper-prefix.pch */,
-				F401FF3EB87E979562ED2C92F5AA5963 /* ValueStepper-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ValueStepper";
 			sourceTree = "<group>";
 		};
 		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
@@ -383,6 +455,55 @@
 				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E2465B321BDC3893729BABF76A8AE50E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78E55B3A7B65E6E9508ED1B956EA1E32 /* ValueStepper.modulemap */,
+				293092064731B38609708D6CF01A4038 /* ValueStepper.xcconfig */,
+				5C9EEAE1E8B221F0B49CC797628A3430 /* ValueStepper-dummy.m */,
+				4233057ABC1B1898CDD4350362137540 /* ValueStepper-Info.plist */,
+				374B083FE178409EDD2207BF6B29453E /* ValueStepper-prefix.pch */,
+				F13DAE24581C54BD53FBE392835F3846 /* ValueStepper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ValueStepper";
+			sourceTree = "<group>";
+		};
+		E9C546AE2775E16E60D49C24FDBD4D98 /* Pulley */ = {
+			isa = PBXGroup;
+			children = (
+				E5B3A45DE77C35428DC55014923F9E2A /* PulleyPassthroughScrollView.swift */,
+				73616A1EC575829DACBA6B4178C62498 /* PulleyViewController.swift */,
+				52937A89151955579F860095893E72E4 /* UIView+constrainToParent.swift */,
+				CEA93EBBA51BC4F9138856B3A082AD2C /* UIViewController+PulleyViewController.swift */,
+				F1887F7B1A98E37E171267472F6CA0C7 /* Support Files */,
+			);
+			path = Pulley;
+			sourceTree = "<group>";
+		};
+		EF69DF31EF7EB56A29AA624498CA068E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C2B2818466639A8D254D347F252D9 /* Fabric.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Fabric";
+			sourceTree = "<group>";
+		};
+		F1887F7B1A98E37E171267472F6CA0C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A069C6FDF9D16EDD672DD38258DE6BDF /* Pulley.modulemap */,
+				7753D57EEAF6BA0A4BAED6F208ADEAE5 /* Pulley.xcconfig */,
+				42D0718931209F7D2D7C5E62151F24E2 /* Pulley-dummy.m */,
+				5FC5A8F07A78CF68D7A86DA60BB206D3 /* Pulley-Info.plist */,
+				B99186C9F12D1B4D539C13D8003E786F /* Pulley-prefix.pch */,
+				108E804FDEC84B668A9FD09C55F7807A /* Pulley-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pulley";
 			sourceTree = "<group>";
 		};
 		F5F5FCB01708AE68AA17CD1996C21B6B /* Products */ = {
@@ -401,6 +522,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1F146C6A5F74E69224AD9E15623D87C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A864DF52B5B73C615FD0F6713C9C2F /* Pods-LunarReader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		411646D2561E5553EA7F5F91BF5B5CA6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,14 +551,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6862C746BBFB6A487E4CA98603BA054F /* ValueStepper-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BEA21C8688ADA54D34A9A21681BB727 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B452823269FB9B01A79C701905BB99DD /* Pods-LunarReader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,19 +631,21 @@
 		};
 		DE6743F195AA4AD7EF5FAB79084A7239 /* Pods-LunarReader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA81CF4D4688D81E43BC87B4B0622CC3 /* Build configuration list for PBXNativeTarget "Pods-LunarReader" */;
+			buildConfigurationList = 698C06B4C030B5BEEAC84E8795B41EDB /* Build configuration list for PBXNativeTarget "Pods-LunarReader" */;
 			buildPhases = (
-				9BEA21C8688ADA54D34A9A21681BB727 /* Headers */,
-				069E4D2EA5E2D85D5CED0E14BF38A2A1 /* Sources */,
-				0872A744511FCAC4CE704F308CE1436E /* Frameworks */,
-				30D4DDC13D87FDF2C390BF10A0F2C876 /* Resources */,
+				1F146C6A5F74E69224AD9E15623D87C4 /* Headers */,
+				3F31F7A8F5D5CE7A9DA9961C6EC0C875 /* Sources */,
+				A2282B0032375CEAA6C78E2137585254 /* Frameworks */,
+				91D06D73555B2B6494CDD0EAA91ABDD3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4082911C8A796BEE67507D2E95BC5A3B /* PBXTargetDependency */,
-				02EE08AE2DFED61004A32E252FEC9CCE /* PBXTargetDependency */,
-				B1FBD4A0BCA8A904CBDB11FF8DE34BDC /* PBXTargetDependency */,
+				46E90F49E36A1187D359AEA3CA5CB1B2 /* PBXTargetDependency */,
+				E3A9ED9AD2FCFB5C75621E95EE476887 /* PBXTargetDependency */,
+				8887D2A5AE3FE0AD75B55525F8E2C7AC /* PBXTargetDependency */,
+				C574222E49BA6A5F04E4CCD67ED4C0CF /* PBXTargetDependency */,
+				C3803F155757CA3DC61688658ACDD52A /* PBXTargetDependency */,
 			);
 			name = "Pods-LunarReader";
 			productName = "Pods-LunarReader";
@@ -581,7 +704,7 @@
 				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -593,7 +716,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				C0E41540D6862472ED7F2FA11669BE1F /* Crashlytics */,
 				914C00A85014D51C5BD9DC8C6E07C79F /* Disk */,
+				ABB048B191245233986A7CD75FE412A5 /* Fabric */,
 				DE6743F195AA4AD7EF5FAB79084A7239 /* Pods-LunarReader */,
 				6B7DA1676223778C8283B104FB775BDE /* Pods-LunarReaderTests */,
 				F7CA3C528FA49F9B97EA57A8F2587738 /* Pods-LunarReaderUITests */,
@@ -611,14 +736,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30D4DDC13D87FDF2C390BF10A0F2C876 /* Resources */ = {
+		5A11388101C6154783EE75976753D688 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A11388101C6154783EE75976753D688 /* Resources */ = {
+		91D06D73555B2B6494CDD0EAA91ABDD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -649,19 +774,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		069E4D2EA5E2D85D5CED0E14BF38A2A1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2946961F84714E76FC4060F4594ED951 /* Pods-LunarReader-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		23FA26D87E5E9CD483C14CBA668E9510 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				56DCC63A834D0CF2FF94162EC891DE09 /* Pods-LunarReaderUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F31F7A8F5D5CE7A9DA9961C6EC0C875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2240C5AFAD6AC4728B59937EB70BEF93 /* Pods-LunarReader-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,29 +840,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		02EE08AE2DFED61004A32E252FEC9CCE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Pulley;
-			target = FDFBB6677FF11273953A3294FBA7E475 /* Pulley */;
-			targetProxy = 5FEB99489791633F46185A3B55E2758A /* PBXContainerItemProxy */;
-		};
 		2BCAE7A5A1A7D1E2AA4C0C918841BF53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LunarReader";
 			target = DE6743F195AA4AD7EF5FAB79084A7239 /* Pods-LunarReader */;
 			targetProxy = E5654F62578CD7E6B4A5515E02009922 /* PBXContainerItemProxy */;
 		};
-		4082911C8A796BEE67507D2E95BC5A3B /* PBXTargetDependency */ = {
+		46E90F49E36A1187D359AEA3CA5CB1B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Disk;
-			target = 914C00A85014D51C5BD9DC8C6E07C79F /* Disk */;
-			targetProxy = 97FF5C2BB3636F21E2645636E0DD75CB /* PBXContainerItemProxy */;
+			name = Crashlytics;
+			target = C0E41540D6862472ED7F2FA11669BE1F /* Crashlytics */;
+			targetProxy = 9D60FD9B4E0F7E9BB788A46F2D27F953 /* PBXContainerItemProxy */;
 		};
-		B1FBD4A0BCA8A904CBDB11FF8DE34BDC /* PBXTargetDependency */ = {
+		8887D2A5AE3FE0AD75B55525F8E2C7AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fabric;
+			target = ABB048B191245233986A7CD75FE412A5 /* Fabric */;
+			targetProxy = 3B676BA8F9CE2BBB2642F73A2725AC44 /* PBXContainerItemProxy */;
+		};
+		C3803F155757CA3DC61688658ACDD52A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ValueStepper;
 			target = 75626691707CB65882B0D7D67E1235EC /* ValueStepper */;
-			targetProxy = 92ED4C7670079039E2094C931193B034 /* PBXContainerItemProxy */;
+			targetProxy = 3810D8EEFDF0DF1E1E34DE1FDB257085 /* PBXContainerItemProxy */;
+		};
+		C574222E49BA6A5F04E4CCD67ED4C0CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pulley;
+			target = FDFBB6677FF11273953A3294FBA7E475 /* Pulley */;
+			targetProxy = DB8336CC985CDF1616FE7D78007CB427 /* PBXContainerItemProxy */;
+		};
+		C9CEFEFAAAEDB8CD947737FA56C849D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fabric;
+			target = ABB048B191245233986A7CD75FE412A5 /* Fabric */;
+			targetProxy = D465047540D12FD9D95291AE82A76DB9 /* PBXContainerItemProxy */;
+		};
+		E3A9ED9AD2FCFB5C75621E95EE476887 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Disk;
+			target = 914C00A85014D51C5BD9DC8C6E07C79F /* Disk */;
+			targetProxy = 3F0547C8AD79B83CF0614D675212F544 /* PBXContainerItemProxy */;
 		};
 		FF6079E4234326EB3AB77ACED0715FB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -748,9 +891,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05D0CF24F4F7CB10CF01D8E3D3FFBA68 /* Debug */ = {
+		3CD5764C051653318E9616042365442B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BCD70E928C409375AF4C7CBA91FD63D /* Pods-LunarReader.debug.xcconfig */;
+			baseConfigurationReference = 2523BD72927C0A5B6278345F372B34F9 /* Pods-LunarReader.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -781,10 +924,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		4093433A309EFE160336AC736594AB22 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -891,7 +1035,7 @@
 		};
 		53115A8C15636E81010FE8D5FEBF7801 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7955E57652AE8682717C30688F1A7507 /* Disk.xcconfig */;
+			baseConfigurationReference = A519D17A3FF5D2C12EC14357348DD269 /* Disk.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -926,7 +1070,7 @@
 		};
 		55DC5E9E40D71EB28FC8CE30C6527E17 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB54A8CE8BC5B327A6495D69DD947E4B /* ValueStepper.xcconfig */;
+			baseConfigurationReference = 293092064731B38609708D6CF01A4038 /* ValueStepper.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -959,6 +1103,22 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8548AC522B2EFC8F87C010366841E234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D5C2B2818466639A8D254D347F252D9 /* Fabric.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		924D56B1D59CD3049300EAEEA256114E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1062,7 +1222,7 @@
 		};
 		B645C241576EFF04BB3B0B16553D561C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7955E57652AE8682717C30688F1A7507 /* Disk.xcconfig */;
+			baseConfigurationReference = A519D17A3FF5D2C12EC14357348DD269 /* Disk.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1136,7 +1296,7 @@
 		};
 		BFE920B9B9F8A6CC92CA986A818EF6AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB54A8CE8BC5B327A6495D69DD947E4B /* ValueStepper.xcconfig */;
+			baseConfigurationReference = 293092064731B38609708D6CF01A4038 /* ValueStepper.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1171,7 +1331,7 @@
 		};
 		C243289CF5CEFD3532ECAB2353EC2F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3DC2153E90E0BFEA70FFE28611CD52E /* Pulley.xcconfig */;
+			baseConfigurationReference = 7753D57EEAF6BA0A4BAED6F208ADEAE5 /* Pulley.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1204,9 +1364,97 @@
 			};
 			name = Debug;
 		};
+		CDFCF98E7F9FB4406E116ED6500B19DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D169D64B152B0EA0E46D9E73CD844156 /* Crashlytics.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE6F1011AE3E3CA432D5EB7085D197E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D5C2B2818466639A8D254D347F252D9 /* Fabric.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D43B3DDF5D3BF6757ED79FD2D914D7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D169D64B152B0EA0E46D9E73CD844156 /* Crashlytics.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8C27C085CF063A0121A8D39800386FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BCD70E928C409375AF4C7CBA91FD63D /* Pods-LunarReader.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LunarReader/Pods-LunarReader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LunarReader/Pods-LunarReader.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E0612C7AD99081454FAA1A2EC6F2B775 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3DC2153E90E0BFEA70FFE28611CD52E /* Pulley.xcconfig */;
+			baseConfigurationReference = 7753D57EEAF6BA0A4BAED6F208ADEAE5 /* Pulley.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1279,48 +1527,18 @@
 			};
 			name = Release;
 		};
-		F4392E8AF5CEDD22D61C82CDB0CC259C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2523BD72927C0A5B6278345F372B34F9 /* Pods-LunarReader.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LunarReader/Pods-LunarReader-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LunarReader/Pods-LunarReader.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13B185864087F75D556AC109B2D70BF7 /* Build configuration list for PBXAggregateTarget "Fabric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8548AC522B2EFC8F87C010366841E234 /* Debug */,
+				CE6F1011AE3E3CA432D5EB7085D197E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1335,6 +1553,15 @@
 			buildConfigurations = (
 				BFE920B9B9F8A6CC92CA986A818EF6AA /* Debug */,
 				55DC5E9E40D71EB28FC8CE30C6527E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		698C06B4C030B5BEEAC84E8795B41EDB /* Build configuration list for PBXNativeTarget "Pods-LunarReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C27C085CF063A0121A8D39800386FF /* Debug */,
+				3CD5764C051653318E9616042365442B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1357,11 +1584,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA81CF4D4688D81E43BC87B4B0622CC3 /* Build configuration list for PBXNativeTarget "Pods-LunarReader" */ = {
+		A084C0089544D8EEE7DA4C6D8EEEF9ED /* Build configuration list for PBXAggregateTarget "Crashlytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05D0CF24F4F7CB10CF01D8E3D3FFBA68 /* Debug */,
-				F4392E8AF5CEDD22D61C82CDB0CC259C /* Release */,
+				D43B3DDF5D3BF6757ED79FD2D914D7C7 /* Debug */,
+				CDFCF98E7F9FB4406E116ED6500B19DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

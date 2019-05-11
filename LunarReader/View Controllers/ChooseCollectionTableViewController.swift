@@ -39,7 +39,17 @@ class ChooseCollectionTableViewController: UITableViewController, UITextFieldDel
         
         // Create a collection and go back to the NewPageViewController
         if self.newPageTableViewController?.collection == nil {
-            self.newPageTableViewController?.collection = Collection(name: self.textField!.text!, pages: [])
+            let collection = Collection(name: self.textField!.text!, pages: [])
+            DataManager.shared.add(collection: collection) { result in
+                switch result {
+                case .success(()):
+                    return
+                case .failure(let error):
+                    print("Failed to save collection: \(collection)")
+                    print("Error: \(error)")
+                }
+            }
+            self.newPageTableViewController?.collection = collection
         }
         self.navigationController?.popViewController(animated: true)
     }

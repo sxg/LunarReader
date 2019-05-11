@@ -42,10 +42,10 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                            <real key="value" value="0.5"/>
+                            <real key="value" value="0.25"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
-                            <real key="value" value="0.5"/>
+                            <real key="value" value="0.25"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="disabledIconButtonColor">
                             <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

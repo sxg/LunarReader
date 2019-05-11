@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Disk" "${PODS_CONFIGURATION_BUILD_DIR}/Pulley" "${PODS_CONFIGURATION_BUILD_DIR}/ValueStepper"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Disk" "${PODS_CONFIGURATION_BUILD_DIR}/Pulley" "${PODS_CONFIGURATION_BUILD_DIR}/ValueStepper" "${PODS_ROOT}/Crashlytics/iOS" "${PODS_ROOT}/Fabric/iOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Disk/Disk.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Pulley/Pulley.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ValueStepper/ValueStepper.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Disk" -framework "Pulley" -framework "UIKit" -framework "ValueStepper"
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"z" -framework "Disk" -framework "Pulley" -framework "Security" -framework "SystemConfiguration" -framework "UIKit" -framework "ValueStepper"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

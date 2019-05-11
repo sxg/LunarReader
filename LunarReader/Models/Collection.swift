@@ -10,14 +10,16 @@ import Foundation
 
 class Collection: Codable {
     
-    let uuid: UUID = UUID()
-    let createdAt: Date = Date()
+    let uuid: UUID
+    let createdAt: Date
     let name: String
     var pages: [Page]
     
     init(name: String, pages: [Page]) {
         self.name =  name
         self.pages = pages
+        self.uuid = UUID()
+        self.createdAt = Date()
     }
     
     static func == (left: Collection, right: Collection) -> Bool {

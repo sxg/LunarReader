@@ -18,6 +18,7 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     public var collection: Collection?
     
     private var didBeginFindingWords: Bool = false
+    private var wordBoxes: [CGRect]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,25 +59,21 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     }
 
     @IBAction func didTapSaveButton(_ sender: UIBarButtonItem) {
-        // Create the new page and add it to the collection
-        let page = Page(name: self.pageNameLabel.text!, image: self.wordBoxImageView.image!, wordBoxes: self.wordBoxImageView.wordBoxes!)
-        self.collection!.pages.append(page)
+        // Create the new page
+        let page = Page(name: self.pageNameLabel.text!, image: self.wordBoxImageView.image!, wordBoxes: self.wordBoxes!)
         
-        // If the collection doesn't already exist, then add it
-        if !DataManager.shared.collections.contains(where: {$0.uuid == self.collection!.uuid}) {
-            try! DataManager.shared.add(collection: self.collection!)
-        }
-        
-        // Save the collection with the new page and dismiss this view controller
-        DataManager.shared.save(collection: self.collection!) { result in
+        // Add the collection
+        DataManager.shared.add(page: page, to: self.collection!, completionHandler: { result in
             switch result {
             case .success(()):
                 return
             case .failure(let error):
-                print("Failed to save collection: \(self.collection!)")
+                print("Failed to add page to collection: \(page) \(self.collection!)")
                 print("Error: \(error)")
             }
-        }
+        })
+
+        // Dismiss the view controller
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -96,7 +93,8 @@ class NewPageTableViewController: UITableViewController, WordBoxFinderDelegate {
     // MARK: - WordBoxFinderDelegate
     
     func didFindWordBoxes(wordBoxFinder: WordBoxFinder, wordBoxes: [CGRect]) {
-        self.wordBoxImageView.drawLines(wordBoxes: wordBoxes)
+        self.wordBoxes = wordBoxes
+        self.wordBoxImageView.drawLines(wordBoxes: wordBoxes, lineWidth: 1.0, lineColor: .black, lineRotationAngle: 0)
     }
 
 }

@@ -21,10 +21,12 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         super.viewDidLoad()
         
         // Load data
-        DispatchQueue.global(qos: .background).async {
-            DataManager.shared.loadCollections()
-            DispatchQueue.main.async {
+        DataManager.shared.loadCollections { result in
+            switch result {
+            case .success(_):
                 self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
             }
         }
         
@@ -55,40 +57,32 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .none:
+            return
+        case .insert:
+            return
+        case .delete:
+            let collection = DataManager.shared.collections[indexPath.row]
+            DataManager.shared.remove(collection: collection) { result in
+                switch result {
+                case .success(()):
+                    return
+                case .failure(let error):
+                    print("Failed to delete collection: \(collection)")
+                    print("Error: \(error)")
+                }
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        default:
+            return
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
     // MARK: - UITableViewDelegate
     
