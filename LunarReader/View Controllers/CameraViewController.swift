@@ -22,24 +22,28 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
     private let photoOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
     private let cameraButtonBottomDistance: CGFloat = 20
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         // Configure camera
         self.cameraSession.beginConfiguration()
         let camera = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back)
-        guard let cameraInput = try? AVCaptureDeviceInput(device: camera!), cameraSession.canAddInput(cameraInput) else { return }
-        self.cameraSession.addInput(cameraInput)
-        guard self.cameraSession.canAddOutput(self.photoOutput) else { return }
-        self.cameraSession.sessionPreset = .photo
-        self.cameraSession.addOutput(self.photoOutput)
-        self.cameraSession.commitConfiguration()
-        
-        // Connect the camera to the view, resize the video feed, and start the camera
-        self.cameraView.cameraPreviewLayer.session = cameraSession
-        self.cameraView.cameraPreviewLayer.videoGravity = .resizeAspectFill
-        cameraSession.startRunning()
+        if camera != nil {
+            guard let cameraInput = try? AVCaptureDeviceInput(device: camera!), cameraSession.canAddInput(cameraInput) else { return }
+            self.cameraSession.addInput(cameraInput)
+            guard self.cameraSession.canAddOutput(self.photoOutput) else { return }
+            self.cameraSession.sessionPreset = .photo
+            self.cameraSession.addOutput(self.photoOutput)
+            self.cameraSession.commitConfiguration()
+            
+            // Connect the camera to the view, resize the video feed, and start the camera
+            self.cameraView.cameraPreviewLayer.session = cameraSession
+            self.cameraView.cameraPreviewLayer.videoGravity = .resizeAspectFill
+            cameraSession.startRunning()
+        } else {
+            let alert = UIAlertController(title: "Camera Not Found", message: "Lunar Reader requires a camera, but no camera was found on this device.", preferredStyle: .alert)
+            self.present(alert, animated: true)
+        }
     }
     
     // MARK: - PulleyPrimaryContentControllerDelegate
