@@ -27,7 +27,7 @@ class CameraViewController: UIViewController, PulleyPrimaryContentControllerDele
         
         // Configure camera
         self.cameraSession.beginConfiguration()
-        let camera = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back)
+        let camera = AVCaptureDevice.default(for: .video)
         if camera != nil {
             guard let cameraInput = try? AVCaptureDeviceInput(device: camera!), cameraSession.canAddInput(cameraInput) else { return }
             self.cameraSession.addInput(cameraInput)
